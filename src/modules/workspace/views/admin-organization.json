@@ -1,0 +1,1530 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:816",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:817",
+        "className": "v76",
+        "children": [
+          "관리자  /  조직·권한  /  조직·권한 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:818",
+        "className": "v77",
+        "children": [
+          "조직·권한 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:819",
+        "className": "v78",
+        "children": [
+          "직원·부서 정보와 시스템 역할을 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:820",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:821",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:822",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:823",
+            "name": "재직 상태",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:824",
+                "className": "v12",
+                "children": [
+                  "재직 상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:825",
+            "name": "이름·사번 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:826",
+                "className": "v12",
+                "children": [
+                  "이름·사번 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:827",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:828",
+            "name": "재직 직원",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:829",
+                "className": "v82",
+                "children": [
+                  "재직 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:830",
+                "className": "v83",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:831",
+            "name": "부서",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:832",
+                "className": "v82",
+                "children": [
+                  "부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:833",
+                "className": "v83",
+                "children": [
+                  "6개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:834",
+            "name": "부서장",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:835",
+                "className": "v82",
+                "children": [
+                  "부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:836",
+                "className": "v83",
+                "children": [
+                  "6명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:837",
+            "name": "관리자",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:838",
+                "className": "v82",
+                "children": [
+                  "관리자"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:839",
+                "className": "v83",
+                "children": [
+                  "2명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:840",
+        "name": "직원 목록",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:841",
+            "className": "v85",
+            "children": [
+              "직원 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:842",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:843",
+                "className": "v87",
+                "children": [
+                  "직원·사번"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:844",
+                "className": "v87",
+                "children": [
+                  "부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:845",
+                "className": "v87",
+                "children": [
+                  "재직 상태"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:846",
+                "className": "v87",
+                "children": [
+                  "역할"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:847",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:848",
+                "className": "v89",
+                "children": [
+                  "김직원 · E001"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:849",
+                "className": "v90",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:850",
+                "className": "v90",
+                "children": [
+                  "재직"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:851",
+                "className": "v90",
+                "children": [
+                  "직원"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:852",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:853",
+                "className": "v89",
+                "children": [
+                  "김부서장 · E002"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:854",
+                "className": "v90",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:855",
+                "className": "v90",
+                "children": [
+                  "재직"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:856",
+                "className": "v90",
+                "children": [
+                  "직원 · 부서장"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:857",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:858",
+                "className": "v89",
+                "children": [
+                  "운영관리자 · E003"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:859",
+                "className": "v90",
+                "children": [
+                  "경영지원팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:860",
+                "className": "v90",
+                "children": [
+                  "재직"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:861",
+                "className": "v90",
+                "children": [
+                  "시스템 관리자"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:862",
+        "name": "선택 직원 · 기본 정보",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:863",
+            "className": "v116",
+            "children": [
+              "선택 직원 · 기본 정보"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:864",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:865",
+                "name": "이름",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:866",
+                    "className": "v24",
+                    "children": [
+                      "이름"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:867",
+                    "name": "필드 · 이름",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:868",
+                        "className": "v120",
+                        "children": [
+                          "김직원"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:869",
+                "name": "사번",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:870",
+                    "className": "v24",
+                    "children": [
+                      "사번"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:871",
+                    "name": "필드 · 사번",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:872",
+                        "className": "v120",
+                        "children": [
+                          "E001"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:873",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:874",
+                "name": "소속 부서",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:875",
+                    "className": "v24",
+                    "children": [
+                      "소속 부서"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:876",
+                    "name": "필드 · 소속 부서",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:877",
+                        "className": "v120",
+                        "children": [
+                          "개발팀"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:878",
+                "name": "재직 상태",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:879",
+                    "className": "v24",
+                    "children": [
+                      "재직 상태"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:880",
+                    "name": "필드 · 재직 상태",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:881",
+                        "className": "v120",
+                        "children": [
+                          "재직"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:882",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:883",
+                "name": "입사일",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:884",
+                    "className": "v24",
+                    "children": [
+                      "입사일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:885",
+                    "name": "필드 · 입사일",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:886",
+                        "className": "v120",
+                        "children": [
+                          "2026.01.01 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:887",
+                "name": "역할",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:888",
+                    "className": "v24",
+                    "children": [
+                      "역할"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:889",
+                    "name": "필드 · 역할",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:890",
+                        "className": "v120",
+                        "children": [
+                          "직원"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:891",
+        "name": "역할별 조회 범위",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:892",
+            "className": "v116",
+            "children": [
+              "역할별 조회 범위"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:893",
+            "className": "v151",
+            "children": [
+              "직원 · 본인 근태 / 부서장 · 소속 부서 근태"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:894",
+            "className": "v152",
+            "children": [
+              "시스템 관리자 · 전체 근태와 관리자 전용 임금 기능"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:895",
+            "name": "가로 배치",
+            "className": "v79",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:896",
+                "name": "변경 내용 저장",
+                "className": "v11",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:897",
+                    "className": "v12",
+                    "children": [
+                      "변경 내용 저장"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:898",
+                "name": "취소",
+                "className": "v11",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:899",
+                    "className": "v12",
+                    "children": [
+                      "취소"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:900",
+        "name": "부서 정보",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:901",
+            "className": "v85",
+            "children": [
+              "부서 정보"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:902",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:903",
+                "className": "v153",
+                "children": [
+                  "부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:904",
+                "className": "v153",
+                "children": [
+                  "부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:905",
+                "className": "v153",
+                "children": [
+                  "인원"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:906",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:907",
+                "className": "v154",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:908",
+                "className": "v155",
+                "children": [
+                  "김부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:909",
+                "className": "v155",
+                "children": [
+                  "8명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:910",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:911",
+                "className": "v154",
+                "children": [
+                  "운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:912",
+                "className": "v155",
+                "children": [
+                  "박부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:913",
+                "className": "v155",
+                "children": [
+                  "12명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:914",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:915",
+                "className": "v154",
+                "children": [
+                  "경영지원팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:916",
+                "className": "v155",
+                "children": [
+                  "이부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:917",
+                "className": "v155",
+                "children": [
+                  "6명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:918",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:923",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:924",
+        "className": "v99",
+        "children": [
+          "관리자  /  조직·권한  /  조직·권한 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:925",
+        "className": "v100",
+        "children": [
+          "조직·권한 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:926",
+        "className": "v101",
+        "children": [
+          "직원·부서 정보와 시스템 역할을 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:927",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:928",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:929",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:930",
+            "name": "재직 상태",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:931",
+                "className": "v12",
+                "children": [
+                  "재직 상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:932",
+            "name": "이름·사번 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:933",
+                "className": "v12",
+                "children": [
+                  "이름·사번 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:934",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:935",
+            "name": "재직 직원",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:936",
+                "className": "v105",
+                "children": [
+                  "재직 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:937",
+                "className": "v106",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:938",
+            "name": "부서",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:939",
+                "className": "v105",
+                "children": [
+                  "부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:940",
+                "className": "v106",
+                "children": [
+                  "6개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:941",
+            "name": "부서장",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:942",
+                "className": "v105",
+                "children": [
+                  "부서장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:943",
+                "className": "v106",
+                "children": [
+                  "6명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:944",
+            "name": "관리자",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:945",
+                "className": "v105",
+                "children": [
+                  "관리자"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:946",
+                "className": "v106",
+                "children": [
+                  "2명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:947",
+        "name": "직원 목록",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:948",
+            "className": "v108",
+            "children": [
+              "직원 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:949",
+            "name": "김직원 · E001",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:950",
+                "className": "v110",
+                "children": [
+                  "김직원 · E001"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:951",
+                "className": "v111",
+                "children": [
+                  "부서 개발팀  ·  재직 상태 재직  ·  역할 직원"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:952",
+            "name": "김부서장 · E002",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:953",
+                "className": "v110",
+                "children": [
+                  "김부서장 · E002"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:954",
+                "className": "v111",
+                "children": [
+                  "부서 개발팀  ·  재직 상태 재직  ·  역할 직원 · 부서장"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:955",
+            "name": "운영관리자 · E003",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:956",
+                "className": "v110",
+                "children": [
+                  "운영관리자 · E003"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:957",
+                "className": "v111",
+                "children": [
+                  "부서 경영지원팀  ·  재직 상태 재직  ·  역할 시스템 관리자"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:958",
+        "name": "선택 직원 · 기본 정보",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:959",
+            "className": "v124",
+            "children": [
+              "선택 직원 · 기본 정보"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:960",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:961",
+                "name": "이름",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:962",
+                    "className": "v24",
+                    "children": [
+                      "이름"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:963",
+                    "name": "필드 · 이름",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:964",
+                        "className": "v128",
+                        "children": [
+                          "김직원"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:965",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:966",
+                "name": "사번",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:967",
+                    "className": "v24",
+                    "children": [
+                      "사번"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:968",
+                    "name": "필드 · 사번",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:969",
+                        "className": "v128",
+                        "children": [
+                          "E001"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:970",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:971",
+                "name": "소속 부서",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:972",
+                    "className": "v24",
+                    "children": [
+                      "소속 부서"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:973",
+                    "name": "필드 · 소속 부서",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:974",
+                        "className": "v128",
+                        "children": [
+                          "개발팀"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:975",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:976",
+                "name": "재직 상태",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:977",
+                    "className": "v24",
+                    "children": [
+                      "재직 상태"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:978",
+                    "name": "필드 · 재직 상태",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:979",
+                        "className": "v128",
+                        "children": [
+                          "재직"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:980",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:981",
+                "name": "입사일",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:982",
+                    "className": "v24",
+                    "children": [
+                      "입사일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:983",
+                    "name": "필드 · 입사일",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:984",
+                        "className": "v128",
+                        "children": [
+                          "2026.01.01 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:985",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:986",
+                "name": "역할",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:987",
+                    "className": "v24",
+                    "children": [
+                      "역할"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:988",
+                    "name": "필드 · 역할",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:989",
+                        "className": "v128",
+                        "children": [
+                          "직원"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:990",
+        "name": "역할별 조회 범위",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:991",
+            "className": "v124",
+            "children": [
+              "역할별 조회 범위"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:992",
+            "className": "v156",
+            "children": [
+              "직원 · 본인 근태 / 부서장 · 소속 부서 근태"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:993",
+            "className": "v157",
+            "children": [
+              "시스템 관리자 · 전체 근태와 관리자 전용 임금 기능"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:994",
+            "name": "가로 배치",
+            "className": "v79",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:995",
+                "name": "변경 내용 저장",
+                "className": "v11",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:996",
+                    "className": "v12",
+                    "children": [
+                      "변경 내용 저장"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:997",
+                "name": "취소",
+                "className": "v11",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:998",
+                    "className": "v12",
+                    "children": [
+                      "취소"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:999",
+        "name": "부서 정보",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1000",
+            "className": "v108",
+            "children": [
+              "부서 정보"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1001",
+            "name": "개발팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1002",
+                "className": "v110",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1003",
+                "className": "v111",
+                "children": [
+                  "부서장 김부서장  ·  인원 8명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1004",
+            "name": "운영팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1005",
+                "className": "v110",
+                "children": [
+                  "운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1006",
+                "className": "v111",
+                "children": [
+                  "부서장 박부서장  ·  인원 12명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1007",
+            "name": "경영지원팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1008",
+                "className": "v110",
+                "children": [
+                  "경영지원팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1009",
+                "className": "v111",
+                "children": [
+                  "부서장 이부서장  ·  인원 6명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1010",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

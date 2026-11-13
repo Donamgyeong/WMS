@@ -1,0 +1,1338 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "11:198",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "11:199",
+        "className": "v7",
+        "children": [
+          "ADMIN WORKSPACE"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:200",
+        "className": "v8",
+        "children": [
+          "전체 운영 현황"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:201",
+        "className": "v9",
+        "children": [
+          "2026년 11월 13일 금요일  ·  시스템 관리자"
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:202",
+        "name": "가로 배치",
+        "className": "v10",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:203",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:204",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:205",
+            "name": "11.09 – 11.15",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:206",
+                "className": "v12",
+                "children": [
+                  "11.09 – 11.15"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:207",
+            "name": "이름 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:208",
+                "className": "v12",
+                "children": [
+                  "이름 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:209",
+        "name": "가로 배치",
+        "className": "v13",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:210",
+            "name": "재직 직원",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:211",
+                "className": "v15",
+                "children": [
+                  "재직 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:212",
+                "className": "v16",
+                "children": [
+                  "48명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:213",
+                "className": "v17",
+                "children": [
+                  "6개 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:214",
+            "name": "근무 중",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:215",
+                "className": "v15",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:216",
+                "className": "v16",
+                "children": [
+                  "35명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:217",
+                "className": "v17",
+                "children": [
+                  "휴게 중 4명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:218",
+            "name": "기록 확인",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:219",
+                "className": "v15",
+                "children": [
+                  "기록 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:220",
+                "className": "v16",
+                "children": [
+                  "7건"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:221",
+                "className": "v17",
+                "children": [
+                  "누락 기록"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:222",
+            "name": "정산 미확정",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:223",
+                "className": "v15",
+                "children": [
+                  "정산 미확정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:224",
+                "className": "v16",
+                "children": [
+                  "3건"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:225",
+                "className": "v17",
+                "children": [
+                  "정책·입력 확인 필요"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:226",
+        "name": "확인 안내",
+        "className": "v18",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:227",
+            "className": "v19",
+            "children": [
+              "11월 정산에 확인이 필요한 항목이 있어요"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:228",
+            "className": "v20",
+            "children": [
+              "포괄 포함시간 배정 정책과 고정수당 비교 방식이 미정입니다. 추가 지급액·총액의 확정을 보류합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:229",
+        "name": "관리 메뉴",
+        "className": "v37",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:230",
+            "className": "v15",
+            "children": [
+              "관리 메뉴"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:231",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:232",
+                "name": "조직·권한",
+                "className": "v137",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:233",
+                    "className": "v72",
+                    "children": [
+                      "조직·권한 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:234",
+                    "className": "v138",
+                    "children": [
+                      "직원·부서·역할 관리"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:235",
+                "name": "근무 설정",
+                "className": "v137",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:236",
+                    "className": "v72",
+                    "children": [
+                      "근무 설정 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:237",
+                    "className": "v138",
+                    "children": [
+                      "정책·근무지·허용 IP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:238",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:239",
+                "name": "휴일·개인 일정",
+                "className": "v137",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:240",
+                    "className": "v72",
+                    "children": [
+                      "휴일·개인 일정 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:241",
+                    "className": "v138",
+                    "children": [
+                      "공휴일·회사 휴일·개인 휴무"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:242",
+                "name": "임금·정산",
+                "className": "v137",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:243",
+                    "className": "v72",
+                    "children": [
+                      "임금·정산 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:244",
+                    "className": "v138",
+                    "children": [
+                      "시급·계약·계산 근거·Excel"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:245",
+        "name": "부서별 오늘 현황",
+        "className": "v37",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:246",
+            "className": "v15",
+            "children": [
+              "부서별 오늘 현황"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:247",
+            "name": "가로 배치",
+            "className": "v38",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:248",
+                "className": "v39",
+                "children": [
+                  "부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:249",
+                "className": "v39",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:250",
+                "className": "v39",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:251",
+                "className": "v39",
+                "children": [
+                  "휴가"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:252",
+                "className": "v39",
+                "children": [
+                  "기록 확인"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:253",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:254",
+                "className": "v41",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:255",
+                "className": "v42",
+                "children": [
+                  "8명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:256",
+                "className": "v42",
+                "children": [
+                  "5명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:257",
+                "className": "v42",
+                "children": [
+                  "1명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:258",
+                "className": "v42",
+                "children": [
+                  "2건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:259",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:260",
+                "className": "v41",
+                "children": [
+                  "운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:261",
+                "className": "v42",
+                "children": [
+                  "12명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:262",
+                "className": "v42",
+                "children": [
+                  "9명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:263",
+                "className": "v42",
+                "children": [
+                  "1명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:264",
+                "className": "v42",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:265",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:266",
+                "className": "v41",
+                "children": [
+                  "경영지원팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:267",
+                "className": "v42",
+                "children": [
+                  "6명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:268",
+                "className": "v42",
+                "children": [
+                  "5명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:269",
+                "className": "v42",
+                "children": [
+                  "—"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:270",
+                "className": "v42",
+                "children": [
+                  "2건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:271",
+        "name": "임금·정산 현황 · 관리자 전용",
+        "className": "v37",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:272",
+            "className": "v15",
+            "children": [
+              "임금·정산 현황 · 관리자 전용"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:273",
+            "name": "가로 배치",
+            "className": "v139",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:274",
+                "name": "정산 기간",
+                "className": "v140",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:275",
+                    "className": "v141",
+                    "children": [
+                      "정산 기간"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:276",
+                    "className": "v142",
+                    "children": [
+                      "2026년 11월"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:277",
+                "name": "계산 상태",
+                "className": "v140",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:278",
+                    "className": "v141",
+                    "children": [
+                      "계산 상태"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:279",
+                    "className": "v142",
+                    "children": [
+                      "검토 중"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:280",
+                "name": "추가 지급액",
+                "className": "v140",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:281",
+                    "className": "v141",
+                    "children": [
+                      "추가 지급액"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:282",
+                    "className": "v143",
+                    "children": [
+                      "미확정"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:283",
+                "name": "총액",
+                "className": "v140",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:284",
+                    "className": "v141",
+                    "children": [
+                      "총액"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:285",
+                    "className": "v143",
+                    "children": [
+                      "미확정"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:286",
+            "className": "v144",
+            "children": [
+              "실제 연장 20시간 → 포괄 포함 16시간 / 추가 대상 4시간 (시간 예시)"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:287",
+            "className": "v145",
+            "children": [
+              "실근로시간은 차감하지 않습니다. 일반·야간 배정 정책 결정 전에는 금액을 확정할 수 없습니다."
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:288",
+            "className": "v3",
+            "children": [
+              "정산 상세 및 계산 근거 보기 →"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:289",
+        "className": "v47",
+        "children": [
+          "기획 시안 · 모든 수치는 예시입니다. 임금 기능은 서버의 관리자 권한 검사와 별도 보호가 필요합니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "11:294",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "11:295",
+        "className": "v7",
+        "children": [
+          "ADMIN WORKSPACE"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:296",
+        "className": "v52",
+        "children": [
+          "전체 운영 현황"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:297",
+        "className": "v53",
+        "children": [
+          "2026년 11월 13일 금요일  ·  시스템 관리자"
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:298",
+        "name": "조회 조건",
+        "className": "v54",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:299",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:300",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:301",
+            "name": "11.09 – 11.15",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:302",
+                "className": "v12",
+                "children": [
+                  "11.09 – 11.15"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:303",
+            "name": "이름 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:304",
+                "className": "v12",
+                "children": [
+                  "이름 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:305",
+        "name": "요약",
+        "className": "v55",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:306",
+            "name": "재직 직원",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:307",
+                "className": "v57",
+                "children": [
+                  "재직 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:308",
+                "className": "v58",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:310",
+            "name": "근무 중",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:311",
+                "className": "v57",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:312",
+                "className": "v58",
+                "children": [
+                  "35명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:314",
+            "name": "기록 확인",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:315",
+                "className": "v57",
+                "children": [
+                  "기록 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:316",
+                "className": "v58",
+                "children": [
+                  "7건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:318",
+            "name": "정산 미확정",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:319",
+                "className": "v57",
+                "children": [
+                  "정산 미확정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:320",
+                "className": "v58",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:322",
+        "name": "확인 안내",
+        "className": "v59",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:323",
+            "className": "v60",
+            "children": [
+              "11월 정산에 확인이 필요한 항목이 있어요"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:324",
+            "className": "v61",
+            "children": [
+              "포괄 포함시간 배정 정책과 고정수당 비교 방식이 미정입니다. 추가 지급액·총액의 확정을 보류합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:325",
+        "name": "관리 메뉴",
+        "className": "v62",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:326",
+            "className": "v23",
+            "children": [
+              "관리 메뉴"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:327",
+            "name": "메뉴 행",
+            "className": "v146",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:328",
+                "name": "조직·권한",
+                "className": "v147",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:329",
+                    "className": "v72",
+                    "children": [
+                      "조직·권한 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:330",
+                    "className": "v148",
+                    "children": [
+                      "직원·부서·역할 관리"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:331",
+            "name": "메뉴 행",
+            "className": "v146",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:332",
+                "name": "근무 설정",
+                "className": "v147",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:333",
+                    "className": "v72",
+                    "children": [
+                      "근무 설정 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:334",
+                    "className": "v148",
+                    "children": [
+                      "정책·근무지·허용 IP"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:335",
+            "name": "메뉴 행",
+            "className": "v146",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:336",
+                "name": "휴일·개인 일정",
+                "className": "v147",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:337",
+                    "className": "v72",
+                    "children": [
+                      "휴일·개인 일정 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:338",
+                    "className": "v148",
+                    "children": [
+                      "공휴일·회사 휴일·개인 휴무"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:339",
+            "name": "메뉴 행",
+            "className": "v146",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:340",
+                "name": "임금·정산",
+                "className": "v147",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:341",
+                    "className": "v72",
+                    "children": [
+                      "임금·정산 →"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:342",
+                    "className": "v148",
+                    "children": [
+                      "시급·계약·계산 근거·Excel"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:343",
+        "name": "부서별 오늘 현황",
+        "className": "v69",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:344",
+            "className": "v15",
+            "children": [
+              "부서별 오늘 현황"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:345",
+            "name": "개발팀",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:346",
+                "className": "v72",
+                "children": [
+                  "개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:347",
+                "className": "v73",
+                "children": [
+                  "직원 8명  ·  근무 중 5명  ·  휴가 1명  ·  기록 확인 2건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:348",
+            "name": "운영팀",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:349",
+                "className": "v72",
+                "children": [
+                  "운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:350",
+                "className": "v73",
+                "children": [
+                  "직원 12명  ·  근무 중 9명  ·  휴가 1명  ·  기록 확인 3건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:351",
+            "name": "경영지원팀",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:352",
+                "className": "v72",
+                "children": [
+                  "경영지원팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:353",
+                "className": "v73",
+                "children": [
+                  "직원 6명  ·  근무 중 5명  ·  휴가 —  ·  기록 확인 2건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:354",
+        "name": "임금·정산 현황 · 관리자 전용",
+        "className": "v69",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:355",
+            "className": "v15",
+            "children": [
+              "임금·정산 현황 · 관리자 전용"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:356",
+            "name": "정산 요약",
+            "className": "v149",
+            "children": [
+              {
+                "tag": "div",
+                "id": "11:357",
+                "name": "정산 기간",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:358",
+                    "className": "v141",
+                    "children": [
+                      "정산 기간"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:359",
+                    "className": "v142",
+                    "children": [
+                      "2026년 11월"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:360",
+                "name": "계산 상태",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:361",
+                    "className": "v141",
+                    "children": [
+                      "계산 상태"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:362",
+                    "className": "v142",
+                    "children": [
+                      "검토 중"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:363",
+                "name": "추가 지급액",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:364",
+                    "className": "v141",
+                    "children": [
+                      "추가 지급액"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:365",
+                    "className": "v143",
+                    "children": [
+                      "미확정"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:366",
+                "name": "총액",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:367",
+                    "className": "v141",
+                    "children": [
+                      "총액"
+                    ]
+                  },
+                  {
+                    "tag": "p",
+                    "id": "11:368",
+                    "className": "v143",
+                    "children": [
+                      "미확정"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:369",
+            "className": "v150",
+            "children": [
+              "실제 연장 20시간 → 포괄 포함 16시간 / 추가 대상 4시간 (시간 예시)"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:370",
+            "className": "v70",
+            "children": [
+              "실근로시간은 차감하지 않습니다. 일반·야간 배정 정책 결정 전에는 금액을 확정할 수 없습니다."
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:371",
+            "className": "v3",
+            "children": [
+              "정산 상세 및 계산 근거 보기 →"
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:372",
+        "className": "v74",
+        "children": [
+          "기획 시안 · 모든 수치는 예시입니다. 임금 기능은 서버의 관리자 권한 검사와 별도 보호가 필요합니다."
+        ]
+      }
+    ]
+  }
+}

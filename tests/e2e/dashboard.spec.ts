@@ -1,0 +1,24 @@
+import { test, expect } from "@playwright/test";
+import { testPool, seed, initialPassword } from "../fixtures";
+import { seedAttendance } from "../attendance-fixtures";
+const pool = testPool();
+test.beforeEach(async () => { await seed(pool); await seedAttendance(pool); });
+test.afterAll(async () => { await pool.end(); });
+test("개인 대시보드 빈 상태와 등록 일정, 본인 전용 API", async ({ page }) => {
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  await pool.query("insert into work_schedules(id,employee_id,work_date,day_type,is_work_scheduled) values('own','employee',$1,'DAY_OFF',false),('other','admin',$1,'WORKDAY',true)", [today]);
+  await page.goto("/login");
+  await page.getByLabel("회사 이메일").fill("employee@example.com");
+  await page.getByLabel("비밀번호", { exact: true }).fill(initialPassword);
+  await page.getByRole("button", { name: "로그인", exact: true }).click();
+  const weekly = page.getByRole("region", { name: "이번 주 근로시간" });
+  await expect(weekly.getByRole("paragraph").filter({ hasText: /^0시간 0분$/ })).toBeVisible();
+  await expect(page.getByText("휴무일 · 근무 예정 없음")).toBeVisible();
+  await expect(page.getByText("근무일 · 근무 예정", { exact: true })).toHaveCount(0);
+  await expect(page.getByText("이전 근무일의 미종료 기록이 없습니다.")).toBeVisible();
+  const result = await page.request.get('/api/dashboard?employeeId=admin');
+  expect(result.headers()['cache-control']).toBe('no-store');
+  expect((await result.json()).upcoming.map((item: {id:string}) => item.id)).toEqual(['schedule-own']);
+  await page.getByRole("button", { name: "출근하기", exact: true }).click();
+  await expect(weekly.getByText(/진행 중 근무 포함 잠정 집계/)).toBeVisible();
+});

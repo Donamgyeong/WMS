@@ -49,7 +49,7 @@ test("부서장과 관리자의 접근 범위를 구분한다", async ({ page })
   await expect(page).toHaveURL(/\/me$/);
   await page.locator("summary").click();
   await page.getByRole("link", { name: "부서 관리" }).click();
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("부서 관리");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("우리 부서의 오늘");
   expect((await page.request.get("/api/admin/payroll")).status()).toBe(403);
   await page.goto("/me");
   await page.locator("summary").click();
@@ -59,7 +59,7 @@ test("부서장과 관리자의 접근 범위를 구분한다", async ({ page })
   await expect(page).toHaveURL(/\/me$/);
   await page.locator("summary").click();
   await page.getByRole("link", { name: "관리자", exact: true }).click();
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("관리자");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("전체 운영 현황");
   expect((await page.request.get("/api/admin/payroll")).status()).toBe(200);
 });
 

@@ -1,0 +1,1346 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:634",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:635",
+        "className": "v76",
+        "children": [
+          "관리자  /  근태 관리  /  전체 근태 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:636",
+        "className": "v77",
+        "children": [
+          "전체 근태 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:637",
+        "className": "v78",
+        "children": [
+          "전체 직원의 기록과 계산 상태를 조회하고 원본·정정 이력을 확인하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:638",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:639",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:640",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:641",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:642",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:643",
+            "name": "직원 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:644",
+                "className": "v12",
+                "children": [
+                  "직원 검색"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:645",
+            "name": "상태 전체",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:646",
+                "className": "v12",
+                "children": [
+                  "상태 전체"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:647",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:648",
+            "name": "조회 직원",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:649",
+                "className": "v82",
+                "children": [
+                  "조회 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:650",
+                "className": "v83",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:651",
+            "name": "누락 기록",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:652",
+                "className": "v82",
+                "children": [
+                  "누락 기록"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:653",
+                "className": "v83",
+                "children": [
+                  "7건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:654",
+            "name": "계산 보류",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:655",
+                "className": "v82",
+                "children": [
+                  "계산 보류"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:656",
+                "className": "v83",
+                "children": [
+                  "7건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:657",
+            "name": "정정 이력",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:658",
+                "className": "v82",
+                "children": [
+                  "정정 이력"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:659",
+                "className": "v83",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:660",
+        "name": "전체 직원 근태",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:661",
+            "className": "v85",
+            "children": [
+              "전체 직원 근태"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:662",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:663",
+                "className": "v87",
+                "children": [
+                  "직원·부서"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:664",
+                "className": "v87",
+                "children": [
+                  "날짜"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:665",
+                "className": "v87",
+                "children": [
+                  "실근로"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:666",
+                "className": "v87",
+                "children": [
+                  "기록 상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:667",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:668",
+                "className": "v89",
+                "children": [
+                  "김직원 · 개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:669",
+                "className": "v90",
+                "children": [
+                  "11.12"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:670",
+                "className": "v90",
+                "children": [
+                  "8시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:671",
+                "className": "v90",
+                "children": [
+                  "정상 · 상세 →"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:672",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:673",
+                "className": "v92",
+                "children": [
+                  "정지훈 · 개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:674",
+                "className": "v94",
+                "children": [
+                  "11.10"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:675",
+                "className": "v93",
+                "children": [
+                  "계산 보류"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:676",
+                "className": "v93",
+                "children": [
+                  "퇴근 누락"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:677",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:678",
+                "className": "v89",
+                "children": [
+                  "한서진 · 운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:679",
+                "className": "v90",
+                "children": [
+                  "11.12"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:680",
+                "className": "v90",
+                "children": [
+                  "8시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:681",
+                "className": "v90",
+                "children": [
+                  "정정 이력 1건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:682",
+        "name": "선택 기록 · 원본과 정정 이력",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:683",
+            "className": "v85",
+            "children": [
+              "선택 기록 · 원본과 정정 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:684",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:685",
+                "className": "v87",
+                "children": [
+                  "구분"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:686",
+                "className": "v87",
+                "children": [
+                  "내용"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:687",
+                "className": "v87",
+                "children": [
+                  "기록 시각"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:688",
+                "className": "v87",
+                "children": [
+                  "근거"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:689",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:690",
+                "className": "v89",
+                "children": [
+                  "원본 이벤트"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:691",
+                "className": "v90",
+                "children": [
+                  "출근 09:00 · 보존"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:692",
+                "className": "v90",
+                "children": [
+                  "11.12 09:00"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:693",
+                "className": "v90",
+                "children": [
+                  "PC / IP 확인"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:694",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:695",
+                "className": "v89",
+                "children": [
+                  "별도 정정 이력"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:696",
+                "className": "v90",
+                "children": [
+                  "퇴근 18:00 보완 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:697",
+                "className": "v90",
+                "children": [
+                  "11.13 10:00"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:698",
+                "className": "v90",
+                "children": [
+                  "정정 사유 기록"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:699",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:700",
+                "className": "v89",
+                "children": [
+                  "파생 계산"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:701",
+                "className": "v90",
+                "children": [
+                  "실근로 8시간 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:702",
+                "className": "v90",
+                "children": [
+                  "11.13 10:01"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:703",
+                "className": "v90",
+                "children": [
+                  "원본 + 정정 이력"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:704",
+        "name": "재계산 추적",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:705",
+            "className": "v116",
+            "children": [
+              "재계산 추적"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:706",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:707",
+                "name": "대상 기록",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:708",
+                    "className": "v24",
+                    "children": [
+                      "대상 기록"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:709",
+                    "name": "필드 · 대상 기록",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:710",
+                        "className": "v120",
+                        "children": [
+                          "한서진 · 2026.11.12"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:711",
+                "name": "정책·계산 버전",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:712",
+                    "className": "v24",
+                    "children": [
+                      "정책·계산 버전"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:713",
+                    "name": "필드 · 정책·계산 버전",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:714",
+                        "className": "v120",
+                        "children": [
+                          "기본 정책 / 예시 v2"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:715",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:716",
+                "name": "이전 계산",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:717",
+                    "className": "v24",
+                    "children": [
+                      "이전 계산"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:718",
+                    "name": "필드 · 이전 계산",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:719",
+                        "className": "v120",
+                        "children": [
+                          "예시 v1 · 보존"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:720",
+                "name": "확정 정산 영향",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:721",
+                    "className": "v24",
+                    "children": [
+                      "확정 정산 영향"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:722",
+                    "name": "필드 · 확정 정산 영향",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:723",
+                        "className": "v120",
+                        "children": [
+                          "원본 스냅샷 변경 없이 별도 조정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:724",
+        "name": "정정 승인 흐름은 결정 전입니다",
+        "className": "v95",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:725",
+            "className": "v96",
+            "children": [
+              "정정 승인 흐름은 결정 전입니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:726",
+            "className": "v97",
+            "children": [
+              "이력 표현을 위한 시안입니다. 승인·반려·즉시 덮어쓰기 기능을 확정하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:727",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:732",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:733",
+        "className": "v99",
+        "children": [
+          "관리자  /  근태 관리  /  전체 근태 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:734",
+        "className": "v100",
+        "children": [
+          "전체 근태 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:735",
+        "className": "v101",
+        "children": [
+          "전체 직원의 기록과 계산 상태를 조회하고 원본·정정 이력을 확인하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:736",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:737",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:738",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:739",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:740",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:741",
+            "name": "직원 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:742",
+                "className": "v12",
+                "children": [
+                  "직원 검색"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:743",
+            "name": "상태 전체",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:744",
+                "className": "v12",
+                "children": [
+                  "상태 전체"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:745",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:746",
+            "name": "조회 직원",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:747",
+                "className": "v105",
+                "children": [
+                  "조회 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:748",
+                "className": "v106",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:749",
+            "name": "누락 기록",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:750",
+                "className": "v105",
+                "children": [
+                  "누락 기록"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:751",
+                "className": "v106",
+                "children": [
+                  "7건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:752",
+            "name": "계산 보류",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:753",
+                "className": "v105",
+                "children": [
+                  "계산 보류"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:754",
+                "className": "v106",
+                "children": [
+                  "7건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:755",
+            "name": "정정 이력",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:756",
+                "className": "v105",
+                "children": [
+                  "정정 이력"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:757",
+                "className": "v106",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:758",
+        "name": "전체 직원 근태",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:759",
+            "className": "v108",
+            "children": [
+              "전체 직원 근태"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:760",
+            "name": "김직원 · 개발팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:761",
+                "className": "v110",
+                "children": [
+                  "김직원 · 개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:762",
+                "className": "v111",
+                "children": [
+                  "날짜 11.12  ·  실근로 8시간  ·  기록 상태 정상 · 상세 →"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:763",
+            "name": "정지훈 · 개발팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:764",
+                "className": "v110",
+                "children": [
+                  "정지훈 · 개발팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:765",
+                "className": "v111",
+                "children": [
+                  "날짜 11.10  ·  실근로 계산 보류  ·  기록 상태 퇴근 누락"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:766",
+            "name": "한서진 · 운영팀",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:767",
+                "className": "v110",
+                "children": [
+                  "한서진 · 운영팀"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:768",
+                "className": "v111",
+                "children": [
+                  "날짜 11.12  ·  실근로 8시간  ·  기록 상태 정정 이력 1건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:769",
+        "name": "선택 기록 · 원본과 정정 이력",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:770",
+            "className": "v108",
+            "children": [
+              "선택 기록 · 원본과 정정 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:771",
+            "name": "원본 이벤트",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:772",
+                "className": "v110",
+                "children": [
+                  "원본 이벤트"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:773",
+                "className": "v111",
+                "children": [
+                  "내용 출근 09:00 · 보존  ·  기록 시각 11.12 09:00  ·  근거 PC / IP 확인"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:774",
+            "name": "별도 정정 이력",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:775",
+                "className": "v110",
+                "children": [
+                  "별도 정정 이력"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:776",
+                "className": "v111",
+                "children": [
+                  "내용 퇴근 18:00 보완 · 예시  ·  기록 시각 11.13 10:00  ·  근거 정정 사유 기록"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:777",
+            "name": "파생 계산",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:778",
+                "className": "v110",
+                "children": [
+                  "파생 계산"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:779",
+                "className": "v111",
+                "children": [
+                  "내용 실근로 8시간 · 예시  ·  기록 시각 11.13 10:01  ·  근거 원본 + 정정 이력"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:780",
+        "name": "재계산 추적",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:781",
+            "className": "v124",
+            "children": [
+              "재계산 추적"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:782",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:783",
+                "name": "대상 기록",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:784",
+                    "className": "v24",
+                    "children": [
+                      "대상 기록"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:785",
+                    "name": "필드 · 대상 기록",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:786",
+                        "className": "v128",
+                        "children": [
+                          "한서진 · 2026.11.12"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:787",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:788",
+                "name": "정책·계산 버전",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:789",
+                    "className": "v24",
+                    "children": [
+                      "정책·계산 버전"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:790",
+                    "name": "필드 · 정책·계산 버전",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:791",
+                        "className": "v128",
+                        "children": [
+                          "기본 정책 / 예시 v2"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:792",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:793",
+                "name": "이전 계산",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:794",
+                    "className": "v24",
+                    "children": [
+                      "이전 계산"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:795",
+                    "name": "필드 · 이전 계산",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:796",
+                        "className": "v128",
+                        "children": [
+                          "예시 v1 · 보존"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:797",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:798",
+                "name": "확정 정산 영향",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:799",
+                    "className": "v24",
+                    "children": [
+                      "확정 정산 영향"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:800",
+                    "name": "필드 · 확정 정산 영향",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:801",
+                        "className": "v128",
+                        "children": [
+                          "원본 스냅샷 변경 없이 별도 조정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:802",
+        "name": "정정 승인 흐름은 결정 전입니다",
+        "className": "v112",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:803",
+            "className": "v113",
+            "children": [
+              "정정 승인 흐름은 결정 전입니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:804",
+            "className": "v114",
+            "children": [
+              "이력 표현을 위한 시안입니다. 승인·반려·즉시 덮어쓰기 기능을 확정하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:805",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

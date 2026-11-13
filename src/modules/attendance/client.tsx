@@ -7,7 +7,7 @@ const labels: Record<EventType, string> = { CLOCK_IN: "출근하기", CLOCK_OUT:
 const states = { NOT_STARTED: "출근 전", WORKING: "근무 중", ON_BREAK: "휴게 중", FINISHED: "퇴근 완료" };
 function duration(minutes: number) { return `${Math.floor(minutes / 60)}시간 ${Math.floor(minutes % 60)}분`; }
 function time(at: string) { return new Date(at).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" }); }
-export function AttendancePanel() {
+export function AttendancePanel({ onRecorded }: { onRecorded?: () => Promise<void> } = {}) {
   const [data, setData] = useState<Status>();
   const [place, setPlace] = useState("");
   const [error, setError] = useState("");
@@ -52,6 +52,7 @@ export function AttendancePanel() {
       }
       pending.current = null; setRetry(false); setNotice("기록했습니다.");
       await refresh();
+      await onRecorded?.();
     } catch (e) {
       setRetry(Boolean(pending.current));
       setError(e instanceof Error ? e.message : "GPS 위치 권한과 연결 상태를 확인하세요.");

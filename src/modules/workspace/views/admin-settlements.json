@@ -1,0 +1,1170 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:1647",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1648",
+        "className": "v76",
+        "children": [
+          "관리자  /  임금·정산  /  정산 목록·상세"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1649",
+        "className": "v77",
+        "children": [
+          "정산 목록·상세"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1650",
+        "className": "v78",
+        "children": [
+          "관리자 전용 · 계산 근거와 미확정 사유를 확인한 뒤 정산을 검토하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1651",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1652",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1653",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1654",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1655",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1656",
+            "name": "상태 전체",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1657",
+                "className": "v12",
+                "children": [
+                  "상태 전체"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1658",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1659",
+            "name": "대상 직원",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1660",
+                "className": "v82",
+                "children": [
+                  "대상 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1661",
+                "className": "v83",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1662",
+            "name": "계산 완료",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1663",
+                "className": "v82",
+                "children": [
+                  "계산 완료"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1664",
+                "className": "v83",
+                "children": [
+                  "45명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1665",
+            "name": "입력 확인",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1666",
+                "className": "v82",
+                "children": [
+                  "입력 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1667",
+                "className": "v83",
+                "children": [
+                  "3명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1668",
+            "name": "최종 금액",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1669",
+                "className": "v82",
+                "children": [
+                  "최종 금액"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1670",
+                "className": "v83",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1671",
+        "name": "정산 목록",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1672",
+            "className": "v85",
+            "children": [
+              "정산 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1673",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1674",
+                "className": "v153",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1676",
+                "className": "v153",
+                "children": [
+                  "상태"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1677",
+                "className": "v153",
+                "children": [
+                  "추가 지급액"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1678",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1679",
+                "className": "v158",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1681",
+                "className": "v159",
+                "children": [
+                  "정책 미확정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1682",
+                "className": "v159",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1683",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1684",
+                "className": "v158",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1686",
+                "className": "v159",
+                "children": [
+                  "정책 미확정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1687",
+                "className": "v159",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1688",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1689",
+                "className": "v158",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1691",
+                "className": "v159",
+                "children": [
+                  "입력 누락"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1692",
+                "className": "v159",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1693",
+        "name": "김직원 · 11월 정산 상세",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1694",
+            "className": "v85",
+            "children": [
+              "김직원 · 11월 정산 상세"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1695",
+            "className": "v160",
+            "children": [
+              "실제 연장 20시간 / 포괄 포함 16시간 / 추가 대상 4시간"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1696",
+            "className": "v122",
+            "children": [
+              "실제 근로시간에서 포괄 포함시간을 차감하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1697",
+        "name": "계산 근거 · 확정 전",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1698",
+            "className": "v85",
+            "children": [
+              "계산 근거 · 확정 전"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1699",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1700",
+                "className": "v153",
+                "children": [
+                  "항목"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1701",
+                "className": "v153",
+                "children": [
+                  "시간·배율"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1702",
+                "className": "v153",
+                "children": [
+                  "금액"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1703",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1704",
+                "className": "v154",
+                "children": [
+                  "일반 근로"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1705",
+                "className": "v155",
+                "children": [
+                  "시급 × 1.0"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1706",
+                "className": "v155",
+                "children": [
+                  "원본 구간 기준 산출"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1707",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1708",
+                "className": "v154",
+                "children": [
+                  "일반 연장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1709",
+                "className": "v155",
+                "children": [
+                  "시급 × 1.5"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1710",
+                "className": "v155",
+                "children": [
+                  "배정 정책 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1711",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1712",
+                "className": "v154",
+                "children": [
+                  "야간 연장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1713",
+                "className": "v155",
+                "children": [
+                  "연장이며 22:00 이후 × 2.0"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1714",
+                "className": "v155",
+                "children": [
+                  "배정 정책 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1715",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1716",
+                "className": "v154",
+                "children": [
+                  "휴일 구간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1717",
+                "className": "v155",
+                "children": [
+                  "시간만 별도 보존"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1718",
+                "className": "v155",
+                "children": [
+                  "배율 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1719",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1720",
+                "className": "v158",
+                "children": [
+                  "추가 지급액·총액"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1721",
+                "className": "v161",
+                "children": [
+                  "배정·비교 정책 필요"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1722",
+                "className": "v159",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1723",
+        "name": "정산 확정을 보류합니다",
+        "className": "v95",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1724",
+            "className": "v96",
+            "children": [
+              "정산 확정을 보류합니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1725",
+            "className": "v97",
+            "children": [
+              "포괄 배정 순서, 고정수당 비교, 휴일 배율, 반올림과 필수 입력을 확인해야 합니다. 미확정 금액을 0원으로 처리하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1726",
+        "name": "정산 검토",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1727",
+            "className": "v85",
+            "children": [
+              "정산 검토"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1728",
+            "className": "v162",
+            "children": [
+              "요약 Excel   /   상세 구간 Excel   /   계산 근거 보기"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1729",
+            "className": "v163",
+            "children": [
+              "확정 불가 · 정책 미정 및 입력 확인"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1730",
+            "className": "v122",
+            "children": [
+              "확정 이후 스냅샷은 유지하며 변경은 새 버전·별도 조정 이력으로 관리합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1731",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:1736",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1737",
+        "className": "v99",
+        "children": [
+          "관리자  /  임금·정산  /  정산 목록·상세"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1738",
+        "className": "v100",
+        "children": [
+          "정산 목록·상세"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1739",
+        "className": "v101",
+        "children": [
+          "관리자 전용 · 계산 근거와 미확정 사유를 확인한 뒤 정산을 검토하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1740",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1741",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1742",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1743",
+            "name": "전체 부서",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1744",
+                "className": "v12",
+                "children": [
+                  "전체 부서"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1745",
+            "name": "상태 전체",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1746",
+                "className": "v12",
+                "children": [
+                  "상태 전체"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1747",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1748",
+            "name": "대상 직원",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1749",
+                "className": "v105",
+                "children": [
+                  "대상 직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1750",
+                "className": "v106",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1751",
+            "name": "계산 완료",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1752",
+                "className": "v105",
+                "children": [
+                  "계산 완료"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1753",
+                "className": "v106",
+                "children": [
+                  "45명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1754",
+            "name": "입력 확인",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1755",
+                "className": "v105",
+                "children": [
+                  "입력 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1756",
+                "className": "v106",
+                "children": [
+                  "3명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1757",
+            "name": "최종 금액",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1758",
+                "className": "v105",
+                "children": [
+                  "최종 금액"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1759",
+                "className": "v106",
+                "children": [
+                  "미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1760",
+        "name": "정산 목록",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1761",
+            "className": "v108",
+            "children": [
+              "정산 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1762",
+            "name": "김직원",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1763",
+                "className": "v110",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1764",
+                "className": "v111",
+                "children": [
+                  "상태 정책 미확정  ·  추가 지급액 미확정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1765",
+            "name": "이서연",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1766",
+                "className": "v110",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1767",
+                "className": "v111",
+                "children": [
+                  "상태 정책 미확정  ·  추가 지급액 미확정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1768",
+            "name": "정지훈",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1769",
+                "className": "v110",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1770",
+                "className": "v111",
+                "children": [
+                  "상태 입력 누락  ·  추가 지급액 미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1771",
+        "name": "김직원 · 11월 정산 상세",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1772",
+            "className": "v108",
+            "children": [
+              "김직원 · 11월 정산 상세"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1773",
+            "className": "v164",
+            "children": [
+              "실제 연장 20시간 / 포괄 포함 16시간 / 추가 대상 4시간"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1774",
+            "className": "v130",
+            "children": [
+              "실제 근로시간에서 포괄 포함시간을 차감하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1775",
+        "name": "계산 근거 · 확정 전",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1776",
+            "className": "v108",
+            "children": [
+              "계산 근거 · 확정 전"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1777",
+            "name": "일반 근로",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1778",
+                "className": "v110",
+                "children": [
+                  "일반 근로"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1779",
+                "className": "v111",
+                "children": [
+                  "시간·배율 시급 × 1.0  ·  금액 원본 구간 기준 산출"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1780",
+            "name": "일반 연장",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1781",
+                "className": "v110",
+                "children": [
+                  "일반 연장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1782",
+                "className": "v111",
+                "children": [
+                  "시간·배율 시급 × 1.5  ·  금액 배정 정책 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1783",
+            "name": "야간 연장",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1784",
+                "className": "v110",
+                "children": [
+                  "야간 연장"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1785",
+                "className": "v111",
+                "children": [
+                  "시간·배율 연장이며 22:00 이후 × 2.0  ·  금액 배정 정책 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1786",
+            "name": "휴일 구간",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1787",
+                "className": "v110",
+                "children": [
+                  "휴일 구간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1788",
+                "className": "v111",
+                "children": [
+                  "시간·배율 시간만 별도 보존  ·  금액 배율 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1789",
+            "name": "추가 지급액·총액",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1790",
+                "className": "v110",
+                "children": [
+                  "추가 지급액·총액"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1791",
+                "className": "v111",
+                "children": [
+                  "시간·배율 배정·비교 정책 필요  ·  금액 미확정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1792",
+        "name": "정산 확정을 보류합니다",
+        "className": "v112",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1793",
+            "className": "v113",
+            "children": [
+              "정산 확정을 보류합니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1794",
+            "className": "v114",
+            "children": [
+              "포괄 배정 순서, 고정수당 비교, 휴일 배율, 반올림과 필수 입력을 확인해야 합니다. 미확정 금액을 0원으로 처리하지 않습니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1795",
+        "name": "정산 검토",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1796",
+            "className": "v108",
+            "children": [
+              "정산 검토"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1797",
+            "className": "v165",
+            "children": [
+              "요약 Excel   /   상세 구간 Excel   /   계산 근거 보기"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1798",
+            "className": "v166",
+            "children": [
+              "확정 불가 · 정책 미정 및 입력 확인"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1799",
+            "className": "v130",
+            "children": [
+              "확정 이후 스냅샷은 유지하며 변경은 새 버전·별도 조정 이력으로 관리합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1800",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+.workspace-design .v0 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; align-items: flex-start; position: relative; width: 100%; min-height: 100vh; }
+.workspace-design .v1 { overflow-wrap: break-word; background-color: #fff; align-content: stretch; display: flex; gap: 40px; align-items: flex-start; line-height: 1.5; padding: 28px; position: relative; flex-shrink: 0; width: 100%; }
+.workspace-design .v2 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 24px; white-space: nowrap; }
+.workspace-design .v3 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 13px; white-space: nowrap; }
+.workspace-design .v4 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 13px; white-space: nowrap; }
+.workspace-design .v5 { flex: 1 0 0; font-weight: 400; min-width: 1px; position: relative; color: #657583; font-size: 12px; text-align: right; }
+.workspace-design .v6 { align-content: stretch; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; padding: 64px; position: relative; flex-shrink: 0; width: 1440px; }
+.workspace-design .v7 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #243e73; font-size: 11px; white-space: nowrap; }
+.workspace-design .v8 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 32px; white-space: nowrap; }
+.workspace-design .v9 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 13px; width: 1312px; white-space: pre-wrap; }
+.workspace-design .v10 { align-content: stretch; display: flex; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; }
+.workspace-design .v11 { background-color: #edf1f9; align-content: stretch; display: flex; align-items: flex-start; padding: 10px; position: relative; border-radius: 8px; flex-shrink: 0; }
+.workspace-design .v12 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #243e73; font-size: 12px; white-space: nowrap; }
+.workspace-design .v13 { overflow-wrap: break-word; align-content: stretch; display: flex; gap: 16px; align-items: flex-start; line-height: 1.5; position: relative; flex-shrink: 0; }
+.workspace-design .v14 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 316px; }
+.workspace-design .v15 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; white-space: nowrap; }
+.workspace-design .v16 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 28px; white-space: nowrap; }
+.workspace-design .v17 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 268px; }
+.workspace-design .v18 { overflow-wrap: break-word; background-color: #fff8ec; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; border-radius: 12px; flex-shrink: 0; color: #805c1c; width: 1312px; }
+.workspace-design .v19 { font-weight: 700; position: relative; flex-shrink: 0; font-size: 14px; width: 1272px; }
+.workspace-design .v20 { font-weight: 400; position: relative; flex-shrink: 0; font-size: 12px; width: 1272px; }
+.workspace-design .v21 { align-content: stretch; display: flex; gap: 24px; align-items: flex-start; position: relative; flex-shrink: 0; }
+.workspace-design .v22 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 820px; }
+.workspace-design .v23 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; white-space: nowrap; }
+.workspace-design .v24 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; white-space: nowrap; }
+.workspace-design .v25 { align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; position: relative; flex-shrink: 0; width: 772px; }
+.workspace-design .v26 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 12px; white-space: pre; }
+.workspace-design .v27 { background-color: #edf1f9; align-content: stretch; display: flex; height: 10px; align-items: flex-start; position: relative; border-radius: 5px; flex-shrink: 0; width: 772px; }
+.workspace-design .v28 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 479.927px; }
+.workspace-design .v29 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 527.533px; }
+.workspace-design .v30 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #805c1c; font-size: 12px; white-space: pre; }
+.workspace-design .v31 { background-color: #9b752c; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 681.933px; }
+.workspace-design .v32 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 411.733px; }
+.workspace-design .v33 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; line-height: 1.5; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 468px; }
+.workspace-design .v34 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 14px; white-space: nowrap; }
+.workspace-design .v35 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 13px; white-space: nowrap; }
+.workspace-design .v36 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 420px; }
+.workspace-design .v37 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; line-height: 1.5; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 1312px; }
+.workspace-design .v38 { align-content: stretch; display: flex; font-weight: 700; gap: 20px; align-items: flex-start; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; }
+.workspace-design .v39 { position: relative; flex-shrink: 0; width: 236.8px; }
+.workspace-design .v40 { align-content: stretch; display: flex; gap: 20px; align-items: flex-start; position: relative; flex-shrink: 0; color: #172c3c; font-size: 13px; }
+.workspace-design .v41 { font-weight: 700; position: relative; flex-shrink: 0; width: 236.8px; }
+.workspace-design .v42 { font-weight: 400; position: relative; flex-shrink: 0; width: 236.8px; }
+.workspace-design .v43 { align-content: stretch; display: flex; gap: 20px; align-items: flex-start; position: relative; flex-shrink: 0; font-size: 13px; }
+.workspace-design .v44 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; width: 236.8px; }
+.workspace-design .v45 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; width: 236.8px; }
+.workspace-design .v46 { font-weight: 400; position: relative; flex-shrink: 0; color: #805c1c; width: 236.8px; }
+.workspace-design .v47 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 11px; width: 1312px; }
+.workspace-design .v48 { overflow-wrap: break-word; background-color: #fff; align-content: stretch; display: flex; flex-direction: column; font-weight: 700; gap: 12px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; flex-shrink: 0; color: #243e73; width: 390px; }
+.workspace-design .v49 { position: relative; flex-shrink: 0; font-size: 24px; white-space: nowrap; }
+.workspace-design .v50 { position: relative; flex-shrink: 0; font-size: 12px; width: 350px; white-space: pre-wrap; }
+.workspace-design .v51 { align-content: stretch; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; padding: 20px; position: relative; flex-shrink: 0; width: 390px; }
+.workspace-design .v52 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 28px; white-space: nowrap; }
+.workspace-design .v53 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 13px; width: 350px; white-space: pre-wrap; }
+.workspace-design .v54 { align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; width: 350px; }
+.workspace-design .v55 { overflow-wrap: break-word; align-content: stretch; display: flex; font-weight: 700; gap: 6px; align-items: flex-start; line-height: 1.5; position: relative; flex-shrink: 0; text-align: center; width: 350px; }
+.workspace-design .v56 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: center; padding-left: 6px; padding-right: 6px; padding-top: 12px; padding-bottom: 12px; position: relative; border-radius: 10px; flex-shrink: 0; width: 83px; }
+.workspace-design .v57 { position: relative; flex-shrink: 0; color: #172c3c; font-size: 10px; width: 71px; }
+.workspace-design .v58 { position: relative; flex-shrink: 0; color: #243e73; font-size: 22px; width: 71px; }
+.workspace-design .v59 { overflow-wrap: break-word; background-color: #fff8ec; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; border-radius: 12px; flex-shrink: 0; color: #805c1c; width: 350px; }
+.workspace-design .v60 { font-weight: 700; position: relative; flex-shrink: 0; font-size: 14px; width: 310px; }
+.workspace-design .v61 { font-weight: 400; position: relative; flex-shrink: 0; font-size: 12px; width: 310px; }
+.workspace-design .v62 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 350px; }
+.workspace-design .v63 { align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; position: relative; flex-shrink: 0; width: 302px; }
+.workspace-design .v64 { background-color: #edf1f9; align-content: stretch; display: flex; height: 10px; align-items: flex-start; position: relative; border-radius: 5px; flex-shrink: 0; width: 302px; }
+.workspace-design .v65 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 187.743px; }
+.workspace-design .v66 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 206.367px; }
+.workspace-design .v67 { background-color: #9b752c; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 266.767px; }
+.workspace-design .v68 { background-color: #243e73; height: 10px; position: relative; border-radius: 5px; flex-shrink: 0; width: 161.067px; }
+.workspace-design .v69 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; line-height: 1.5; padding: 24px; position: relative; border-radius: 14px; flex-shrink: 0; width: 350px; }
+.workspace-design .v70 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 302px; }
+.workspace-design .v71 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; padding: 14px; position: relative; border-radius: 10px; flex-shrink: 0; width: 302px; }
+.workspace-design .v72 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 15px; white-space: nowrap; }
+.workspace-design .v73 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 12px; width: 274px; white-space: pre-wrap; }
+.workspace-design .v74 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 11px; width: 350px; }
+.workspace-design .v75 { overflow-wrap: break-word; background-color: #fff; align-content: stretch; display: flex; gap: 36px; align-items: flex-start; line-height: 1.5; padding: 28px; position: relative; flex-shrink: 0; width: 100%; }
+.workspace-design .v76 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 11px; width: 1312px; white-space: pre-wrap; }
+.workspace-design .v77 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 32px; width: 1312px; }
+.workspace-design .v78 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 13px; width: 1312px; }
+.workspace-design .v79 { align-content: stretch; display: flex; gap: 12px; align-items: flex-start; position: relative; flex-shrink: 0; }
+.workspace-design .v80 { overflow-wrap: break-word; align-content: stretch; display: flex; font-weight: 700; gap: 16px; align-items: flex-start; line-height: 1.5; position: relative; flex-shrink: 0; }
+.workspace-design .v81 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 20px; position: relative; border-radius: 10px; flex-shrink: 0; width: 316px; }
+.workspace-design .v82 { position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 276px; }
+.workspace-design .v83 { position: relative; flex-shrink: 0; color: #243e73; font-size: 28px; width: 276px; }
+.workspace-design .v84 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; border-radius: 14px; flex-shrink: 0; width: 1312px; }
+.workspace-design .v85 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; width: 1272px; }
+.workspace-design .v86 { align-content: stretch; display: flex; font-weight: 700; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; }
+.workspace-design .v87 { position: relative; flex-shrink: 0; width: 306px; }
+.workspace-design .v88 { align-content: stretch; display: flex; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; color: #172c3c; font-size: 13px; }
+.workspace-design .v89 { font-weight: 700; position: relative; flex-shrink: 0; width: 306px; }
+.workspace-design .v90 { font-weight: 400; position: relative; flex-shrink: 0; width: 306px; }
+.workspace-design .v91 { align-content: stretch; display: flex; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; font-size: 13px; }
+.workspace-design .v92 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; width: 306px; }
+.workspace-design .v93 { font-weight: 400; position: relative; flex-shrink: 0; color: #805c1c; width: 306px; }
+.workspace-design .v94 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; width: 306px; }
+.workspace-design .v95 { overflow-wrap: break-word; background-color: #fff8ec; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; line-height: 1.5; padding: 16px; position: relative; border-radius: 10px; flex-shrink: 0; color: #805c1c; width: 1312px; }
+.workspace-design .v96 { font-weight: 700; position: relative; flex-shrink: 0; font-size: 14px; width: 1280px; }
+.workspace-design .v97 { font-weight: 400; position: relative; flex-shrink: 0; font-size: 12px; width: 1280px; }
+.workspace-design .v98 { overflow-wrap: break-word; background-color: #fff; align-content: stretch; display: flex; flex-direction: column; font-weight: 700; gap: 10px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; flex-shrink: 0; color: #243e73; width: 390px; }
+.workspace-design .v99 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 11px; width: 350px; white-space: pre-wrap; }
+.workspace-design .v100 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 26px; width: 350px; }
+.workspace-design .v101 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #657583; font-size: 13px; width: 350px; }
+.workspace-design .v102 { align-content: stretch; display: flex; flex-direction: column; gap: 8px; align-items: flex-start; position: relative; flex-shrink: 0; width: 350px; }
+.workspace-design .v103 { overflow-wrap: break-word; align-content: stretch; display: flex; font-weight: 700; gap: 6px; align-items: flex-start; line-height: 1.5; position: relative; flex-shrink: 0; }
+.workspace-design .v104 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 6px; position: relative; border-radius: 10px; flex-shrink: 0; width: 83px; }
+.workspace-design .v105 { position: relative; flex-shrink: 0; color: #657583; font-size: 10px; width: 71px; }
+.workspace-design .v106 { position: relative; flex-shrink: 0; color: #243e73; font-size: 19px; width: 71px; }
+.workspace-design .v107 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; border-radius: 14px; flex-shrink: 0; width: 350px; }
+.workspace-design .v108 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; width: 310px; }
+.workspace-design .v109 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 12px; position: relative; border-radius: 8px; flex-shrink: 0; width: 310px; }
+.workspace-design .v110 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 14px; width: 286px; }
+.workspace-design .v111 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 12px; width: 286px; white-space: pre-wrap; }
+.workspace-design .v112 { overflow-wrap: break-word; background-color: #fff8ec; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; line-height: 1.5; padding: 16px; position: relative; border-radius: 10px; flex-shrink: 0; color: #805c1c; width: 350px; }
+.workspace-design .v113 { font-weight: 700; position: relative; flex-shrink: 0; font-size: 14px; width: 318px; }
+.workspace-design .v114 { font-weight: 400; position: relative; flex-shrink: 0; font-size: 12px; width: 318px; }
+.workspace-design .v115 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; padding: 20px; position: relative; border-radius: 14px; flex-shrink: 0; width: 1312px; }
+.workspace-design .v116 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; width: 1272px; }
+.workspace-design .v117 { align-content: stretch; display: flex; gap: 20px; align-items: flex-start; position: relative; flex-shrink: 0; }
+.workspace-design .v118 { align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; position: relative; flex-shrink: 0; width: 626px; }
+.workspace-design .v119 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; align-items: flex-start; padding: 12px; position: relative; border-radius: 8px; flex-shrink: 0; width: 626px; }
+.workspace-design .v120 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 602px; }
+.workspace-design .v121 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 1272px; }
+.workspace-design .v122 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 1272px; }
+.workspace-design .v123 { background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; padding: 20px; position: relative; border-radius: 14px; flex-shrink: 0; width: 350px; }
+.workspace-design .v124 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 16px; width: 310px; }
+.workspace-design .v125 { align-content: stretch; display: flex; flex-direction: column; align-items: flex-start; position: relative; flex-shrink: 0; width: 310px; }
+.workspace-design .v126 { align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; position: relative; flex-shrink: 0; width: 310px; }
+.workspace-design .v127 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; align-items: flex-start; padding: 12px; position: relative; border-radius: 8px; flex-shrink: 0; width: 310px; }
+.workspace-design .v128 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 286px; }
+.workspace-design .v129 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 310px; }
+.workspace-design .v130 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 310px; }
+.workspace-design .v131 { align-content: stretch; display: flex; gap: 8px; align-items: flex-start; position: relative; flex-shrink: 0; }
+.workspace-design .v132 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding: 12px; position: relative; border-radius: 8px; flex-shrink: 0; width: 174.857px; }
+.workspace-design .v133 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 12px; width: 150.857px; }
+.workspace-design .v134 { overflow-wrap: break-word; background-color: #fff; border-width: 1px; border-color: #e3e9ed; border-style: solid; align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; line-height: 1.5; padding: 20px; position: relative; border-radius: 14px; flex-shrink: 0; color: #172c3c; width: 350px; }
+.workspace-design .v135 { font-weight: 700; position: relative; flex-shrink: 0; font-size: 16px; width: 310px; }
+.workspace-design .v136 { font-weight: 400; position: relative; flex-shrink: 0; font-size: 13px; width: 310px; white-space: pre-wrap; }
+.workspace-design .v137 { background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; padding: 16px; position: relative; border-radius: 10px; flex-shrink: 0; width: 622px; }
+.workspace-design .v138 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 590px; }
+.workspace-design .v139 { align-content: stretch; display: flex; gap: 32px; align-items: flex-start; position: relative; flex-shrink: 0; white-space: nowrap; }
+.workspace-design .v140 { align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; position: relative; flex-shrink: 0; width: 270px; }
+.workspace-design .v141 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; }
+.workspace-design .v142 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 18px; }
+.workspace-design .v143 { font-weight: 700; position: relative; flex-shrink: 0; color: #805c1c; font-size: 18px; }
+.workspace-design .v144 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 13px; width: 1264px; }
+.workspace-design .v145 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 1264px; }
+.workspace-design .v146 { align-content: stretch; display: flex; flex-direction: column; align-items: flex-start; position: relative; flex-shrink: 0; width: 302px; }
+.workspace-design .v147 { overflow-wrap: break-word; background-color: #f4f6f8; align-content: stretch; display: flex; flex-direction: column; gap: 6px; align-items: flex-start; line-height: 1.5; padding: 16px; position: relative; border-radius: 10px; flex-shrink: 0; width: 302px; }
+.workspace-design .v148 { font-weight: 400; position: relative; flex-shrink: 0; color: #657583; font-size: 12px; width: 270px; }
+.workspace-design .v149 { align-content: stretch; display: flex; flex-direction: column; gap: 16px; align-items: flex-start; position: relative; flex-shrink: 0; width: 302px; white-space: nowrap; }
+.workspace-design .v150 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; font-size: 13px; width: 302px; }
+.workspace-design .v151 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 1272px; }
+.workspace-design .v152 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #243e73; font-size: 14px; width: 1272px; }
+.workspace-design .v153 { position: relative; flex-shrink: 0; width: 413.333px; }
+.workspace-design .v154 { font-weight: 700; position: relative; flex-shrink: 0; width: 413.333px; }
+.workspace-design .v155 { font-weight: 400; position: relative; flex-shrink: 0; width: 413.333px; }
+.workspace-design .v156 { overflow-wrap: break-word; font-weight: 400; line-height: 1.5; position: relative; flex-shrink: 0; color: #172c3c; font-size: 14px; width: 310px; }
+.workspace-design .v157 { overflow-wrap: break-word; font-weight: 700; line-height: 1.5; position: relative; flex-shrink: 0; color: #243e73; font-size: 14px; width: 310px; }
+.workspace-design .v158 { font-weight: 700; position: relative; flex-shrink: 0; color: #172c3c; width: 413.333px; }
+.workspace-design .v159 { font-weight: 400; position: relative; flex-shrink: 0; color: #805c1c; width: 413.333px; }
+.workspace-design .v160 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 20px; width: 1272px; }
+.workspace-design .v161 { font-weight: 400; position: relative; flex-shrink: 0; color: #172c3c; width: 413.333px; }
+.workspace-design .v162 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 13px; width: 1272px; white-space: pre-wrap; }
+.workspace-design .v163 { font-weight: 700; position: relative; flex-shrink: 0; color: #805c1c; font-size: 14px; width: 1272px; }
+.workspace-design .v164 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 14px; width: 310px; }
+.workspace-design .v165 { font-weight: 700; position: relative; flex-shrink: 0; color: #243e73; font-size: 13px; width: 310px; white-space: pre-wrap; }
+.workspace-design .v166 { font-weight: 700; position: relative; flex-shrink: 0; color: #805c1c; font-size: 14px; width: 310px; }

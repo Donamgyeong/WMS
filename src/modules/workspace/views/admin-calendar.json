@@ -1,0 +1,1402 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:1253",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1254",
+        "className": "v76",
+        "children": [
+          "관리자  /  휴일  /  휴일·개인 일정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1255",
+        "className": "v77",
+        "children": [
+          "휴일·개인 일정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1256",
+        "className": "v78",
+        "children": [
+          "휴일 종류와 직원별 근무·휴무 일정을 구분해 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1257",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1258",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1259",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1260",
+            "name": "회사 캘린더",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1261",
+                "className": "v12",
+                "children": [
+                  "회사 캘린더"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1262",
+            "name": "개인 일정",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1263",
+                "className": "v12",
+                "children": [
+                  "개인 일정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1264",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1265",
+            "name": "회사 휴일",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1266",
+                "className": "v82",
+                "children": [
+                  "회사 휴일"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1267",
+                "className": "v83",
+                "children": [
+                  "1일"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1268",
+            "name": "개인 일정",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1269",
+                "className": "v82",
+                "children": [
+                  "개인 일정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1270",
+                "className": "v83",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1271",
+            "name": "휴가 연동",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1272",
+                "className": "v82",
+                "children": [
+                  "휴가 연동"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1273",
+                "className": "v83",
+                "children": [
+                  "검토 중"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1274",
+            "name": "수집 방식",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1275",
+                "className": "v82",
+                "children": [
+                  "수집 방식"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1276",
+                "className": "v83",
+                "children": [
+                  "미정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1277",
+        "name": "회사 캘린더 · 휴일 목록",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1278",
+            "className": "v85",
+            "children": [
+              "회사 캘린더 · 휴일 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1279",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1280",
+                "className": "v87",
+                "children": [
+                  "날짜"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1281",
+                "className": "v87",
+                "children": [
+                  "이름"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1282",
+                "className": "v87",
+                "children": [
+                  "종류"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1283",
+                "className": "v87",
+                "children": [
+                  "적용"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1284",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1285",
+                "className": "v89",
+                "children": [
+                  "11.27"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1286",
+                "className": "v90",
+                "children": [
+                  "회사 창립기념일 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1287",
+                "className": "v90",
+                "children": [
+                  "회사 지정 휴일"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1288",
+                "className": "v90",
+                "children": [
+                  "회사 캘린더"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1289",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1290",
+                "className": "v89",
+                "children": [
+                  "—"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1291",
+                "className": "v90",
+                "children": [
+                  "공휴일·대체공휴일"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1292",
+                "className": "v90",
+                "children": [
+                  "공급원 결정 필요"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1293",
+                "className": "v90",
+                "children": [
+                  "미수집"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1294",
+        "name": "휴일 등록 시안",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1295",
+            "className": "v116",
+            "children": [
+              "휴일 등록 시안"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1296",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1297",
+                "name": "이름",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1298",
+                    "className": "v24",
+                    "children": [
+                      "이름"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1299",
+                    "name": "필드 · 이름",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1300",
+                        "className": "v120",
+                        "children": [
+                          "회사 창립기념일 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1301",
+                "name": "날짜",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1302",
+                    "className": "v24",
+                    "children": [
+                      "날짜"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1303",
+                    "name": "필드 · 날짜",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1304",
+                        "className": "v120",
+                        "children": [
+                          "2026.11.27"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1305",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1306",
+                "name": "종류",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1307",
+                    "className": "v24",
+                    "children": [
+                      "종류"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1308",
+                    "name": "필드 · 종류",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1309",
+                        "className": "v120",
+                        "children": [
+                          "회사 지정 휴일"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1310",
+                "name": "캘린더",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1311",
+                    "className": "v24",
+                    "children": [
+                      "캘린더"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1312",
+                    "name": "필드 · 캘린더",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1313",
+                        "className": "v120",
+                        "children": [
+                          "회사 공통"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1314",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1315",
+                "name": "적용 범위",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1316",
+                    "className": "v24",
+                    "children": [
+                      "적용 범위"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1317",
+                    "name": "필드 · 적용 범위",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1318",
+                        "className": "v120",
+                        "children": [
+                          "직원 캘린더 배정 기준"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1319",
+                "name": "근로 가산율",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1320",
+                    "className": "v24",
+                    "children": [
+                      "근로 가산율"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1321",
+                    "name": "필드 · 근로 가산율",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1322",
+                        "className": "v120",
+                        "children": [
+                          "미정 · 자동 적용 안 함"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1323",
+        "name": "직원별 근무·휴무",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1324",
+            "className": "v85",
+            "children": [
+              "직원별 근무·휴무"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1325",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1326",
+                "className": "v87",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1327",
+                "className": "v87",
+                "children": [
+                  "날짜"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1328",
+                "className": "v87",
+                "children": [
+                  "일정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1329",
+                "className": "v87",
+                "children": [
+                  "캘린더"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1330",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1331",
+                "className": "v89",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1332",
+                "className": "v90",
+                "children": [
+                  "11.14"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1333",
+                "className": "v90",
+                "children": [
+                  "개인 휴무"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1334",
+                "className": "v90",
+                "children": [
+                  "개인 일정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1335",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1336",
+                "className": "v89",
+                "children": [
+                  "박민수"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1337",
+                "className": "v90",
+                "children": [
+                  "11.14"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1338",
+                "className": "v90",
+                "children": [
+                  "근무일 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1339",
+                "className": "v90",
+                "children": [
+                  "개인 일정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1340",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1341",
+                "className": "v89",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1342",
+                "className": "v90",
+                "children": [
+                  "11.27"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1343",
+                "className": "v90",
+                "children": [
+                  "회사 휴일"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1344",
+                "className": "v90",
+                "children": [
+                  "회사 캘린더"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1345",
+        "name": "휴일과 개인 휴무는 별도입니다",
+        "className": "v95",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1346",
+            "className": "v96",
+            "children": [
+              "휴일과 개인 휴무는 별도입니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1347",
+            "className": "v97",
+            "children": [
+              "토·일 일괄 휴일 처리와 미정인 휴일근로 배율 적용을 하지 않습니다. 공휴일 수집 방식과 다우오피스 연동은 검토 중입니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1348",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:1353",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1354",
+        "className": "v99",
+        "children": [
+          "관리자  /  휴일  /  휴일·개인 일정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1355",
+        "className": "v100",
+        "children": [
+          "휴일·개인 일정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1356",
+        "className": "v101",
+        "children": [
+          "휴일 종류와 직원별 근무·휴무 일정을 구분해 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1357",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1358",
+            "name": "2026년 11월",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1359",
+                "className": "v12",
+                "children": [
+                  "2026년 11월"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1360",
+            "name": "회사 캘린더",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1361",
+                "className": "v12",
+                "children": [
+                  "회사 캘린더"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1362",
+            "name": "개인 일정",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1363",
+                "className": "v12",
+                "children": [
+                  "개인 일정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1364",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1365",
+            "name": "회사 휴일",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1366",
+                "className": "v105",
+                "children": [
+                  "회사 휴일"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1367",
+                "className": "v106",
+                "children": [
+                  "1일"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1368",
+            "name": "개인 일정",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1369",
+                "className": "v105",
+                "children": [
+                  "개인 일정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1370",
+                "className": "v106",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1371",
+            "name": "휴가 연동",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1372",
+                "className": "v105",
+                "children": [
+                  "휴가 연동"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1373",
+                "className": "v106",
+                "children": [
+                  "검토 중"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1374",
+            "name": "수집 방식",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1375",
+                "className": "v105",
+                "children": [
+                  "수집 방식"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1376",
+                "className": "v106",
+                "children": [
+                  "미정"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1377",
+        "name": "회사 캘린더 · 휴일 목록",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1378",
+            "className": "v108",
+            "children": [
+              "회사 캘린더 · 휴일 목록"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1379",
+            "name": "11.27",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1380",
+                "className": "v110",
+                "children": [
+                  "11.27"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1381",
+                "className": "v111",
+                "children": [
+                  "이름 회사 창립기념일 · 예시  ·  종류 회사 지정 휴일  ·  적용 회사 캘린더"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1382",
+            "name": "—",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1383",
+                "className": "v110",
+                "children": [
+                  "—"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1384",
+                "className": "v111",
+                "children": [
+                  "이름 공휴일·대체공휴일  ·  종류 공급원 결정 필요  ·  적용 미수집"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1385",
+        "name": "휴일 등록 시안",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1386",
+            "className": "v124",
+            "children": [
+              "휴일 등록 시안"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1387",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1388",
+                "name": "이름",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1389",
+                    "className": "v24",
+                    "children": [
+                      "이름"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1390",
+                    "name": "필드 · 이름",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1391",
+                        "className": "v128",
+                        "children": [
+                          "회사 창립기념일 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1392",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1393",
+                "name": "날짜",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1394",
+                    "className": "v24",
+                    "children": [
+                      "날짜"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1395",
+                    "name": "필드 · 날짜",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1396",
+                        "className": "v128",
+                        "children": [
+                          "2026.11.27"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1397",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1398",
+                "name": "종류",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1399",
+                    "className": "v24",
+                    "children": [
+                      "종류"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1400",
+                    "name": "필드 · 종류",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1401",
+                        "className": "v128",
+                        "children": [
+                          "회사 지정 휴일"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1402",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1403",
+                "name": "캘린더",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1404",
+                    "className": "v24",
+                    "children": [
+                      "캘린더"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1405",
+                    "name": "필드 · 캘린더",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1406",
+                        "className": "v128",
+                        "children": [
+                          "회사 공통"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1407",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1408",
+                "name": "적용 범위",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1409",
+                    "className": "v24",
+                    "children": [
+                      "적용 범위"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1410",
+                    "name": "필드 · 적용 범위",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1411",
+                        "className": "v128",
+                        "children": [
+                          "직원 캘린더 배정 기준"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1412",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1413",
+                "name": "근로 가산율",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1414",
+                    "className": "v24",
+                    "children": [
+                      "근로 가산율"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1415",
+                    "name": "필드 · 근로 가산율",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1416",
+                        "className": "v128",
+                        "children": [
+                          "미정 · 자동 적용 안 함"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1417",
+        "name": "직원별 근무·휴무",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1418",
+            "className": "v108",
+            "children": [
+              "직원별 근무·휴무"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1419",
+            "name": "김직원",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1420",
+                "className": "v110",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1421",
+                "className": "v111",
+                "children": [
+                  "날짜 11.14  ·  일정 개인 휴무  ·  캘린더 개인 일정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1422",
+            "name": "박민수",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1423",
+                "className": "v110",
+                "children": [
+                  "박민수"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1424",
+                "className": "v111",
+                "children": [
+                  "날짜 11.14  ·  일정 근무일 · 예시  ·  캘린더 개인 일정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1425",
+            "name": "김직원",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1426",
+                "className": "v110",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1427",
+                "className": "v111",
+                "children": [
+                  "날짜 11.27  ·  일정 회사 휴일  ·  캘린더 회사 캘린더"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1428",
+        "name": "휴일과 개인 휴무는 별도입니다",
+        "className": "v112",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1429",
+            "className": "v113",
+            "children": [
+              "휴일과 개인 휴무는 별도입니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1430",
+            "className": "v114",
+            "children": [
+              "토·일 일괄 휴일 처리와 미정인 휴일근로 배율 적용을 하지 않습니다. 공휴일 수집 방식과 다우오피스 연동은 검토 중입니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1431",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

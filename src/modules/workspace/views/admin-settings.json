@@ -1,0 +1,1746 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:1021",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1022",
+        "className": "v76",
+        "children": [
+          "관리자  /  근무 설정  /  근무 설정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1023",
+        "className": "v77",
+        "children": [
+          "근무 설정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1024",
+        "className": "v78",
+        "children": [
+          "정책 적용 기간과 근무지 검증 조건을 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1025",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1026",
+            "name": "근무 정책",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1027",
+                "className": "v12",
+                "children": [
+                  "근무 정책"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1028",
+            "name": "근무지·IP",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1029",
+                "className": "v12",
+                "children": [
+                  "근무지·IP"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1030",
+            "name": "적용 이력",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1031",
+                "className": "v12",
+                "children": [
+                  "적용 이력"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1032",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1033",
+            "name": "정책",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1034",
+                "className": "v82",
+                "children": [
+                  "정책"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1035",
+                "className": "v83",
+                "children": [
+                  "1개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1036",
+            "name": "근무지",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1037",
+                "className": "v82",
+                "children": [
+                  "근무지"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1038",
+                "className": "v83",
+                "children": [
+                  "2개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1039",
+            "name": "허용 IP",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1040",
+                "className": "v82",
+                "children": [
+                  "허용 IP"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1041",
+                "className": "v83",
+                "children": [
+                  "3개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1042",
+            "name": "미정 항목",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1043",
+                "className": "v82",
+                "children": [
+                  "미정 항목"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1044",
+                "className": "v83",
+                "children": [
+                  "8건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1045",
+        "name": "기본 근무 정책",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1046",
+            "className": "v116",
+            "children": [
+              "기본 근무 정책"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1047",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1048",
+                "name": "정책명",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1049",
+                    "className": "v24",
+                    "children": [
+                      "정책명"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1050",
+                    "name": "필드 · 정책명",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1051",
+                        "className": "v120",
+                        "children": [
+                          "기본 근무"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1052",
+                "name": "적용 기간",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1053",
+                    "className": "v24",
+                    "children": [
+                      "적용 기간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1054",
+                    "name": "필드 · 적용 기간",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1055",
+                        "className": "v120",
+                        "children": [
+                          "2026.01.01 – 종료 없음 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1056",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1057",
+                "name": "자율 출근",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1058",
+                    "className": "v24",
+                    "children": [
+                      "자율 출근"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1059",
+                    "name": "필드 · 자율 출근",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1060",
+                        "className": "v120",
+                        "children": [
+                          "08:00 – 10:00"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1061",
+                "name": "의무 실근로",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1062",
+                    "className": "v24",
+                    "children": [
+                      "의무 실근로"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1063",
+                    "name": "필드 · 의무 실근로",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1064",
+                        "className": "v120",
+                        "children": [
+                          "8시간"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1065",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1066",
+                "name": "기본 휴게",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1067",
+                    "className": "v24",
+                    "children": [
+                      "기본 휴게"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1068",
+                    "name": "필드 · 기본 휴게",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1069",
+                        "className": "v120",
+                        "children": [
+                          "1시간"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1070",
+                "name": "반차 의무 실근로",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1071",
+                    "className": "v24",
+                    "children": [
+                      "반차 의무 실근로"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1072",
+                    "name": "필드 · 반차 의무 실근로",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1073",
+                        "className": "v120",
+                        "children": [
+                          "4시간 · 휴게 미정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1074",
+        "name": "근무지·접속 검증",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1075",
+            "className": "v85",
+            "children": [
+              "근무지·접속 검증"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1076",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1077",
+                "className": "v87",
+                "children": [
+                  "근무지"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1078",
+                "className": "v87",
+                "children": [
+                  "PC 허용 IP"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1079",
+                "className": "v87",
+                "children": [
+                  "모바일 GPS"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1080",
+                "className": "v87",
+                "children": [
+                  "상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1081",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1082",
+                "className": "v89",
+                "children": [
+                  "본사"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1083",
+                "className": "v90",
+                "children": [
+                  "192.0.2.0/24 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1084",
+                "className": "v90",
+                "children": [
+                  "위치·반경 입력 필요"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1085",
+                "className": "v90",
+                "children": [
+                  "검토 중"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1086",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1087",
+                "className": "v89",
+                "children": [
+                  "지점"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1088",
+                "className": "v90",
+                "children": [
+                  "198.51.100.0/24 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1089",
+                "className": "v90",
+                "children": [
+                  "위치·반경 입력 필요"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1090",
+                "className": "v90",
+                "children": [
+                  "검토 중"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1091",
+        "name": "근무지 상세",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1092",
+            "className": "v116",
+            "children": [
+              "근무지 상세"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1093",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1094",
+                "name": "근무지명",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1095",
+                    "className": "v24",
+                    "children": [
+                      "근무지명"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1096",
+                    "name": "필드 · 근무지명",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1097",
+                        "className": "v120",
+                        "children": [
+                          "본사"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1098",
+                "name": "주소",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1099",
+                    "className": "v24",
+                    "children": [
+                      "주소"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1100",
+                    "name": "필드 · 주소",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1101",
+                        "className": "v120",
+                        "children": [
+                          "사업장 주소 입력"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1102",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1103",
+                "name": "GPS 중심 좌표",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1104",
+                    "className": "v24",
+                    "children": [
+                      "GPS 중심 좌표"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1105",
+                    "name": "필드 · GPS 중심 좌표",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1106",
+                        "className": "v120",
+                        "children": [
+                          "위도·경도 입력"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1107",
+                "name": "허용 반경·정확도",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1108",
+                    "className": "v24",
+                    "children": [
+                      "허용 반경·정확도"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1109",
+                    "name": "필드 · 허용 반경·정확도",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1110",
+                        "className": "v120",
+                        "children": [
+                          "결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1111",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1112",
+                "name": "신뢰 프록시 기준",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1113",
+                    "className": "v24",
+                    "children": [
+                      "신뢰 프록시 기준"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1114",
+                    "name": "필드 · 신뢰 프록시 기준",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1115",
+                        "className": "v120",
+                        "children": [
+                          "결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1116",
+                "name": "적용 시작일",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1117",
+                    "className": "v24",
+                    "children": [
+                      "적용 시작일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1118",
+                    "name": "필드 · 적용 시작일",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1119",
+                        "className": "v120",
+                        "children": [
+                          "날짜 선택"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1120",
+        "name": "정책 결정이 필요한 항목",
+        "className": "v95",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1121",
+            "className": "v96",
+            "children": [
+              "정책 결정이 필요한 항목"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1122",
+            "className": "v97",
+            "children": [
+              "반차 휴게·연장 승인·52시간 경보·반올림·주간 시작 요일은 미정 상태를 유지합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1123",
+        "name": "적용 이력",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1124",
+            "className": "v85",
+            "children": [
+              "적용 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1125",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1126",
+                "className": "v153",
+                "children": [
+                  "정책"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1127",
+                "className": "v153",
+                "children": [
+                  "적용 기간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1128",
+                "className": "v153",
+                "children": [
+                  "대상"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1129",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1130",
+                "className": "v154",
+                "children": [
+                  "기본 근무 · 예시 v1"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1131",
+                "className": "v155",
+                "children": [
+                  "2026.01.01 –"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1132",
+                "className": "v155",
+                "children": [
+                  "김직원 외 47명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1133",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:1138",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1139",
+        "className": "v99",
+        "children": [
+          "관리자  /  근무 설정  /  근무 설정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1140",
+        "className": "v100",
+        "children": [
+          "근무 설정"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1141",
+        "className": "v101",
+        "children": [
+          "정책 적용 기간과 근무지 검증 조건을 관리합니다."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1142",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1143",
+            "name": "근무 정책",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1144",
+                "className": "v12",
+                "children": [
+                  "근무 정책"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1145",
+            "name": "근무지·IP",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1146",
+                "className": "v12",
+                "children": [
+                  "근무지·IP"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1147",
+            "name": "적용 이력",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1148",
+                "className": "v12",
+                "children": [
+                  "적용 이력"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1149",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1150",
+            "name": "정책",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1151",
+                "className": "v105",
+                "children": [
+                  "정책"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1152",
+                "className": "v106",
+                "children": [
+                  "1개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1153",
+            "name": "근무지",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1154",
+                "className": "v105",
+                "children": [
+                  "근무지"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1155",
+                "className": "v106",
+                "children": [
+                  "2개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1156",
+            "name": "허용 IP",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1157",
+                "className": "v105",
+                "children": [
+                  "허용 IP"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1158",
+                "className": "v106",
+                "children": [
+                  "3개"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1159",
+            "name": "미정 항목",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1160",
+                "className": "v105",
+                "children": [
+                  "미정 항목"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1161",
+                "className": "v106",
+                "children": [
+                  "8건"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1162",
+        "name": "기본 근무 정책",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1163",
+            "className": "v124",
+            "children": [
+              "기본 근무 정책"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1164",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1165",
+                "name": "정책명",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1166",
+                    "className": "v24",
+                    "children": [
+                      "정책명"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1167",
+                    "name": "필드 · 정책명",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1168",
+                        "className": "v128",
+                        "children": [
+                          "기본 근무"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1169",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1170",
+                "name": "적용 기간",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1171",
+                    "className": "v24",
+                    "children": [
+                      "적용 기간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1172",
+                    "name": "필드 · 적용 기간",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1173",
+                        "className": "v128",
+                        "children": [
+                          "2026.01.01 – 종료 없음 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1174",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1175",
+                "name": "자율 출근",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1176",
+                    "className": "v24",
+                    "children": [
+                      "자율 출근"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1177",
+                    "name": "필드 · 자율 출근",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1178",
+                        "className": "v128",
+                        "children": [
+                          "08:00 – 10:00"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1179",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1180",
+                "name": "의무 실근로",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1181",
+                    "className": "v24",
+                    "children": [
+                      "의무 실근로"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1182",
+                    "name": "필드 · 의무 실근로",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1183",
+                        "className": "v128",
+                        "children": [
+                          "8시간"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1184",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1185",
+                "name": "기본 휴게",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1186",
+                    "className": "v24",
+                    "children": [
+                      "기본 휴게"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1187",
+                    "name": "필드 · 기본 휴게",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1188",
+                        "className": "v128",
+                        "children": [
+                          "1시간"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1189",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1190",
+                "name": "반차 의무 실근로",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1191",
+                    "className": "v24",
+                    "children": [
+                      "반차 의무 실근로"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1192",
+                    "name": "필드 · 반차 의무 실근로",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1193",
+                        "className": "v128",
+                        "children": [
+                          "4시간 · 휴게 미정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1194",
+        "name": "근무지·접속 검증",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1195",
+            "className": "v108",
+            "children": [
+              "근무지·접속 검증"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1196",
+            "name": "본사",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1197",
+                "className": "v110",
+                "children": [
+                  "본사"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1198",
+                "className": "v111",
+                "children": [
+                  "PC 허용 IP 192.0.2.0/24 · 예시  ·  모바일 GPS 위치·반경 입력 필요  ·  상태 검토 중"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1199",
+            "name": "지점",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1200",
+                "className": "v110",
+                "children": [
+                  "지점"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1201",
+                "className": "v111",
+                "children": [
+                  "PC 허용 IP 198.51.100.0/24 · 예시  ·  모바일 GPS 위치·반경 입력 필요  ·  상태 검토 중"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1202",
+        "name": "근무지 상세",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1203",
+            "className": "v124",
+            "children": [
+              "근무지 상세"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1204",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1205",
+                "name": "근무지명",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1206",
+                    "className": "v24",
+                    "children": [
+                      "근무지명"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1207",
+                    "name": "필드 · 근무지명",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1208",
+                        "className": "v128",
+                        "children": [
+                          "본사"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1209",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1210",
+                "name": "주소",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1211",
+                    "className": "v24",
+                    "children": [
+                      "주소"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1212",
+                    "name": "필드 · 주소",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1213",
+                        "className": "v128",
+                        "children": [
+                          "사업장 주소 입력"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1214",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1215",
+                "name": "GPS 중심 좌표",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1216",
+                    "className": "v24",
+                    "children": [
+                      "GPS 중심 좌표"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1217",
+                    "name": "필드 · GPS 중심 좌표",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1218",
+                        "className": "v128",
+                        "children": [
+                          "위도·경도 입력"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1219",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1220",
+                "name": "허용 반경·정확도",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1221",
+                    "className": "v24",
+                    "children": [
+                      "허용 반경·정확도"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1222",
+                    "name": "필드 · 허용 반경·정확도",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1223",
+                        "className": "v128",
+                        "children": [
+                          "결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1224",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1225",
+                "name": "신뢰 프록시 기준",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1226",
+                    "className": "v24",
+                    "children": [
+                      "신뢰 프록시 기준"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1227",
+                    "name": "필드 · 신뢰 프록시 기준",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1228",
+                        "className": "v128",
+                        "children": [
+                          "결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1229",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1230",
+                "name": "적용 시작일",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1231",
+                    "className": "v24",
+                    "children": [
+                      "적용 시작일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1232",
+                    "name": "필드 · 적용 시작일",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1233",
+                        "className": "v128",
+                        "children": [
+                          "날짜 선택"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1234",
+        "name": "정책 결정이 필요한 항목",
+        "className": "v112",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1235",
+            "className": "v113",
+            "children": [
+              "정책 결정이 필요한 항목"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1236",
+            "className": "v114",
+            "children": [
+              "반차 휴게·연장 승인·52시간 경보·반올림·주간 시작 요일은 미정 상태를 유지합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1237",
+        "name": "적용 이력",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1238",
+            "className": "v108",
+            "children": [
+              "적용 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1239",
+            "name": "기본 근무 · 예시 v1",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1240",
+                "className": "v110",
+                "children": [
+                  "기본 근무 · 예시 v1"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1241",
+                "className": "v111",
+                "children": [
+                  "적용 기간 2026.01.01 –  ·  대상 김직원 외 47명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1242",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

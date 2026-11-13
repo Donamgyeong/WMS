@@ -1,0 +1,1330 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "11:13",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "11:14",
+        "className": "v7",
+        "children": [
+          "TEAM WORKSPACE"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:15",
+        "className": "v8",
+        "children": [
+          "우리 부서의 오늘"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:16",
+        "className": "v9",
+        "children": [
+          "개발팀  ·  2026년 11월 13일 금요일"
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:17",
+        "name": "가로 배치",
+        "className": "v10",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:18",
+            "name": "개발팀 · 8명",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:19",
+                "className": "v12",
+                "children": [
+                  "개발팀 · 8명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:20",
+            "name": "11.09 – 11.15",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:21",
+                "className": "v12",
+                "children": [
+                  "11.09 – 11.15"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:22",
+            "name": "이름 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:23",
+                "className": "v12",
+                "children": [
+                  "이름 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:24",
+        "name": "가로 배치",
+        "className": "v13",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:25",
+            "name": "근무 중",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:26",
+                "className": "v15",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:27",
+                "className": "v16",
+                "children": [
+                  "5명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:28",
+                "className": "v17",
+                "children": [
+                  "휴게 중 1명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:29",
+            "name": "오늘 휴가",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:30",
+                "className": "v15",
+                "children": [
+                  "오늘 휴가"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:31",
+                "className": "v16",
+                "children": [
+                  "1명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:32",
+                "className": "v17",
+                "children": [
+                  "연차 · 예시"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:33",
+            "name": "기록 확인",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:34",
+                "className": "v15",
+                "children": [
+                  "기록 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:35",
+                "className": "v16",
+                "children": [
+                  "2건"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:36",
+                "className": "v17",
+                "children": [
+                  "미완료 기록 포함"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:37",
+            "name": "주 52시간 초과",
+            "className": "v14",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:38",
+                "className": "v15",
+                "children": [
+                  "주 52시간 초과"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:39",
+                "className": "v16",
+                "children": [
+                  "1명"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:40",
+                "className": "v17",
+                "children": [
+                  "실제 근로 기준"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:41",
+        "name": "확인 안내",
+        "className": "v18",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:42",
+            "className": "v19",
+            "children": [
+              "확인할 근태 기록이 2건 있어요"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:43",
+            "className": "v20",
+            "children": [
+              "누락 기록과 주간 근로시간을 확인해주세요. 경보 기준·정정 승인 절차는 결정 전입니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:44",
+        "name": "가로 배치",
+        "className": "v21",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:45",
+            "name": "부서원 주간 실근로시간",
+            "className": "v22",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:46",
+                "className": "v23",
+                "children": [
+                  "부서원 주간 실근로시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:47",
+                "className": "v24",
+                "children": [
+                  "휴게 제외 · 주 52시간 기준"
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:48",
+                "name": "김직원",
+                "className": "v25",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:49",
+                    "className": "v26",
+                    "children": [
+                      "김직원   37시간 20분"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:50",
+                    "name": "시간 막대",
+                    "className": "v27",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:51",
+                        "name": "Rectangle",
+                        "className": "v28",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:52",
+                "name": "이서연",
+                "className": "v25",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:53",
+                    "className": "v26",
+                    "children": [
+                      "이서연   41시간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:54",
+                    "name": "시간 막대",
+                    "className": "v27",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:55",
+                        "name": "Rectangle",
+                        "className": "v29",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:56",
+                "name": "박민수",
+                "className": "v25",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:57",
+                    "className": "v30",
+                    "children": [
+                      "박민수   53시간  ·  52시간 초과"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:58",
+                    "name": "시간 막대",
+                    "className": "v27",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:59",
+                        "name": "Rectangle",
+                        "className": "v31",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:60",
+                "name": "정지훈",
+                "className": "v25",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:61",
+                    "className": "v26",
+                    "children": [
+                      "정지훈   32시간 · 계산 완료분"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:62",
+                    "name": "시간 막대",
+                    "className": "v27",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:63",
+                        "name": "Rectangle",
+                        "className": "v32",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:64",
+            "name": "부서 일정",
+            "className": "v33",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:65",
+                "className": "v15",
+                "children": [
+                  "부서 일정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:66",
+                "className": "v34",
+                "children": [
+                  "오늘 · 최유진 연차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:67",
+                "className": "v35",
+                "children": [
+                  "11.18 · 김직원 연차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:68",
+                "className": "v35",
+                "children": [
+                  "11.20 · 이서연 오후 반차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:69",
+                "className": "v36",
+                "children": [
+                  "휴가 일정은 연동된 정보만 표시합니다."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:70",
+        "name": "부서원 근태",
+        "className": "v37",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:71",
+            "className": "v15",
+            "children": [
+              "부서원 근태"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:72",
+            "name": "가로 배치",
+            "className": "v38",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:73",
+                "className": "v39",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:74",
+                "className": "v39",
+                "children": [
+                  "오늘 상태"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:75",
+                "className": "v39",
+                "children": [
+                  "출근"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:76",
+                "className": "v39",
+                "children": [
+                  "주간 실근로"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:77",
+                "className": "v39",
+                "children": [
+                  "확인 사항"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:78",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:79",
+                "className": "v41",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:80",
+                "className": "v42",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:81",
+                "className": "v42",
+                "children": [
+                  "09:00"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:82",
+                "className": "v42",
+                "children": [
+                  "37시간 20분"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:83",
+                "className": "v42",
+                "children": [
+                  "—"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:84",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:85",
+                "className": "v41",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:86",
+                "className": "v42",
+                "children": [
+                  "휴게 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:87",
+                "className": "v42",
+                "children": [
+                  "08:40"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:88",
+                "className": "v42",
+                "children": [
+                  "41시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:89",
+                "className": "v42",
+                "children": [
+                  "—"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:90",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:91",
+                "className": "v41",
+                "children": [
+                  "박민수"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:92",
+                "className": "v42",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:93",
+                "className": "v42",
+                "children": [
+                  "09:10"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:94",
+                "className": "v42",
+                "children": [
+                  "53시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:95",
+                "className": "v42",
+                "children": [
+                  "주 52시간 초과"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:96",
+            "name": "가로 배치",
+            "className": "v43",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:97",
+                "className": "v44",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:98",
+                "className": "v45",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:99",
+                "className": "v45",
+                "children": [
+                  "09:00"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:100",
+                "className": "v45",
+                "children": [
+                  "계산 보류"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:101",
+                "className": "v46",
+                "children": [
+                  "퇴근 누락"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:102",
+            "name": "가로 배치",
+            "className": "v40",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:103",
+                "className": "v41",
+                "children": [
+                  "최유진"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:104",
+                "className": "v42",
+                "children": [
+                  "연차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:105",
+                "className": "v42",
+                "children": [
+                  "—"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:106",
+                "className": "v42",
+                "children": [
+                  "24시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:107",
+                "className": "v42",
+                "children": [
+                  "—"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:108",
+        "className": "v47",
+        "children": [
+          "기획 시안 · 부서 내 예시 데이터입니다. 누락 기록이 있는 합계는 계산 보류로 표시합니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "11:113",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "11:114",
+        "className": "v7",
+        "children": [
+          "TEAM WORKSPACE"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:115",
+        "className": "v52",
+        "children": [
+          "우리 부서의 오늘"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:116",
+        "className": "v53",
+        "children": [
+          "개발팀  ·  2026년 11월 13일 금요일"
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:117",
+        "name": "조회 조건",
+        "className": "v54",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:118",
+            "name": "개발팀 · 8명",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:119",
+                "className": "v12",
+                "children": [
+                  "개발팀 · 8명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:120",
+            "name": "11.09 – 11.15",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:121",
+                "className": "v12",
+                "children": [
+                  "11.09 – 11.15"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:122",
+            "name": "이름 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:123",
+                "className": "v12",
+                "children": [
+                  "이름 검색"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:124",
+        "name": "요약",
+        "className": "v55",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:125",
+            "name": "근무 중",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:126",
+                "className": "v57",
+                "children": [
+                  "근무 중"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:127",
+                "className": "v58",
+                "children": [
+                  "5명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:129",
+            "name": "오늘 휴가",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:130",
+                "className": "v57",
+                "children": [
+                  "오늘 휴가"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:131",
+                "className": "v58",
+                "children": [
+                  "1명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:133",
+            "name": "기록 확인",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:134",
+                "className": "v57",
+                "children": [
+                  "기록 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:135",
+                "className": "v58",
+                "children": [
+                  "2건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:137",
+            "name": "주 52시간 초과",
+            "className": "v56",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:138",
+                "className": "v57",
+                "children": [
+                  "52시간 초과"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:139",
+                "className": "v58",
+                "children": [
+                  "1명"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:141",
+        "name": "확인 안내",
+        "className": "v59",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:142",
+            "className": "v60",
+            "children": [
+              "확인할 근태 기록이 2건 있어요"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "11:143",
+            "className": "v61",
+            "children": [
+              "누락 기록과 주간 근로시간을 확인해주세요. 경보 기준·정정 승인 절차는 결정 전입니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:144",
+        "name": "주간 요약",
+        "className": "v54",
+        "children": [
+          {
+            "tag": "div",
+            "id": "11:145",
+            "name": "부서원 주간 실근로시간",
+            "className": "v62",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:146",
+                "className": "v23",
+                "children": [
+                  "부서원 주간 실근로시간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:147",
+                "className": "v24",
+                "children": [
+                  "휴게 제외 · 주 52시간 기준"
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:148",
+                "name": "김직원",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:149",
+                    "className": "v26",
+                    "children": [
+                      "김직원   37시간 20분"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:150",
+                    "name": "시간 막대",
+                    "className": "v64",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:151",
+                        "name": "Rectangle",
+                        "className": "v65",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:152",
+                "name": "이서연",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:153",
+                    "className": "v26",
+                    "children": [
+                      "이서연   41시간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:154",
+                    "name": "시간 막대",
+                    "className": "v64",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:155",
+                        "name": "Rectangle",
+                        "className": "v66",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:156",
+                "name": "박민수",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:157",
+                    "className": "v30",
+                    "children": [
+                      "박민수   53시간  ·  52시간 초과"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:158",
+                    "name": "시간 막대",
+                    "className": "v64",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:159",
+                        "name": "Rectangle",
+                        "className": "v67",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "11:160",
+                "name": "정지훈",
+                "className": "v63",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "11:161",
+                    "className": "v26",
+                    "children": [
+                      "정지훈   32시간 · 계산 완료분"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "11:162",
+                    "name": "시간 막대",
+                    "className": "v64",
+                    "children": [
+                      {
+                        "tag": "div",
+                        "id": "11:163",
+                        "name": "Rectangle",
+                        "className": "v68",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:164",
+            "name": "부서 일정",
+            "className": "v69",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:165",
+                "className": "v15",
+                "children": [
+                  "부서 일정"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:166",
+                "className": "v34",
+                "children": [
+                  "오늘 · 최유진 연차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:167",
+                "className": "v35",
+                "children": [
+                  "11.18 · 김직원 연차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:168",
+                "className": "v35",
+                "children": [
+                  "11.20 · 이서연 오후 반차"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:169",
+                "className": "v70",
+                "children": [
+                  "휴가 일정은 연동된 정보만 표시합니다."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "11:170",
+        "name": "부서원 근태",
+        "className": "v69",
+        "children": [
+          {
+            "tag": "p",
+            "id": "11:171",
+            "className": "v15",
+            "children": [
+              "부서원 근태"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:172",
+            "name": "김직원",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:173",
+                "className": "v72",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:174",
+                "className": "v73",
+                "children": [
+                  "오늘 상태 근무 중  ·  출근 09:00  ·  주간 실근로 37시간 20분  ·  확인 사항 —"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:175",
+            "name": "이서연",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:176",
+                "className": "v72",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:177",
+                "className": "v73",
+                "children": [
+                  "오늘 상태 휴게 중  ·  출근 08:40  ·  주간 실근로 41시간  ·  확인 사항 —"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:178",
+            "name": "박민수",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:179",
+                "className": "v72",
+                "children": [
+                  "박민수"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:180",
+                "className": "v73",
+                "children": [
+                  "오늘 상태 근무 중  ·  출근 09:10  ·  주간 실근로 53시간  ·  확인 사항 주 52시간 초과"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:181",
+            "name": "정지훈",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:182",
+                "className": "v72",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:183",
+                "className": "v73",
+                "children": [
+                  "오늘 상태 근무 중  ·  출근 09:00  ·  주간 실근로 계산 보류  ·  확인 사항 퇴근 누락"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "11:184",
+            "name": "최유진",
+            "className": "v71",
+            "children": [
+              {
+                "tag": "p",
+                "id": "11:185",
+                "className": "v72",
+                "children": [
+                  "최유진"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "11:186",
+                "className": "v73",
+                "children": [
+                  "오늘 상태 연차  ·  출근 —  ·  주간 실근로 24시간  ·  확인 사항 —"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "11:187",
+        "className": "v74",
+        "children": [
+          "기획 시안 · 부서 내 예시 데이터입니다. 누락 기록이 있는 합계는 계산 보류로 표시합니다."
+        ]
+      }
+    ]
+  }
+}

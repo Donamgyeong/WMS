@@ -1,0 +1,1530 @@
+{
+  "desktop": {
+    "tag": "div",
+    "id": "16:1442",
+    "name": "본문",
+    "className": "v6",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1443",
+        "className": "v76",
+        "children": [
+          "관리자  /  임금·정산  /  시급·계약 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1444",
+        "className": "v77",
+        "children": [
+          "시급·계약 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1445",
+        "className": "v78",
+        "children": [
+          "관리자 전용 · 개인별 시급과 계약의 적용 기간·변경 이력을 확인하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1446",
+        "name": "조회 조건",
+        "className": "v79",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1447",
+            "name": "직원 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1448",
+                "className": "v12",
+                "children": [
+                  "직원 검색"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1449",
+            "name": "계약 유효 상태",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1450",
+                "className": "v12",
+                "children": [
+                  "계약 유효 상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1451",
+            "name": "2026.11.01 기준",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1452",
+                "className": "v12",
+                "children": [
+                  "2026.11.01 기준"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1453",
+        "name": "가로 배치",
+        "className": "v80",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1454",
+            "name": "직원",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1455",
+                "className": "v82",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1456",
+                "className": "v83",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1457",
+            "name": "유효 계약",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1458",
+                "className": "v82",
+                "children": [
+                  "유효 계약"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1459",
+                "className": "v83",
+                "children": [
+                  "45건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1460",
+            "name": "입력 확인",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1461",
+                "className": "v82",
+                "children": [
+                  "입력 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1462",
+                "className": "v83",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1463",
+            "name": "포괄 포함",
+            "className": "v81",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1464",
+                "className": "v82",
+                "children": [
+                  "포괄 포함"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1465",
+                "className": "v83",
+                "children": [
+                  "16시간"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1466",
+        "name": "직원별 시급·계약",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1467",
+            "className": "v85",
+            "children": [
+              "직원별 시급·계약"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1468",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1469",
+                "className": "v87",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1470",
+                "className": "v87",
+                "children": [
+                  "시급"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1471",
+                "className": "v87",
+                "children": [
+                  "계약 기간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1472",
+                "className": "v87",
+                "children": [
+                  "확인 사항"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1473",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1474",
+                "className": "v89",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1475",
+                "className": "v90",
+                "children": [
+                  "12,000원 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1476",
+                "className": "v90",
+                "children": [
+                  "2026.01.01 –"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1477",
+                "className": "v90",
+                "children": [
+                  "고정수당 입력 필요"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1478",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1479",
+                "className": "v89",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1480",
+                "className": "v90",
+                "children": [
+                  "14,000원 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1481",
+                "className": "v90",
+                "children": [
+                  "2026.01.01 –"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1482",
+                "className": "v90",
+                "children": [
+                  "비교 방식 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1483",
+            "name": "가로 배치",
+            "className": "v91",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1484",
+                "className": "v92",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1485",
+                "className": "v94",
+                "children": [
+                  "미입력"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1486",
+                "className": "v94",
+                "children": [
+                  "계약 미등록"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1487",
+                "className": "v93",
+                "children": [
+                  "계산 보류"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1488",
+        "name": "선택 직원 · 계약 상세",
+        "className": "v115",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1489",
+            "className": "v116",
+            "children": [
+              "선택 직원 · 계약 상세"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1490",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1491",
+                "name": "직원",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1492",
+                    "className": "v24",
+                    "children": [
+                      "직원"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1493",
+                    "name": "필드 · 직원",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1494",
+                        "className": "v120",
+                        "children": [
+                          "김직원 · E001"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1495",
+                "name": "시급",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1496",
+                    "className": "v24",
+                    "children": [
+                      "시급"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1497",
+                    "name": "필드 · 시급",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1498",
+                        "className": "v120",
+                        "children": [
+                          "12,000원 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1499",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1500",
+                "name": "적용 시작일",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1501",
+                    "className": "v24",
+                    "children": [
+                      "적용 시작일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1502",
+                    "name": "필드 · 적용 시작일",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1503",
+                        "className": "v120",
+                        "children": [
+                          "2026.01.01 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1504",
+                "name": "적용 종료일",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1505",
+                    "className": "v24",
+                    "children": [
+                      "적용 종료일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1506",
+                    "name": "필드 · 적용 종료일",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1507",
+                        "className": "v120",
+                        "children": [
+                          "종료 없음"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1508",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1509",
+                "name": "포괄 포함시간",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1510",
+                    "className": "v24",
+                    "children": [
+                      "포괄 포함시간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1511",
+                    "name": "필드 · 포괄 포함시간",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1512",
+                        "className": "v120",
+                        "children": [
+                          "월 16시간 · 960분"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1513",
+                "name": "고정 연장수당",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1514",
+                    "className": "v24",
+                    "children": [
+                      "고정 연장수당"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1515",
+                    "name": "필드 · 고정 연장수당",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1516",
+                        "className": "v120",
+                        "children": [
+                          "입력 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1517",
+            "name": "가로 배치",
+            "className": "v117",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1518",
+                "name": "배정·차감 순서",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1519",
+                    "className": "v24",
+                    "children": [
+                      "배정·차감 순서"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1520",
+                    "name": "필드 · 배정·차감 순서",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1521",
+                        "className": "v120",
+                        "children": [
+                          "UNDECIDED · 미정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "div",
+                "id": "16:1522",
+                "name": "법정수당 비교",
+                "className": "v118",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1523",
+                    "className": "v24",
+                    "children": [
+                      "법정수당 비교"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1524",
+                    "name": "필드 · 법정수당 비교",
+                    "className": "v119",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1525",
+                        "className": "v120",
+                        "children": [
+                          "검증 방식 결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1526",
+        "name": "계약 입력만으로 정산을 확정하지 않습니다",
+        "className": "v95",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1527",
+            "className": "v96",
+            "children": [
+              "계약 입력만으로 정산을 확정하지 않습니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1528",
+            "className": "v97",
+            "children": [
+              "고정수당과 실제 법정수당의 비교 절차가 필요합니다. 적용 기간이 겹치는 시급·계약은 저장할 수 없도록 설계합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1529",
+        "name": "시급 변경 이력",
+        "className": "v84",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1530",
+            "className": "v85",
+            "children": [
+              "시급 변경 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1531",
+            "name": "가로 배치",
+            "className": "v86",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1532",
+                "className": "v153",
+                "children": [
+                  "적용 기간"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1533",
+                "className": "v153",
+                "children": [
+                  "시급"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1534",
+                "className": "v153",
+                "children": [
+                  "기록"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1535",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1536",
+                "className": "v154",
+                "children": [
+                  "2026.01.01 –"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1537",
+                "className": "v155",
+                "children": [
+                  "12,000원 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1538",
+                "className": "v155",
+                "children": [
+                  "현재 유효"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1539",
+            "name": "가로 배치",
+            "className": "v88",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1540",
+                "className": "v154",
+                "children": [
+                  "2025.01.01 – 12.31"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1541",
+                "className": "v155",
+                "children": [
+                  "11,000원 · 예시"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1542",
+                "className": "v155",
+                "children": [
+                  "이전 이력 보존"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1543",
+        "className": "v47",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  },
+  "mobile": {
+    "tag": "div",
+    "id": "16:1548",
+    "name": "본문",
+    "className": "v51",
+    "children": [
+      {
+        "tag": "p",
+        "id": "16:1549",
+        "className": "v99",
+        "children": [
+          "관리자  /  임금·정산  /  시급·계약 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1550",
+        "className": "v100",
+        "children": [
+          "시급·계약 관리"
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1551",
+        "className": "v101",
+        "children": [
+          "관리자 전용 · 개인별 시급과 계약의 적용 기간·변경 이력을 확인하세요."
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1552",
+        "name": "조회 조건",
+        "className": "v102",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1553",
+            "name": "직원 검색",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1554",
+                "className": "v12",
+                "children": [
+                  "직원 검색"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1555",
+            "name": "계약 유효 상태",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1556",
+                "className": "v12",
+                "children": [
+                  "계약 유효 상태"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1557",
+            "name": "2026.11.01 기준",
+            "className": "v11",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1558",
+                "className": "v12",
+                "children": [
+                  "2026.11.01 기준"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1559",
+        "name": "가로 배치",
+        "className": "v103",
+        "children": [
+          {
+            "tag": "div",
+            "id": "16:1560",
+            "name": "직원",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1561",
+                "className": "v105",
+                "children": [
+                  "직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1562",
+                "className": "v106",
+                "children": [
+                  "48명"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1563",
+            "name": "유효 계약",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1564",
+                "className": "v105",
+                "children": [
+                  "유효 계약"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1565",
+                "className": "v106",
+                "children": [
+                  "45건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1566",
+            "name": "입력 확인",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1567",
+                "className": "v105",
+                "children": [
+                  "입력 확인"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1568",
+                "className": "v106",
+                "children": [
+                  "3건"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1569",
+            "name": "포괄 포함",
+            "className": "v104",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1570",
+                "className": "v105",
+                "children": [
+                  "포괄 포함"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1571",
+                "className": "v106",
+                "children": [
+                  "16시간"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1572",
+        "name": "직원별 시급·계약",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1573",
+            "className": "v108",
+            "children": [
+              "직원별 시급·계약"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1574",
+            "name": "김직원",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1575",
+                "className": "v110",
+                "children": [
+                  "김직원"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1576",
+                "className": "v111",
+                "children": [
+                  "시급 12,000원 · 예시  ·  계약 기간 2026.01.01 –  ·  확인 사항 고정수당 입력 필요"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1577",
+            "name": "이서연",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1578",
+                "className": "v110",
+                "children": [
+                  "이서연"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1579",
+                "className": "v111",
+                "children": [
+                  "시급 14,000원 · 예시  ·  계약 기간 2026.01.01 –  ·  확인 사항 비교 방식 미정"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1580",
+            "name": "정지훈",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1581",
+                "className": "v110",
+                "children": [
+                  "정지훈"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1582",
+                "className": "v111",
+                "children": [
+                  "시급 미입력  ·  계약 기간 계약 미등록  ·  확인 사항 계산 보류"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1583",
+        "name": "선택 직원 · 계약 상세",
+        "className": "v123",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1584",
+            "className": "v124",
+            "children": [
+              "선택 직원 · 계약 상세"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1585",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1586",
+                "name": "직원",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1587",
+                    "className": "v24",
+                    "children": [
+                      "직원"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1588",
+                    "name": "필드 · 직원",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1589",
+                        "className": "v128",
+                        "children": [
+                          "김직원 · E001"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1590",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1591",
+                "name": "시급",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1592",
+                    "className": "v24",
+                    "children": [
+                      "시급"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1593",
+                    "name": "필드 · 시급",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1594",
+                        "className": "v128",
+                        "children": [
+                          "12,000원 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1595",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1596",
+                "name": "적용 시작일",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1597",
+                    "className": "v24",
+                    "children": [
+                      "적용 시작일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1598",
+                    "name": "필드 · 적용 시작일",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1599",
+                        "className": "v128",
+                        "children": [
+                          "2026.01.01 · 예시"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1600",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1601",
+                "name": "적용 종료일",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1602",
+                    "className": "v24",
+                    "children": [
+                      "적용 종료일"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1603",
+                    "name": "필드 · 적용 종료일",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1604",
+                        "className": "v128",
+                        "children": [
+                          "종료 없음"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1605",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1606",
+                "name": "포괄 포함시간",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1607",
+                    "className": "v24",
+                    "children": [
+                      "포괄 포함시간"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1608",
+                    "name": "필드 · 포괄 포함시간",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1609",
+                        "className": "v128",
+                        "children": [
+                          "월 16시간 · 960분"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1610",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1611",
+                "name": "고정 연장수당",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1612",
+                    "className": "v24",
+                    "children": [
+                      "고정 연장수당"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1613",
+                    "name": "필드 · 고정 연장수당",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1614",
+                        "className": "v128",
+                        "children": [
+                          "입력 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1615",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1616",
+                "name": "배정·차감 순서",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1617",
+                    "className": "v24",
+                    "children": [
+                      "배정·차감 순서"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1618",
+                    "name": "필드 · 배정·차감 순서",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1619",
+                        "className": "v128",
+                        "children": [
+                          "UNDECIDED · 미정"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1620",
+            "name": "필드 행",
+            "className": "v125",
+            "children": [
+              {
+                "tag": "div",
+                "id": "16:1621",
+                "name": "법정수당 비교",
+                "className": "v126",
+                "children": [
+                  {
+                    "tag": "p",
+                    "id": "16:1622",
+                    "className": "v24",
+                    "children": [
+                      "법정수당 비교"
+                    ]
+                  },
+                  {
+                    "tag": "div",
+                    "id": "16:1623",
+                    "name": "필드 · 법정수당 비교",
+                    "className": "v127",
+                    "children": [
+                      {
+                        "tag": "p",
+                        "id": "16:1624",
+                        "className": "v128",
+                        "children": [
+                          "검증 방식 결정 필요"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1625",
+        "name": "계약 입력만으로 정산을 확정하지 않습니다",
+        "className": "v112",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1626",
+            "className": "v113",
+            "children": [
+              "계약 입력만으로 정산을 확정하지 않습니다"
+            ]
+          },
+          {
+            "tag": "p",
+            "id": "16:1627",
+            "className": "v114",
+            "children": [
+              "고정수당과 실제 법정수당의 비교 절차가 필요합니다. 적용 기간이 겹치는 시급·계약은 저장할 수 없도록 설계합니다."
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "div",
+        "id": "16:1628",
+        "name": "시급 변경 이력",
+        "className": "v107",
+        "children": [
+          {
+            "tag": "p",
+            "id": "16:1629",
+            "className": "v108",
+            "children": [
+              "시급 변경 이력"
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1630",
+            "name": "2026.01.01 –",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1631",
+                "className": "v110",
+                "children": [
+                  "2026.01.01 –"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1632",
+                "className": "v111",
+                "children": [
+                  "시급 12,000원 · 예시  ·  기록 현재 유효"
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "div",
+            "id": "16:1633",
+            "name": "2025.01.01 – 12.31",
+            "className": "v109",
+            "children": [
+              {
+                "tag": "p",
+                "id": "16:1634",
+                "className": "v110",
+                "children": [
+                  "2025.01.01 – 12.31"
+                ]
+              },
+              {
+                "tag": "p",
+                "id": "16:1635",
+                "className": "v111",
+                "children": [
+                  "시급 11,000원 · 예시  ·  기록 이전 이력 보존"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "p",
+        "id": "16:1636",
+        "className": "v74",
+        "children": [
+          "화면 설계 시안 · 모든 이름·시간·금액·일정은 예시입니다. 실제 저장·승인·정산 기능과 연결되지 않았습니다."
+        ]
+      }
+    ]
+  }
+}

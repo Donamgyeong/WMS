@@ -13,25 +13,33 @@
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "accounts": "tsx scripts/accounts.ts",
+    "test": "vitest run",
+    "test:integration": "vitest run --config vitest.integration.config.ts",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
+    "better-auth": "^1.7.22",
+    "dotenv": "latest",
+    "drizzle-orm": "latest",
     "next": "16.4.6",
+    "pg": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "drizzle-orm": "latest",
-    "pg": "latest",
-    "server-only": "latest",
-    "dotenv": "latest"
+    "server-only": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
+    "@playwright/test": "^1.65.0",
     "@types/node": "latest",
+    "@types/pg": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
-    "@types/pg": "latest",
     "drizzle-kit": "latest",
     "eslint": "latest",
-    "eslint-config-next": "16.4.6"
+    "eslint-config-next": "16.4.6",
+    "tsx": "^4.23.15",
+    "typescript": "latest",
+    "vitest": "^4.1.12"
   }
 }

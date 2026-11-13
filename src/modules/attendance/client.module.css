@@ -1,0 +1,14 @@
+.panel { display: flex; flex-direction: column; gap: 16px; width: 100%; min-width: 0; }
+.state { color: #243e73; }
+.duration { display: block; font-size: clamp(26px, 4vw, 40px); line-height: 1.4; color: #172c3c; }
+.detail { font-size: 12px; color: #657583; overflow-wrap: anywhere; }
+.workplace { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.workplace select { min-width: 100px; max-width: 100%; border: 1px solid #e3e9ed; border-radius: 8px; padding: 8px; background: white; color: #172c3c; font: inherit; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.actions button { flex: 1; min-width: 100px; min-height: 48px; }
+.panel button:disabled { cursor: not-allowed; opacity: .5; }
+.records { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; font-size: 12px; overflow-wrap: anywhere; }
+.recordsHeading { margin: 8px 0 0; font-size: 14px; scroll-margin-top: 24px; }
+.error { color: #a02b2b; overflow-wrap: anywhere; }
+.success { color: #246448; }
+.refresh { align-self: flex-start; font-size: 12px; }

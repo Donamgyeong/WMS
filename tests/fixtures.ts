@@ -12,7 +12,7 @@ export function testPool() {
 }
 export async function seed(pool: Pool) {
   await pool.query(
-    "TRUNCATE auth_rate_limits, managed_departments, employee_roles, employees, departments, auth_sessions, auth_accounts, auth_verifications, auth_users CASCADE",
+    "TRUNCATE work_policies, workplaces, auth_rate_limits, managed_departments, employee_roles, employees, departments, auth_sessions, auth_accounts, auth_verifications, auth_users CASCADE",
   );
   const hash = await hashPassword(initialPassword);
   await pool.query(

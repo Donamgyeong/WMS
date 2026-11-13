@@ -1,5 +1,9 @@
 # worktime
 
-담당: 재계산 가능한 세션·근로 구간 및 일/주/월 집계.
+- `domain.ts`: 기존 출퇴근 화면의 실시간 실근로·휴게 요약.
+- `engine.ts`: 순수 구간 생성·분류·기간 집계.
+- `repository.ts`: 원본·정책·일정·휴일·휴가·정정 입력 조회.
+- `service.ts`: 권한·직원 잠금·종료 세션 재계산·버전 저장·조회.
+- `http.ts`: 조회 및 관리자 재계산 API 계약.
 
-기능 구현 시 필요한 `domain`, `service`, `repository`, `validation` 파일을 추가한다. 계산 규칙의 단위 테스트는 대상 코드 옆에 `*.test.ts`로 작성한다. 구체적인 의존성 및 권한 규칙은 [전체 설계](../../../docs/architecture.md)를 따른다.
+계산 옵션·미정 처리·버전·API와 후속 범위는 [결정 기록](../../../docs/decisions/0003-worktime-calculation.md)을 따른다. 테스트는 인접 `engine.test.ts`, `tests/integration/worktime.test.ts`, `tests/e2e/worktime.spec.ts`에 있다.

@@ -43,6 +43,13 @@
       "when": 1794545450751,
       "tag": "0005_finalization_guards",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1794548444187,
+      "tag": "0006_purple_grey_gargoyle",
+      "breakpoints": true
     }
   ]
 }

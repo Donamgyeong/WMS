@@ -60,7 +60,7 @@ npm run typecheck
 npm run build
 ```
 
-`docker compose down`은 DB 데이터를 보존한다. `docker compose down -v`는 DB를 포함한 개발 볼륨을 모두 삭제하므로 초기화가 필요할 때만 사용한다. 인증 기본 흐름은 구현되어 있으며 실제 운영 배포와 근태·임금 업무 기능은 후속 구현 범위다.
+`docker compose down`은 DB 데이터를 보존한다. `docker compose down -v`는 DB를 포함한 개발 볼륨을 모두 삭제하므로 초기화가 필요할 때만 사용한다. 인증과 출퇴근·휴게 기본 기록은 구현되어 있으며 실제 운영 배포와 근로 구간 분류·집계·임금 업무는 후속 구현 범위다.
 
 설정 참고: [Next.js 설치](https://nextjs.org/docs/app/getting-started/installation), [Drizzle PostgreSQL](https://orm.drizzle.team/docs/get-started/postgresql-new).
 
@@ -108,3 +108,26 @@ TEST_DATABASE_URL=postgresql://wms:wms_dev@localhost:5433/wms_auth_test npm run 
 ERD v1.2의 조직·근태·휴일·시급·계약·정산 테이블을 포함한다. 물리 제약과 미정 정책 처리 방식은 [DB 설계](docs/database-schema.md)를 참고한다. 기존 DB에도 `npm run db:migrate`로 순서대로 적용하며 기존 마이그레이션은 수정하지 않는다. btree_gist 확장 설치 권한이 필요하다.
 
 스키마 테스트는 위 인증 테스트와 동일한 전용 `_test` DB에서 `npm run test:integration`으로 실행한다. 인증 테스트의 TRUNCATE CASCADE는 업무 데이터도 초기화한다. 개발·운영 DB를 테스트 DB로 사용하지 않는다.
+
+## 출퇴근·휴게 기록
+
+`/me`에서 출근·휴게 시작/종료·퇴근과 본인 현재 기록을 사용한다. 자정 이후 근무는 출근일에 귀속하며 PC는 헤더 IP의 허용 CIDR, 모바일은 GPS 반경 100m를 확인한다. GPS는 HTTPS 또는 localhost에서 사용한다. 주간 통계·누락 안내·일정은 아직 예시다.
+
+먼저 DB 운영자가 실제 근무지와 직원별 기본 정책을 등록한다. 아래 예시 좌표·CIDR·이메일·적용일은 실제 값으로 바꾼다. 네트워크를 무제한 허용하는 기본 설정은 만들지 않는다.
+
+```sh
+npx tsx scripts/attendance-setup.ts workplace main 본사 37.5665 126.9780 192.0.2.0/24
+npx tsx scripts/attendance-setup.ts assign employee@example.com 2026-11-13
+```
+
+Docker에서는 `docker compose exec app`을 앞에 붙인다. 기존 근무지 ID나 정책 적용 기간과 충돌하면 실패하며 기존 데이터를 덮어쓰지 않는다. 정책 배정은 기본 8시간·휴게 1시간 규칙을 저장하고 반차·포괄·휴일 등 미정 항목은 유지한다. 실제 휴게 기록만 근로시간에서 제외한다.
+
+요청 IP는 `X-Forwarded-For` 첫 IP, 없으면 `X-Real-IP`를 신뢰한다. 앱에 이 헤더가 전달되어야 PC 기록이 가능하다. 기기는 `X-Attendance-Device` 우선이며 없으면 모바일 관련 브라우저 헤더로 판별한다. 상세 API·상태·보존 및 후속 범위는 [근태 결정 기록](docs/decisions/0002-attendance-recording.md)을 따른다.
+
+근태 테스트는 기존 테스트 명령(`npm run test`, `npm run test:integration`, `npm run test:e2e`)에 포함된다. 통합/E2E는 전용 `_test` DB의 업무 데이터도 초기화한다. 임금·주간 집계·근로 구간 분류와 정정 승인은 후속 기능이다.
+
+## 근로시간 계산 엔진
+
+마이그레이션 0006 적용 후 `GET /api/worktime?from=2026-11-01&to=2026-12-01&basis=WORK_DATE`로 본인 일·주·월 근로시간과 구간을 조회한다. `basis=ACTUAL_TIME`은 실제 시각 기준 배분이다. 종료일은 제외하며 주 시작일(`weekStartsOn`)·야간 종료(`nightEndHour`)를 생략하면 관련 결과는 미정으로 유지한다.
+
+관리자는 `POST /api/admin/worktime/recalculate`에 `employeeId`, `from`, `to`, 선택적 `nightEndHour` JSON을 보내 종료 세션을 새 버전으로 계산한다. 정책·일정 변경 후에는 명시적 재계산이 필요하다. 기존 원본과 파생 이력을 보존한다. 상세 API·미정 정책·권한·후속 범위는 [결정 기록](docs/decisions/0003-worktime-calculation.md), 검증 결과는 [테스트 보고서](docs/worktime-test-results.md)를 참고한다. 주간 대시보드 차트는 아직 예시다.

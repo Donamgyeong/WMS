@@ -58,3 +58,26 @@ test("randomUUID 미지원 환경에서 응답 유실 후 같은 요청 ID로 �
   await expect(panel.getByText("근무 중", { exact: true })).toBeVisible();
   expect((await pool.query("select * from attendance_events")).rowCount).toBe(1);
 });
+
+test("데스크톱 모드 iPad에서 GPS 권한 요청 및 거부 후 재시도", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "userAgent", { value: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15)" });
+    Object.defineProperty(navigator, "maxTouchPoints", { value: 5 });
+    let calls = 0;
+    Object.defineProperty(navigator, "geolocation", { value: {
+      getCurrentPosition(success: PositionCallback, failure: PositionErrorCallback) {
+        calls++;
+        if (calls === 1) failure({ code: 1 } as GeolocationPositionError);
+        else success({ coords: { latitude: 37.5665, longitude: 126.978, accuracy: 5 } } as GeolocationPosition);
+      },
+    } });
+  });
+  await login(page);
+  const panel = page.getByRole("region", { name: "출퇴근·휴게 기록" });
+  await panel.getByRole("button", { name: "출근하기", exact: true }).click();
+  await expect(panel.getByRole("alert")).toContainText("위치 권한이 차단");
+  expect((await pool.query("select * from attendance_events")).rowCount).toBe(0);
+  await panel.getByRole("button", { name: "출근하기", exact: true }).click();
+  await expect(panel.getByText("근무 중", { exact: true })).toBeVisible();
+  expect((await pool.query("select source from attendance_events")).rows[0].source).toBe("MOBILE");
+});

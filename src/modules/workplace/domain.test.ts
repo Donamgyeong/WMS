@@ -20,3 +20,11 @@ it("GPS 100m 경계 안·경계·밖과 날짜 변경선 거리", () => {
   expect(distanceMeters(origin, { latitude: 0, longitude: longitude * 1.001 })).toBeGreaterThan(GPS_RADIUS_METERS);
   expect(distanceMeters({ latitude: 0, longitude: 179.9999 }, { latitude: 0, longitude: -179.9999 })).toBeLessThan(25);
 });
+
+it("IPv4-mapped IPv6를 IPv4 CIDR과 비교 가능한 주소로 정규화한다", () => {
+  for (const ip of ["::ffff:192.168.0.10", "::FFFF:c0a8:a", "0:0:0:0:0:ffff:c0a8:000a"]) {
+    expect(requestIp(new Headers({ "x-forwarded-for": ip }))).toBe("192.168.0.10");
+  }
+  expect(requestIp(new Headers({ "x-real-ip": "::ffff:127.0.0.1" }))).toBe("127.0.0.1");
+  expect(requestIp(new Headers({ "x-real-ip": "2001:db8::1" }))).toBe("2001:db8::1");
+});

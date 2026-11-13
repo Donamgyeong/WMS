@@ -73,6 +73,8 @@ export async function recordAttendance(employeeId: string, input: Input, headers
     await tx.update(workSessions).set({ clockOutAt: next === "FINISHED" ? now : null, actualWorkMinutes: String(result.actualWorkMinutes), breakMinutes: String(result.breakMinutes), status: next === "FINISHED" ? "UNRESOLVED" : "OPEN", inputSnapshot: { ...(session.inputSnapshot as object), eventIds: result.events.map(e => e.id) } }).where(eq(workSessions.id, sessionId));
     return { rejected: false, eventId, replayed: false };
   });
-  if (outcome.rejected) throw new AttendanceError(403, "근무지 검증에 실패했습니다. PC 허용 IP 또는 GPS 100m 범위를 확인하세요.");
+  if (outcome.rejected) throw new AttendanceError(403, source === "PC"
+    ? `근무지 검증에 실패했습니다. 서버에서 확인한 접속 IP: ${ip}. 선택한 근무지의 허용 IP와 프록시 설정을 확인하세요.`
+    : "근무지 검증에 실패했습니다. GPS 100m 범위를 확인하세요.");
   return outcome;
 }

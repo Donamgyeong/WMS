@@ -11,6 +11,16 @@ export function requestDevice(headers: Headers): "PC" | "MOBILE" {
 export function requestIp(headers: Headers) {
   const ip = (headers.get("x-forwarded-for")?.split(",")[0] ?? headers.get("x-real-ip") ?? "").trim();
   if (!isIP(ip)) throw new AttendanceError(400, "클라이언트 IP 헤더가 필요합니다.");
+  // Node/proxies may expose IPv4 peers as IPv4-mapped IPv6. PostgreSQL
+  // treats those as IPv6, so they do not match an IPv4 CIDR without conversion.
+  if (isIP(ip) === 6) {
+    const canonical = new URL(`http://[${ip}]/`).hostname.slice(1, -1);
+    const mapped = /^::ffff:([0-9a-f]+):([0-9a-f]+)$/.exec(canonical);
+    if (mapped) {
+      const high = parseInt(mapped[1], 16), low = parseInt(mapped[2], 16);
+      return [high >> 8, high & 255, low >> 8, low & 255].join(".");
+    }
+  }
   return ip;
 }
 export function distanceMeters(a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) {

@@ -168,3 +168,22 @@
 
 .ws-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .workspace-design .ws-panel-heading button { flex-shrink: 0; padding: 8px 16px; border-radius: 8px; background: var(--navy); color: white; font-size: 13px; }
+
+.ws-config-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.workspace-design .ws-config-toolbar button { padding: 10px 14px; border-radius: 8px; font-size: 13px; }
+.ws-config-modes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: #f4f6f8; }
+.workspace-design .ws-config-modes button { display: flex; align-items: center; justify-content: center; min-width: 0; min-height: 42px; padding: 10px 12px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); font-size: 13px; font-weight: 500; line-height: 20px; text-align: center; }
+.workspace-design .ws-config-modes button:hover:not(:disabled):not([aria-pressed=true]) { background: #fff; color: var(--navy); border-color: var(--line); }
+.workspace-design .ws-config-modes button:focus-visible { outline: 3px solid #8cb9ff; outline-offset: 2px; }
+.workspace-design .ws-config-modes button:disabled { cursor: wait; opacity: .6; }
+.workspace-design .ws-config-modes button[aria-pressed=true] { background: var(--navy); color: white; border-color: var(--navy); font-weight: 700; }
+.ws-config-fields > .ws-config-choices { display: block; padding: 16px; }
+.ws-config-fields > .ws-config-choices legend { float: none; width: auto; padding: 0 8px; font-size: 13px; font-weight: 700; color: var(--ink); }
+.ws-config-choices > p { margin: 0 0 12px; font-size: 12px; color: var(--muted); }
+.ws-config-choice-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.ws-config-fields .ws-config-choice-list label { display: flex; align-items: center; justify-content: flex-start; gap: 10px; min-width: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: white; overflow-wrap: anywhere; }
+.workspace-design .ws-config-choice-list input[type=checkbox] { flex: 0 0 16px; }
+.ws-config-choices:disabled .ws-config-choice-list { opacity: .5; }
+@media (max-width: 767px) { .ws-config-choice-list { grid-template-columns: minmax(0, 1fr); } }
+
+@media (max-width: 767px) { .workspace-design .ws-config-modes button { padding: 10px 4px; font-size: 12px; } }

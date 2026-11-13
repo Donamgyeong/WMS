@@ -56,6 +56,11 @@ describe("근태 기록 API와 DB", () => {
     expect((await pool.query("select * from attendance_events where verification_status='REJECTED'")).rowCount).toBe(1);
     expect((await (await status()).json()).state).toBe("NOT_STARTED");
   });
+  it("IPv4-mapped IPv6 접속은 등록된 IPv4 CIDR로 검증한다", async () => {
+    expect((await send(input(), { "x-forwarded-for": "::ffff:127.0.0.1" })).status).toBe(201);
+    expect((await pool.query("select verification_evidence->>'ip' as ip from attendance_events")).rows[0].ip).toBe("127.0.0.1");
+    expect((await send(input("CLOCK_OUT"), { "x-forwarded-for": "::ffff:192.0.2.1" })).status).toBe(403);
+  });
   it("GPS 100m 안팎·위치 누락·헤더 IPv6 검증", async () => {
     const mobile = { "x-attendance-device": "MOBILE" };
     expect((await send(input(), mobile)).status).toBe(400);

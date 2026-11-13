@@ -1,0 +1,138 @@
+import { spawnSync } from "node:child_process";
+import { beforeEach, afterAll, describe, expect, it } from "vitest";
+import { verifyPassword } from "better-auth/crypto";
+import { testPool, seed, initialPassword } from "../fixtures";
+import { seedAttendance } from "../attendance-fixtures";
+import type { Principal } from "../../src/modules/identity/domain";
+const pool = testPool();
+process.env.DATABASE_URL = process.env.TEST_DATABASE_URL;
+const { getDb } = await import("../../src/db");
+const { changeConfiguration, getConfiguration } = await import("../../src/modules/admin-management/service");
+const db = getDb();
+const admin: Principal = { userId: "admin", employeeId: "admin", name: "admin", email: "admin@example.com", roles: ["ADMIN"], departmentIds: [], mustChangePassword: false };
+const employee: Principal = { ...admin, employeeId: "employee", userId: "employee", roles: ["EMPLOYEE"] };
+const change = async (body: Record<string, unknown>) => changeConfiguration(db, admin, { revision: (await getConfiguration(db, admin)).revision, ...body });
+const future = (days: number) => new Date(Date.now() + days * 86400000).toISOString().slice(0, 10);
+beforeEach(async () => { await seed(pool); await seedAttendance(pool); });
+afterAll(async () => { await pool.end(); await (globalThis as unknown as { wmsPool?: import("pg").Pool }).wmsPool?.end(); });
+describe("조직·계정·정책·근무지 변경", () => {
+  it("직원에서 지정한 담당 부서를 부서 정보에 반영하고 제거한다", async () => {
+    await change({ action: "employee.save", id: "employee", name: "employee", roles: ["EMPLOYEE", "MANAGER"], departmentIds: ["d1", "d2"] });
+    let data = await getConfiguration(db, admin);
+    expect(data.departments.map(d => d.managerId)).toEqual(["employee", "employee"]);
+    expect(data.managed.filter(m => m.employeeId === "manager")).toHaveLength(0);
+    expect(data.roles.filter(r => r.employeeId === "manager").map(r => r.role)).toEqual(["EMPLOYEE"]);
+    await change({ action: "employee.save", id: "employee", name: "employee", roles: ["EMPLOYEE", "MANAGER"], departmentIds: ["d2"] });
+    data = await getConfiguration(db, admin);
+    expect(data.departments.map(d => d.managerId)).toEqual([null, "employee"]);
+    expect(data.managed.filter(m => m.employeeId === "employee").map(m => m.departmentId)).toEqual(["d2"]);
+  });
+  it("부서에서 일반 직원을 부서장으로 지정·교체·해제하며 다른 담당 부서는 보존한다", async () => {
+    await pool.query("insert into auth_sessions(id,token,user_id,expires_at) values('manager-session','manager-token','manager',now()+interval '1 hour')");
+    await change({ action: "department.save", id: "d1", name: "개발", managerId: "employee" });
+    await change({ action: "department.save", id: "d2", name: "운영", managerId: "employee" });
+    let data = await getConfiguration(db, admin);
+    expect(data.roles).toContainEqual({ employeeId: "employee", role: "MANAGER" });
+    expect(data.managed.filter(m => m.employeeId === "employee")).toHaveLength(2);
+    expect((await pool.query("select id from auth_sessions where user_id='manager'")).rowCount).toBe(0);
+    await change({ action: "department.save", id: "d1", name: "개발", managerId: "admin" });
+    data = await getConfiguration(db, admin);
+    expect(data.managed.filter(m => m.employeeId === "employee").map(m => m.departmentId)).toEqual(["d2"]);
+    expect(data.roles).toContainEqual({ employeeId: "employee", role: "MANAGER" });
+    expect(data.roles).toContainEqual({ employeeId: "admin", role: "ADMIN" });
+    await change({ action: "department.save", id: "d2", name: "운영", managerId: "" });
+    data = await getConfiguration(db, admin);
+    expect(data.managed.filter(m => m.employeeId === "employee")).toHaveLength(0);
+    expect(data.roles).not.toContainEqual({ employeeId: "employee", role: "MANAGER" });
+    expect(data.roles).toContainEqual({ employeeId: "employee", role: "EMPLOYEE" });
+    expect(data.departments.find(d => d.id === "d2")?.managerId).toBeNull();
+  });
+  it("새 부서에서도 부서장을 함께 지정하고 비활성 직원 지정은 차단한다", async () => {
+    const { id } = await change({ action: "department.save", name: "신설", managerId: "employee" });
+    const data = await getConfiguration(db, admin);
+    expect(data.managed).toContainEqual({ employeeId: "employee", departmentId: id });
+    await change({ action: "employee.status", id: "employee", active: false });
+    await expect(change({ action: "department.save", id, name: "신설", managerId: "employee" })).rejects.toThrow("활성");
+    await expect(change({ action: "employee.save", id: "employee", name: "employee", roles: ["MANAGER"], departmentIds: [id] })).rejects.toThrow("활성");
+    expect((await getConfiguration(db, admin)).departments.find(d => d.id === id)?.managerId).toBeNull();
+  });
+  it("CLI도 동일한 계정 보호·근무지·정책 검증을 사용한다", async () => {
+    const run = (script: string, args: string[], input?: string) => spawnSync(process.execPath, ["--import", "tsx", script, ...args], { env: { ...process.env, DATABASE_URL: process.env.TEST_DATABASE_URL }, encoding: "utf8", input });
+    const created = run("scripts/accounts.ts", ["create", "cli@example.com", "CLI 직원", "EMPLOYEE", "개발"], initialPassword);
+    expect(created.status, created.stderr).toBe(0);
+    expect(run("scripts/accounts.ts", ["disable", "admin@example.com"]).status).toBe(1);
+    const office = run("scripts/attendance-setup.ts", ["workplace", "cli-office", "CLI 근무지", "37", "127", "10.0.0.0/8"]);
+    expect(office.status, office.stderr).toBe(0);
+    expect((await getConfiguration(db, admin)).workplaces.some(w => w.id === "cli-office")).toBe(true);
+    const assigned = run("scripts/attendance-setup.ts", ["assign", "cli@example.com", future(2)]);
+    expect(assigned.status, assigned.stderr).toBe(0);
+  });
+  it("비관리자·오래된 수정·마지막 관리자 변경을 차단한다", async () => {
+    await expect(getConfiguration(db, employee)).rejects.toMatchObject({ status: 403 });
+    await expect(changeConfiguration(db, employee, {})).rejects.toMatchObject({ status: 403 });
+    await expect(change({ action: "employee.status", id: "admin", active: false })).rejects.toThrow("마지막");
+    await expect(change({ action: "employee.save", id: "admin", name: "admin", roles: ["EMPLOYEE"], departmentIds: [] })).rejects.toThrow("마지막");
+    await expect(change({ action: "department.save", name: "신규", revision: "old" })).rejects.toMatchObject({ status: 409 });
+  });
+  it("동시 저장 중 하나만 반영하고 부서 순환을 차단한다", async () => {
+    const revision = (await getConfiguration(db, admin)).revision;
+    const results = await Promise.allSettled(["A", "B"].map(name => changeConfiguration(db, admin, { action: "department.save", name, revision })));
+    expect(results.filter(r => r.status === "fulfilled")).toHaveLength(1);
+    await change({ action: "department.save", id: "d2", name: "운영", parentId: "d1" });
+    await expect(change({ action: "department.save", id: "d1", name: "개발", parentId: "d2" })).rejects.toThrow("순환");
+  });
+  it("계정을 발급하고 정보·담당 부서 수정과 세션 폐기를 처리한다", async () => {
+    const created = await change({ action: "employee.create", name: "신규 직원", email: "NEW2@example.com", employeeNo: "N2", password: initialPassword, roles: ["MANAGER"], departmentIds: ["d1", "d2"], departmentId: "d1" });
+    let data = await getConfiguration(db, admin);
+    const p = data.people.find(p => p.id === created.id)!;
+    expect(p.email).toBe("new2@example.com"); expect(p.mustChangePassword).toBe(true);
+    await change({ action: "department.save", id: "d1", name: "개발", managerId: p.id });
+    await expect(change({ action: "employee.create", name: "중복", email: "duplicate@example.com", employeeNo: "N2", password: initialPassword, roles: ["EMPLOYEE"], departmentIds: [] })).rejects.toThrow();
+    expect((await pool.query("select id from auth_users where email='duplicate@example.com'")).rowCount).toBe(0);
+    expect(JSON.stringify(data)).not.toContain(initialPassword);
+    await pool.query("insert into auth_sessions(id,token,user_id,expires_at) values('session','token',$1,now()+interval '1 hour')", [p.userId]);
+    await change({ action: "employee.save", id: p.id, name: "수정", roles: ["EMPLOYEE"], departmentIds: [], departmentId: "d2" });
+    expect((await pool.query("select count(*)::int n from auth_sessions where user_id=$1", [p.userId])).rows[0].n).toBe(0);
+    data = await getConfiguration(db, admin); expect(data.managed.filter(m => m.employeeId === p.id)).toHaveLength(0);
+    expect(data.departments.find(d => d.id === "d1")?.managerId).toBeNull();
+    await change({ action: "password.reset", id: p.id, password: "Another-password-123!" });
+    const credentials = await pool.query("select password from auth_accounts where user_id=$1", [p.userId]);
+    expect(await verifyPassword({ hash: credentials.rows[0].password, password: "Another-password-123!" })).toBe(true);
+    await change({ action: "employee.status", id: p.id, active: false });
+    expect((await getConfiguration(db, admin)).people.find(v => v.id === p.id)?.active).toBe(false);
+    await change({ action: "employee.status", id: p.id, active: true });
+  });
+  it("잘못된 역할이면 계정 전체 생성을 롤백한다", async () => {
+    await expect(change({ action: "employee.create", name: "bad", email: "bad@example.com", password: initialPassword, roles: ["MANAGER"], departmentIds: [] })).rejects.toThrow();
+    expect((await pool.query("select id from auth_users where email='bad@example.com'")).rowCount).toBe(0);
+  });
+  it("근무지와 IPv4/IPv6를 저장하고 잘못된 CIDR이면 전체 롤백한다", async () => {
+    await change({ action: "workplace.save", id: "office", name: "새 본사", latitude: "37", longitude: "127", networks: ["10.0.0.0/8", "2001:db8::/32"] });
+    const before = await getConfiguration(db, admin);
+    expect(before.workplaces[0].gpsRadiusMeters).toBe(100);
+    await expect(change({ action: "workplace.save", id: "office", name: "실패", latitude: "38", longitude: "128", networks: ["10.0.0.1/8"] })).rejects.toThrow();
+    expect((await getConfiguration(db, admin)).revision).toBe(before.revision);
+  });
+  it("동일 정책 새 버전은 배정을 원자적으로 전환한다", async () => {
+    const start = future(2);
+    const { id } = await change({ action: "policy.create", name: "기본", effectiveFrom: start });
+    const data = await getConfiguration(db, admin);
+    expect(data.policies.find(p => p.id === id)?.version).toBe(2);
+    expect(data.policies.find(p => p.id === "standard")?.effectiveTo).toBe(start);
+    expect(data.assignments.filter(a => a.workPolicyId === id)).toHaveLength(4);
+    expect(data.assignments.find(a => a.id === "employee")?.effectiveTo).toBe(start);
+  });
+  it("정책 새 버전과 미래 배정 전환을 보존하며 중복·범위 이탈을 차단한다", async () => {
+    const start = future(2), end = future(8);
+    const { id } = await change({ action: "policy.create", name: "신규 정책", effectiveFrom: start, effectiveTo: end });
+    const data = await getConfiguration(db, admin), policy = data.policies.find(p => p.id === id)!;
+    expect(policy.version).toBe(1); expect(policy.halfDayBreakMinutes).toBeNull(); expect(policy.holidayMultiplier).toBeNull();
+    expect(policy.unresolvedPolicies).toContain("ALLOCATION");
+    await expect(change({ action: "policy.assign", employeeId: "employee", workPolicyId: id, effectiveFrom: start })).rejects.toThrow("유효 기간");
+    await change({ action: "policy.assign", employeeId: "employee", workPolicyId: id, effectiveFrom: start, effectiveTo: end });
+    const after = await getConfiguration(db, admin);
+    expect(after.assignments.find(a => a.id === "employee")?.effectiveTo).toBe(start);
+    await expect(change({ action: "policy.assign", employeeId: "employee", workPolicyId: id, effectiveFrom: start, effectiveTo: end })).rejects.toThrow("겹칩니다");
+    expect(after.policies.find(p => p.id === "standard")?.version).toBe(1);
+  });
+});

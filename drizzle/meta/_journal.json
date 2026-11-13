@@ -15,6 +15,34 @@
       "when": 1794544618047,
       "tag": "0001_aromatic_jimmy_woo",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1794545292272,
+      "tag": "0002_dapper_black_panther",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1794545303759,
+      "tag": "0003_domain_integrity",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1794545417331,
+      "tag": "0004_needy_marrow",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1794545450751,
+      "tag": "0005_finalization_guards",
+      "breakpoints": true
     }
   ]
 }

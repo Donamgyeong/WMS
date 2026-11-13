@@ -1,3 +1,4 @@
+import { sql } from "drizzle-orm";
 import {
   pgTable,
   text,
@@ -9,6 +10,9 @@ import {
   unique,
   integer,
   bigint,
+  date,
+  check,
+  type AnyPgColumn,
 } from "drizzle-orm/pg-core";
 const time = (name: string) => timestamp(name, { withTimezone: true });
 export const user = pgTable("auth_users", {
@@ -82,7 +86,9 @@ export const roleEnum = pgEnum("employee_role", [
 export const departments = pgTable("departments", {
   id: text("id").primaryKey(),
   name: text("name").notNull().unique(),
-});
+  parentId: text("parent_id").references((): AnyPgColumn => departments.id),
+  managerId: text("manager_id").references((): AnyPgColumn => employees.id),
+}, (t) => [check("department_not_self_parent", sql`${t.parentId} IS DISTINCT FROM ${t.id}`)]);
 export const employees = pgTable("employees", {
   id: text("id").primaryKey(),
   userId: text("user_id")
@@ -90,6 +96,10 @@ export const employees = pgTable("employees", {
     .unique()
     .references(() => user.id),
   departmentId: text("department_id").references(() => departments.id),
+  employeeNo: text("employee_no").unique(),
+  name: text("name"),
+  hiredAt: date("hired_at"),
+  terminatedAt: date("terminated_at"),
   active: boolean("active").notNull().default(true),
   mustChangePassword: boolean("must_change_password").notNull().default(true),
 });

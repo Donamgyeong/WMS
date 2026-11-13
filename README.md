@@ -102,3 +102,9 @@ TEST_DATABASE_URL=postgresql://wms:wms_dev@localhost:5433/wms_auth_test npm run 
 ```
 
 통합/E2E 테스트는 `_test`로 끝나는 DB만 허용하고 해당 DB의 인증·직원·부서 데이터를 초기화한다. 동일 테스트 DB를 사용하는 통합/E2E 테스트를 동시에 실행하지 않는다. E2E는 3002 포트에 별도 Next.js 서버를 띄우고 종료한다. 포트·자격증명을 바꾼 환경에서는 URL도 맞춘다.
+
+## 업무 DB 스키마
+
+ERD v1.2의 조직·근태·휴일·시급·계약·정산 테이블을 포함한다. 물리 제약과 미정 정책 처리 방식은 [DB 설계](docs/database-schema.md)를 참고한다. 기존 DB에도 `npm run db:migrate`로 순서대로 적용하며 기존 마이그레이션은 수정하지 않는다. btree_gist 확장 설치 권한이 필요하다.
+
+스키마 테스트는 위 인증 테스트와 동일한 전용 `_test` DB에서 `npm run test:integration`으로 실행한다. 인증 테스트의 TRUNCATE CASCADE는 업무 데이터도 초기화한다. 개발·운영 DB를 테스트 DB로 사용하지 않는다.

@@ -21,6 +21,20 @@ async function attendance() {
   await pool.query("insert into attendance_corrections(id,employee_id,event_id,requested_change,reason) values('correction','employee','out','{\"occurredAt\":\"2026-11-12T18:01:00+09:00\"}','시간 확인')");
 }
 describe("하위 관리 화면 실제 데이터", () => {
+  it("직원 선택 시에만 일별 집계를 제공하고 그래프에 원본 분 단위를 전달한다", async () => {
+    await attendance();
+    for (const area of ["team", "admin"] as const) {
+      const principal = area === "team" ? manager : admin;
+      const all = await getManagement(principal, area, `${area}-attendance`, query);
+      expect(all.sections.some(s => s.title === "일별 집계")).toBe(false);
+      const selected = await getManagement(principal, area, `${area}-attendance`, { ...query, employeeId: "employee" });
+      const daily = selected.sections.find(s => s.title === "일별 집계")!;
+      expect(daily.rows).toHaveLength(30);
+      expect(daily.rows.every(r => r.employeeId === "employee")).toBe(true);
+      expect(daily.rows.find(r => r.workDate === "2026-11-12")?.dailyMinutes?.[0]).toBe(480);
+    }
+  });
+
   it("모든 하위 화면을 빈 데이터에서도 조회하고 예시를 포함하지 않는다", async () => {
     for (const key of ["team-attendance", "team-detail", "team-calendar", "admin-attendance", "admin-organization", "admin-settings", "admin-calendar", "admin-contracts", "admin-settlements"]) {
       const area = key.startsWith("team") ? "team" : "admin";
@@ -74,7 +88,7 @@ describe("하위 관리 화면 실제 데이터", () => {
     expect(settings.sections.find(s => s.title === "근무지·접속 검증")?.rows[0].cells.join(' ')).toContain('127.0.0.0/8');
     expect(settings.sections.find(s => s.title === "정책 적용 이력")?.rows).toHaveLength(4);
     const org = await getManagement(admin, "admin", "admin-organization", query);
-    expect(org.sections.find(s => s.title === "직원 목록")?.rows.find(r => r.id === "manager")?.cells).toContain("MANAGER");
+    expect(org.sections.find(s => s.title === "직원 목록")?.rows.find(r => r.id === "manager")?.cells).toContain("부서장");
   });
   it("시급·계약 이력 및 정산 최신 버전·근거·조정·미확정 값을 유지한다", async () => {
     await pool.query("insert into payroll.hourly_rate_histories(id,employee_id,hourly_rate,effective_from,effective_to) values('old','employee',11000,'2025-01-01','2026-01-01'),('rate','employee',12000,'2026-01-01',null)");

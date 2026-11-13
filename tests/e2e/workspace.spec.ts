@@ -58,7 +58,7 @@ test("관리자 실제 정책·조직·계약 조회와 조회 오류", async ({
   await login(page, "admin"); await page.goto("/admin/settings");
   await expect(page.getByRole("region", { name: "근무지·접속 검증", exact: true })).toContainText("127.0.0.0/8");
   await page.goto("/admin/organization");
-  await expect(page.getByRole("region", { name: "직원 목록", exact: true })).toContainText("MANAGER");
+  await expect(page.getByRole("region", { name: "직원 목록", exact: true })).toContainText("부서장");
   await page.goto("/admin/contracts");
   await expect(page.getByRole("region", { name: "미등록 항목", exact: true })).toContainText("기준일 유효 계약 없음");
   await page.getByLabel("시작일", { exact: true }).fill("2027-01-01");
@@ -119,3 +119,50 @@ test("관리자 저장된 정산을 선택하면 근거와 미확정 금액을 �
   await expect(page.getByRole('region', { name: '계산 근거', exact: true })).toContainText('조회 결과가 없습니다.');
   await expect(page.getByRole('region', { name: '미구현 기능', exact: true })).toContainText('Excel');
 });
+
+for (const area of ["team", "admin"] as const) {
+  test(`${area} 일별 집계는 직원 선택 시에만 막대그래프로 표시한다`, async ({ page }) => {
+    await login(page, area === "admin" ? "admin" : "manager");
+    await page.goto(`/${area}/attendance`);
+    await expect(page.getByText(/실제 DB 조회/)).toBeVisible();
+    const chart = page.getByRole("region", { name: "일별 집계", exact: true });
+    await expect(chart).toHaveCount(0);
+    await page.getByLabel("직원", { exact: true }).selectOption("employee");
+    await expect(chart).toBeVisible();
+    await expect(chart.getByRole("table")).toHaveCount(0);
+    await expect(chart.getByRole("list", { name: "일별 근로시간 막대그래프" })).toBeVisible();
+    await expect(chart).toContainText("실근로");
+    await chart.getByRole("button", { name: /근태 상세 선택/ }).first().click();
+    await expect(page.getByRole("heading", { name: /선택 근무일/ })).toBeVisible();
+    await expect(page.getByRole("region", { name: "원본 이벤트", exact: true })).toBeVisible();
+    await page.getByLabel("직원", { exact: true }).selectOption("");
+    await expect(page.getByText(/실제 DB 조회/)).toBeVisible();
+    await expect(chart).toHaveCount(0);
+  });
+}
+
+for (const width of [1440, 1024, 390, 320]) {
+  test(`관리자 네비게이션 세로 정렬 ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 900 });
+    await login(page, "admin");
+    await page.goto("/admin");
+    const header = page.locator(".ws-header");
+    const logo = await header.getByRole("link", { name: "WMS", exact: true }).boundingBox();
+    const account = header.locator("summary");
+    const accountBox = await account.boundingBox();
+    expect(logo).not.toBeNull(); expect(accountBox).not.toBeNull();
+    expect(Math.abs(logo!.y + logo!.height / 2 - accountBox!.y - accountBox!.height / 2)).toBeLessThanOrEqual(1);
+    const links = header.getByRole("navigation").getByRole("link");
+    const first = await links.first().boundingBox();
+    for (const link of await links.all()) {
+      const box = await link.boundingBox();
+      expect(Math.abs(box!.y + box!.height / 2 - first!.y - first!.height / 2)).toBeLessThanOrEqual(1);
+      if (width >= 768) expect(Math.abs(box!.y + box!.height / 2 - logo!.y - logo!.height / 2)).toBeLessThanOrEqual(1);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await account.click();
+    await expect(header.getByRole("link", { name: "비밀번호 변경" })).toBeVisible();
+    const menu = await header.locator(".ws-account > div").boundingBox();
+    expect(menu!.y).toBeGreaterThanOrEqual(accountBox!.y + accountBox!.height);
+  });
+}

@@ -1,3 +1,4 @@
+import { roleLabel } from "@/modules/identity/role-labels";
 import "server-only";
 import { and, asc, desc, eq, inArray, isNull, or, sql } from "drizzle-orm";
 import type { AnyPgColumn } from "drizzle-orm/pg-core";
@@ -45,10 +46,10 @@ export async function getManagement(principal: Principal, area: "team" | "admin"
         records.push(row(session.id, [names.get(person.id), session.workDate, minutes(c.actualWorkMinutes), minutes(c.breakMinutes), c.state, c.provisional ? "잠정" : "종료", `v${session.calculationVersion}`, c.unresolvedReasons.join(", ") || "—"], extra));
         c.segments.forEach((segment, i) => segments.push(row(`${session.id}-${i}`, [names.get(person.id), session.workDate, at(segment.startedAt), at(segment.endedAt), minutes(segment.durationMinutes), value(segment.isOvertime), value(segment.isNight), value(segment.isHolidayWork), segment.unresolvedReasons.join(", ") || "—"], extra)));
       }
-      report.daily.forEach(d => daily.push(row(`${person.id}-${d.key}`, [names.get(person.id), d.key, minutes(d.actualWorkMinutes), minutes(d.overtimeMinutes), minutes(d.nightMinutes), minutes(d.holidayMinutes)], { employeeId: person.id, workDate: d.key })));
+      if (query.employeeId) report.daily.forEach(d => daily.push(row(`${person.id}-${d.key}`, [names.get(person.id), d.key, minutes(d.actualWorkMinutes), minutes(d.overtimeMinutes), minutes(d.nightMinutes), minutes(d.holidayMinutes)], { employeeId: person.id, workDate: d.key, dailyMinutes: [d.actualWorkMinutes, d.overtimeMinutes, d.nightMinutes, d.holidayMinutes] })));
     }
     add("근무일별 기록", ["직원·부서", "근무일", "실근로", "휴게", "상태", "계산 상태", "계산 버전", "미확정 사유"], records);
-    if (key !== "team-detail") add("일별 집계", ["직원·부서", "근무일", "실근로", "연장", "야간", "휴일"], daily);
+    if (key !== "team-detail" && query.employeeId) add("일별 집계", ["직원·부서", "근무일", "실근로", "연장", "야간", "휴일"], daily);
     if (query.employeeId && query.workDate) {
       const sessions = await db.select().from(s.workSessions).where(and(eq(s.workSessions.employeeId, query.employeeId), eq(s.workSessions.workDate, query.workDate))).orderBy(asc(s.workSessions.calculationVersion));
       const source = sessions.find(v => v.calculationVersion === 1);
@@ -80,15 +81,15 @@ export async function getManagement(principal: Principal, area: "team" | "admin"
     unavailable.push("휴일·개인 일정 등록·수정·삭제 UI/API", "공휴일 자동 수집", "다우오피스 휴가·반차 동기화");
   } else if (key === "admin-organization") {
     const [roles, managed, deptRows] = await Promise.all([db.select().from(s.employeeRoles), db.select().from(s.managedDepartments), db.select().from(s.departments)]);
-    add("직원 목록", ["직원", "사번", "부서", "계정 상태", "입사일", "퇴사일", "역할", "담당 부서"], selected.map(p => row(p.id, [p.name, p.employeeNo ?? "—", p.department, p.active ? "활성" : "비활성", p.hiredAt ?? "—", p.terminatedAt ?? "—", roles.filter(r => r.employeeId === p.id).map(r => r.role).join(", "), managed.filter(m => m.employeeId === p.id).map(m => departmentList.find(d => d.id === m.departmentId)?.name ?? m.departmentId).join(", ") || "—"], { employeeId: p.id })));
+    add("직원 목록", ["직원", "사번", "부서", "계정 상태", "입사일", "퇴사일", "역할", "담당 부서"], selected.map(p => row(p.id, [p.name, p.employeeNo ?? "—", p.department, p.active ? "활성" : "비활성", p.hiredAt ?? "—", p.terminatedAt ?? "—", roles.filter(r => r.employeeId === p.id).map(r => roleLabel(r.role)).join(", "), managed.filter(m => m.employeeId === p.id).map(m => departmentList.find(d => d.id === m.departmentId)?.name ?? m.departmentId).join(", ") || "—"], { employeeId: p.id })));
     add("부서 정보", ["부서", "상위 부서", "지정 부서장", "활성 직원"], deptRows.map(d => row(d.id, [d.name, departmentList.find(p => p.id === d.parentId)?.name ?? "—", names.get(d.managerId ?? "") ?? "미지정", people.filter(p => p.active && p.departmentId === d.id).length])));
-    unavailable.push("직원 기본 정보·부서 구조 편집 UI/API", "계정 발급·역할 변경·비활성화 웹 UI/API (기존 accounts CLI 사용 가능)");
+    unavailable.push("과거 소속 이력 관리·과거 부서 기준 조회", "직원·부서 영구 삭제");
   } else if (key === "admin-settings") {
     const [policies, places, networks, assignments] = await Promise.all([db.select().from(s.workPolicies).orderBy(asc(s.workPolicies.name), desc(s.workPolicies.version)), db.select().from(s.workplaces), db.select().from(s.workplaceIpRanges), db.select().from(s.employeePolicyAssignments).where(employeeScope(s.employeePolicyAssignments.employeeId)).orderBy(asc(s.employeePolicyAssignments.effectiveFrom))]);
     add("근무 정책", ["정책", "버전", "기간", "자율 출근", "의무 실근로", "휴게", "반차 실근로", "반차 휴게", "기본/연장/야간 연장 배율", "휴일 배율", "미정 정책"], policies.map(p => row(p.id, [p.name, p.version, effective(p), `${p.clockInFrom}~${p.clockInTo}`, minutes(p.dailyWorkMinutes), minutes(p.breakMinutes), minutes(p.halfDayWorkMinutes), minutes(p.halfDayBreakMinutes), `${p.regularMultiplier}/${p.overtimeMultiplier}/${p.nightOvertimeMultiplier}`, p.holidayMultiplier, p.unresolvedPolicies])));
     add("근무지·접속 검증", ["근무지", "GPS 위도", "GPS 경도", "등록 반경(m)", "허용 CIDR"], places.map(p => row(p.id, [p.name, p.latitude, p.longitude, p.gpsRadiusMeters, networks.filter(n => n.workplaceId === p.id).map(n => n.ipNetwork).join(", ") || "등록 없음"])));
     add("정책 적용 이력", ["직원·부서", "정책", "버전", "유효 기간"], assignments.map(a => row(a.id, [names.get(a.employeeId), policies.find(p => p.id === a.workPolicyId)?.name ?? a.workPolicyId, policies.find(p => p.id === a.workPolicyId)?.version, effective(a)], { employeeId: a.employeeId })));
-    unavailable.push("근무 정책·근무지·허용 IP 편집 웹 UI/API (근무지 등록·기본 정책 배정은 기존 attendance-setup CLI 사용 가능)");
+    unavailable.push("정책 소급 변경·자동 재계산", "근무지 삭제·사용 중지", "미정 정책 확정");
   } else if (key === "admin-contracts") {
     const [rates, contracts] = await Promise.all([db.select().from(s.hourlyRateHistories).where(employeeScope(s.hourlyRateHistories.employeeId)).orderBy(desc(s.hourlyRateHistories.effectiveFrom)), db.select().from(s.compensationContracts).where(employeeScope(s.compensationContracts.employeeId)).orderBy(desc(s.compensationContracts.effectiveFrom))]);
     add("시급 이력", ["직원·부서", "시급", "유효 기간"], rates.map(r => row(r.id, [names.get(r.employeeId), money(r.hourlyRate), effective(r)], { employeeId: r.employeeId })));

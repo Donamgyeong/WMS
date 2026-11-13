@@ -1,40 +1,31 @@
-// DB operator CLI; no public setup endpoint.
+// Trusted local database-operator CLI; uses the same validation and transactions as the web UI.
 import { config } from "dotenv";
 import { Pool } from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
-import { eq } from "drizzle-orm";
-import { randomUUID } from "node:crypto";
-import { workplaces, workplaceIpRanges, workPolicies, employeePolicyAssignments, employees, user } from "../src/db/schema";
-config({ path: ".env.local", quiet: true });
-config({ path: ".env", quiet: true });
+import * as schema from "../src/db/schema";
+import { getConfiguration, changeConfiguration } from "../src/modules/admin-management/service";
+config({ path: ".env.local", quiet: true }); config({ path: ".env", quiet: true });
 async function main() {
-const [command, ...args] = process.argv.slice(2);
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-const db = drizzle(pool);
-try {
-  if (command === "workplace") {
-    const [id, name, rawLat, rawLon, ...networks] = args;
-    const latitude = Number(rawLat), longitude = Number(rawLon);
-    if (!id || !name || !rawLat || !rawLon || !Number.isFinite(latitude) || !Number.isFinite(longitude) || Math.abs(latitude) > 90 || Math.abs(longitude) > 180) throw new Error("workplace ID NAME LATITUDE LONGITUDE [CIDR ...]");
-    await db.transaction(async tx => {
-      await tx.insert(workplaces).values({ id, name, latitude: String(latitude), longitude: String(longitude), gpsRadiusMeters: 100 });
-      for (const ipNetwork of networks) await tx.insert(workplaceIpRanges).values({ id: randomUUID(), workplaceId: id, ipNetwork });
-    });
-    console.log("근무지 등록 완료 (GPS 반경 100m)");
-  } else if (command === "assign") {
-    const [email, from] = args;
-    if (!email || !/^\d{4}-\d{2}-\d{2}$/.test(from ?? "") || Number.isNaN(Date.parse(from))) throw new Error("assign EMAIL YYYY-MM-DD");
-    await db.transaction(async tx => {
-      const [employee] = await tx.select({ id: employees.id }).from(employees).innerJoin(user, eq(employees.userId, user.id)).where(eq(user.email, email.trim().toLowerCase()));
+  const [command, ...args] = process.argv.slice(2);
+  const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+  const db = drizzle(pool, { schema }); const actor = "DATABASE_OPERATOR" as const;
+  try {
+    let data = await getConfiguration(db, actor);
+    if (command === "workplace") {
+      const [id, name, latitude, longitude, ...networks] = args;
+      // Keep the historical CLI's caller-supplied workplace ID for setup scripts.
+      if (!id || data.workplaces.some(w => w.id === id)) throw new Error("새 근무지 ID가 필요합니다.");
+      await changeConfiguration(db, actor, { action: "workplace.save", newId: id, name, latitude, longitude, networks, revision: data.revision });
+      console.log("근무지 등록 완료 (GPS 반경 100m)");
+    } else if (command === "assign") {
+      const [email, effectiveFrom] = args;
+      const employee = data.people.find(p => p.email === email?.trim().toLowerCase());
       if (!employee) throw new Error("직원을 찾을 수 없습니다.");
-      // Each assignment owns its immutable policy basis; no changes to existing assignments.
-      const id = randomUUID();
-      await tx.insert(workPolicies).values({ id, name: `기본 근무 ${id}`, version: 1, effectiveFrom: from });
-      await tx.insert(employeePolicyAssignments).values({ id: randomUUID(), employeeId: employee.id, workPolicyId: id, effectiveFrom: from });
-    });
-    console.log("기본 근무정책 배정 완료 (미정 정책 유지)");
-  } else throw new Error("Usage: tsx scripts/attendance-setup.ts workplace ID NAME LAT LON [CIDR ...] | assign EMAIL YYYY-MM-DD");
-} finally { await pool.end(); }
-
+      const created = await changeConfiguration(db, actor, { action: "policy.create", name: `기본 근무 ${crypto.randomUUID()}`, effectiveFrom, revision: data.revision });
+      data = await getConfiguration(db, actor);
+      await changeConfiguration(db, actor, { action: "policy.assign", employeeId: employee.id, workPolicyId: created.id, effectiveFrom, revision: data.revision });
+      console.log("기본 근무정책 배정 완료 (미정 정책 유지)");
+    } else throw new Error("Usage: tsx scripts/attendance-setup.ts workplace ID NAME LAT LON [CIDR ...] | assign EMAIL YYYY-MM-DD (내일 이후)");
+  } finally { await pool.end(); }
 }
-main().catch(error => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
+main().catch(error => { console.error(error instanceof Error ? error.message : "설정에 실패했습니다."); process.exitCode = 1; });

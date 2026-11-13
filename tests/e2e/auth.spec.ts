@@ -64,16 +64,16 @@ test("부서장과 관리자의 접근 범위를 구분한다", async ({ page })
 });
 
 for (const width of [1440, 390, 320]) {
-  test(`직원 대시보드 ${width}px 레이아웃과 예시 버튼`, async ({ page }) => {
+  test(`직원 대시보드 ${width}px 실제 데이터 레이아웃과 빈 상태`, async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
     await login(page, "employee@example.com");
     await expect(page).toHaveURL(/\/me$/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("오늘도, 나의 속도로.");
     await expect(page.getByRole("button", { name: "출근하기", exact: true })).toBeDisabled();
-    await expect(page.getByLabel("요일별 실제 근로시간 예시").getByRole("listitem")).toHaveCount(7);
+    await expect(page.getByLabel("요일별 실제 근로시간").getByRole("listitem")).toHaveCount(7);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     const work = await page.getByRole("region", { name: "출퇴근·휴게 기록", exact: true }).locator("..").boundingBox();
-    const week = await page.getByRole("region", { name: "이번 주 근로시간 · 예시" }).boundingBox();
+    const week = await page.getByRole("region", { name: "이번 주 근로시간" }).boundingBox();
     const attention = await page.getByRole("region", { name: "확인할 사항" }).boundingBox();
     if (width < 768) {
       expect(attention!.y).toBeGreaterThan(work!.y + work!.height);
@@ -84,12 +84,8 @@ for (const width of [1440, 390, 320]) {
     }
     const writes: string[] = [];
     page.on("request", request => { if (request.method() === "POST") writes.push(request.url()); });
-    for (const name of ["11월 10일 퇴근 기록 누락 · 상세 보기 →"]) {
-      await page.getByRole("button", { name, exact: true }).click();
-      await expect(page.getByRole("status")).toContainText("실제 근태 기록을 저장하지 않습니다.");
-      await page.getByRole("button", { name: "닫기", exact: true }).click();
-      await expect(page.getByRole("status")).toHaveCount(0);
-    }
+    await expect(page.getByRole("region", { name: "확인할 사항" })).toContainText("이전 근무일의 미종료 기록이 없습니다.");
+    await expect(page.getByRole("region", { name: "다가오는 일정" })).toContainText("등록된 일정이 없습니다.");
     expect(writes).toEqual([]);
     await page.getByRole("link", { name: "내 근태", exact: true }).click();
     await expect(page).toHaveURL(/#today-records$/);

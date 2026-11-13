@@ -1,4 +1,4 @@
-export type ManagementRow = { id: string; cells: string[]; employeeId?: string; workDate?: string; calculationId?: string };
+export type ManagementRow = { id: string; cells: string[]; employeeId?: string; workDate?: string; calculationId?: string; dailyMinutes?: (number | null)[] };
 export type ManagementSection = { title: string; columns: string[]; rows: ManagementRow[] };
 export type ManagementData = {
   asOf: string; from: string; to: string;

@@ -15,6 +15,8 @@ beforeAll(async () => { await pool.query("SELECT 1"); });
 beforeEach(async () => {
   db = await pool.connect();
   await db.query("BEGIN");
+  // Other suites may retain a period with these dates; rollback restores it.
+  await db.query("TRUNCATE payroll.payroll_periods CASCADE");
   employee = key();
   await db.query("INSERT INTO auth_users(id,name,email) VALUES ($1,'schema test',$2)",[employee,`${employee}@example.com`]);
   await db.query("INSERT INTO employees(id,user_id) VALUES ($1,$1)",[employee]);

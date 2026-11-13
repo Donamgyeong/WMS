@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./client.module.css";
 import type { EventType, Input, State } from "./domain";
+import { createAttendanceRequestId } from "./request-id";
 type Status = { state: State; canStartNewSession: boolean; workDate: string; clockInAt: string | null; actualWorkMinutes: number; breakMinutes: number; needsReview: boolean; events: { id: string; eventType: EventType; occurredAt: string; source: string }[]; workplaces: { id: string; name: string }[] };
 const labels: Record<EventType, string> = { CLOCK_IN: "출근하기", CLOCK_OUT: "퇴근하기", BREAK_START: "휴게 시작", BREAK_END: "휴게 종료" };
 const states = { NOT_STARTED: "출근 전", WORKING: "근무 중", ON_BREAK: "휴게 중", FINISHED: "퇴근 완료" };
@@ -35,7 +36,7 @@ export function AttendancePanel({ onRecorded }: { onRecorded?: () => Promise<voi
     try {
       if (!pending.current) {
         if (!eventType) return;
-        const input: Input = { eventType, requestId: crypto.randomUUID(), workplaceId: place };
+        const input: Input = { eventType, requestId: createAttendanceRequestId(), workplaceId: place };
         mobile.current = /Android|iPhone|iPad|Mobile/i.test(navigator.userAgent);
         if (mobile.current) {
           if (!navigator.geolocation) throw new Error("GPS를 지원하는 브라우저가 필요합니다.");

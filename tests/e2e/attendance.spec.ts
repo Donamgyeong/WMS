@@ -11,7 +11,9 @@ async function login(page: import("@playwright/test").Page) {
   await page.getByRole("button", { name: "로그인", exact: true }).click();
   await expect(page).toHaveURL(/\/me$/);
 }
-test("PC 출근·다중 휴게·퇴근과 새로고침", async ({ page }) => {
+for (const withoutRandomUUID of [false, true]) {
+test(`PC 출근·다중 휴게·퇴근과 새로고침 (randomUUID 미지원: ${withoutRandomUUID})`, async ({ page }) => {
+  if (withoutRandomUUID) await page.addInitScript(() => { Object.defineProperty(Crypto.prototype, "randomUUID", { value: undefined, configurable: true }); });
   await login(page);
   const panel = page.getByRole("region", { name: "출퇴근·휴게 기록" });
   await expect(panel.getByText("출근 전", { exact: true })).toBeVisible();
@@ -25,6 +27,7 @@ test("PC 출근·다중 휴게·퇴근과 새로고침", async ({ page }) => {
   await expect(panel.getByRole("listitem")).toHaveCount(6);
   expect((await pool.query("select * from attendance_events where verification_status='ACCEPTED'")).rowCount).toBe(6);
 });
+}
 test("모바일 GPS 100m 안과 밖", async ({ browser }) => {
   const context = await browser.newContext({ userAgent: "Mozilla/5.0 iPhone Mobile", permissions: ["geolocation"], geolocation: { latitude: 37.57, longitude: 126.978 } });
   const page = await context.newPage();
@@ -39,7 +42,8 @@ test("모바일 GPS 100m 안과 밖", async ({ browser }) => {
     expect((await pool.query("select * from attendance_events where source='MOBILE'")).rowCount).toBe(2);
   } finally { await context.close(); }
 });
-test("응답 유실 후 같은 요청 ID로 재시도", async ({ page }) => {
+test("randomUUID 미지원 환경에서 응답 유실 후 같은 요청 ID로 재시도", async ({ page }) => {
+  await page.addInitScript(() => { Object.defineProperty(Crypto.prototype, "randomUUID", { value: undefined, configurable: true }); });
   await login(page);
   let first = true;
   await page.route("**/api/attendance/events", async route => {

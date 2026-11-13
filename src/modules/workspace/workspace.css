@@ -8,15 +8,15 @@
 .workspace-design input:not([readonly]):hover, .workspace-design select:hover { border-color: #ced7ea; }
 .workspace-design input[readonly] { cursor: default; }
 .workspace-design input:focus-visible, .workspace-design summary:focus-visible, .workspace-design select:focus-visible { outline: 3px solid #8cb9ff; }
-.ws-header { display: flex; align-items: flex-start; gap: 36px; padding: 28px; min-height: 92px; background: #fff; }
+.ws-header { display: flex; align-items: center; gap: 36px; padding: 28px; min-height: 92px; background: #fff; }
 .ws-logo { color: var(--navy) !important; font-size: 24px; font-weight: 700; line-height: 36px; }
-.ws-header nav { display: flex; flex-wrap: wrap; gap: 36px; margin: 0; }
-.ws-header nav a { color: var(--muted); font-size: 13px; white-space: nowrap; }
+.ws-header nav { display: flex; align-items: center; flex-wrap: wrap; gap: 36px; margin: 0; }
+.ws-header nav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--muted); font-size: 13px; white-space: nowrap; }
 .ws-header nav a[aria-current] { color: var(--navy); font-weight: 700; }
 .ws-account { position: relative; margin-left: auto; text-align: right; font-size: 12px; color: var(--muted); }
-.ws-account summary { cursor: pointer; list-style: none; white-space: nowrap; }
+.ws-account summary { display: flex; align-items: center; justify-content: flex-end; min-height: 36px; cursor: pointer; list-style: none; white-space: nowrap; }
 .ws-account summary::-webkit-details-marker { display: none; }
-.ws-account > div { position: absolute; top: 28px; right: 0; z-index: 3; display: grid; gap: 16px; padding: 20px; min-width: 190px; background: white; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px #172c3c15; text-align: left; }
+.ws-account > div { position: absolute; top: calc(100% + 8px); right: 0; z-index: 3; display: grid; gap: 16px; padding: 20px; min-width: 190px; background: white; border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px #172c3c15; text-align: left; }
 .workspace-design .ws-main { padding: 0; margin: 0 auto; width: 100%; max-width: 1440px; }
 .workspace-design [data-design-node] { max-width: 100%; min-width: 0; flex-shrink: 1; }
 .workspace-design .ws-desktop > div { width: 100%; }
@@ -79,3 +79,92 @@
 .workspace-design .ws-live button:disabled { cursor: default; opacity: .5; }
 .ws-live label { min-width: 0; }
 .ws-live select { max-width: 240px !important; }
+
+/* Match the workspace card, field and action rhythm. */
+.ws-config { gap: 24px; border-radius: 14px; }
+.ws-config-toolbar { justify-content: space-between; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.ws-config-toolbar label { min-width: 220px; }
+.workspace-design .ws-config-toolbar button { background: #fff; color: var(--navy); border: 1px solid var(--line); }
+.ws-config form { min-width: 0; }
+.ws-config-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 24px; min-width: 0; margin: 0; padding: 0; border: 0; }
+.ws-config-fields > legend { float: left; width: 100%; margin: 0 0 4px; padding: 0; font-size: 14px; font-weight: 700; grid-column: 1 / -1; }
+.ws-config-fields > label { display: grid; align-content: start; gap: 8px; min-width: 0; font-size: 12px; font-weight: 500; color: var(--muted); }
+.workspace-design .ws-config-fields input:not([type=checkbox]), .workspace-design .ws-config select, .workspace-design .ws-config-fields textarea { width: 100%; max-width: none !important; min-width: 0; min-height: 42px; margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); font: inherit; font-size: 13px; line-height: 20px; }
+.workspace-design .ws-config-fields textarea { min-height: 112px; resize: vertical; }
+.workspace-design .ws-config-fields textarea:focus-visible { outline: 3px solid #8cb9ff; outline-offset: 2px; }
+.ws-config-fields > label:has(textarea), .ws-config-fields > p, .ws-config-fields > fieldset { grid-column: 1 / -1; }
+.ws-config-fields > p { line-height: 1.7; }
+.ws-config-fields > fieldset { display: flex; flex-wrap: wrap; gap: 12px 24px; min-width: 0; margin: 0; padding: 16px; border: 0; border-radius: 10px; background: #f4f6f8; }
+.ws-config-fields > fieldset legend { padding: 0 0 8px; font-size: 12px; font-weight: 500; color: var(--muted); }
+.ws-config-fields > fieldset label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; }
+.workspace-design .ws-config-fields input[type=checkbox] { width: 16px; height: 16px; margin: 0; accent-color: var(--navy); }
+.ws-config-actions { grid-column: 1 / -1; display: flex; justify-content: flex-end; padding-top: 20px; margin-top: 4px; border-top: 1px solid var(--line); }
+.workspace-design .ws-config-actions button { min-height: 42px; padding: 10px 24px; border-radius: 8px; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; text-align: center; }
+.ws-config > [role=alert], .ws-config > [role=status] { padding: 12px 16px; border-radius: 8px; background: #edf1f9; color: var(--navy); }
+.ws-config > [role=alert] { background: #fff8ec; color: #805c1c; }
+@media (max-width: 767px) {
+  .ws-config { gap: 20px; }
+  .ws-config-toolbar { gap: 12px; align-items: stretch; padding-bottom: 16px; }
+  .ws-config-toolbar label { flex: 1 1 100%; min-width: 0; }
+  .ws-config-fields { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ws-config-actions { padding-top: 16px; }
+  .workspace-design .ws-config-actions button { width: 100%; }
+}
+
+.ws-config-launch { display: flex; justify-content: flex-end; }
+.workspace-design .ws-config-launch button { padding: 10px 20px; border-radius: 8px; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; }
+.workspace-design .ws-config-dialog { width: min(960px, calc(100% - 48px)); max-height: calc(100dvh - 48px); margin: auto; padding: 24px; overflow-y: auto; border: 1px solid var(--line); border-radius: 16px; background: #fff; color: var(--ink); font: inherit; box-shadow: 0 16px 64px #172c3c22; }
+.ws-config-dialog:not([open]) { display: none; }
+.ws-config-dialog::backdrop { background: #172c3c66; }
+.ws-config-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.ws-config-dialog-header h2 { font-size: 18px; }
+.workspace-design .ws-config-dialog-header button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--navy); font-size: 13px; }
+.ws-config-dialog .ws-config { padding: 24px 0 0; border: 0; border-radius: 0; }
+.ws-config-dialog .ws-config > h2 { display: none; }
+@media (max-width: 767px) {
+  .workspace-design .ws-config-dialog { width: calc(100% - 24px); max-height: calc(100dvh - 24px); padding: 20px; border-radius: 14px; }
+  .ws-config-launch { justify-content: flex-start; }
+}
+
+.ws-location-picker { grid-column: 1 / -1; display: grid; gap: 12px; min-width: 0; }
+.ws-location-heading, .ws-location-result { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.ws-location-heading h3 { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+.workspace-design .ws-location-picker button { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--navy); font-size: 12px; }
+.ws-location-map { height: 340px; width: 100%; border: 1px solid var(--line); border-radius: 10px; z-index: 0; font: inherit; }
+.ws-location-result output { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.ws-map-marker { display: grid; place-items: center; border-radius: 50%; background: #fff; box-shadow: 0 2px 8px #172c3c55; border: 2px solid #243e73; }
+.ws-map-marker span { width: 12px; height: 12px; border-radius: 50%; background: #243e73; }
+.workspace-design .ws-location-map a { color: #243e73; }
+.workspace-design .ws-location-map .leaflet-control-zoom a { display: block; background: white; color: #172c3c; font-size: 20px; }
+@media (max-width: 767px) { .ws-location-map { height: 280px; } }
+
+.ws-place-search { display: flex; align-items: end; gap: 12px; min-width: 0; }
+.ws-place-search label { display: grid; gap: 8px; flex: 1; min-width: 0; font-size: 12px; color: var(--muted); }
+.workspace-design .ws-place-search > button { min-height: 42px; flex-shrink: 0; background: var(--navy); color: white; }
+.ws-place-results { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.ws-place-results li + li { border-top: 1px solid var(--line); }
+.workspace-design .ws-place-results button { display: grid; gap: 4px; width: 100%; padding: 12px 16px; border: 0; border-radius: 0; text-align: left; }
+.workspace-design .ws-place-results button:hover { background: #edf1f9; }
+.ws-place-results strong { font-size: 13px; }
+.ws-place-results span { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.ws-place-credit a { text-decoration: underline; }
+@media (max-width: 400px) { .ws-place-search { flex-wrap: wrap; } .ws-place-search label { flex-basis: 100%; } }
+
+.ws-daily-chart { list-style: none; margin: 20px 0 0; padding: 0; }
+.ws-daily-chart > li { display: grid; grid-template-columns: 110px minmax(0, 1fr); align-items: start; gap: 20px; padding: 18px 0; border-top: 1px solid var(--line); }
+.workspace-design .ws-daily-date { padding: 8px 0; color: var(--navy); text-decoration: underline; font-size: 13px; }
+.ws-daily-metrics { display: grid; gap: 10px; min-width: 0; }
+.ws-daily-metric { display: grid; grid-template-columns: 42px minmax(0, 1fr) 100px; gap: 12px; align-items: center; font-size: 12px; }
+.ws-daily-track { height: 12px; background: #edf1f5; border-radius: 4px; overflow: hidden; }
+.ws-daily-bar { display: block; height: 100%; border-radius: 4px; background: var(--navy); }
+.ws-daily-bar-1 { background: #b7771c; }
+.ws-daily-bar-2 { background: #8165b3; }
+.ws-daily-bar-3 { background: #328078; }
+@media (max-width: 767px) {
+  .ws-daily-chart > li { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .ws-daily-date { justify-self: start; }
+  .ws-daily-metric { grid-template-columns: 38px minmax(0, 1fr) 85px; gap: 8px; }
+}
+
+.ws-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.workspace-design .ws-panel-heading button { flex-shrink: 0; padding: 8px 16px; border-radius: 8px; background: var(--navy); color: white; font-size: 13px; }

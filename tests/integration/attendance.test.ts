@@ -99,7 +99,9 @@ describe("근태 기록 API와 DB", () => {
     expect(await run(["workplace", "branch", "지점", "37", "127", "192.0.2.0/24"])).toBe(0);
     expect(await run(["workplace", "bad", "잘못된 좌표", "91", "127"])).not.toBe(0);
     await pool.query("DELETE FROM employee_policy_assignments WHERE employee_id='employee'");
-    expect(await run(["assign", "employee@example.com", "2026-01-01"])).toBe(0);
-    expect((await send(input())).status).toBe(201);
+    expect(await run(["assign", "employee@example.com", "2026-01-01"])).not.toBe(0);
+    const future = new Date(Date.now() + 3 * 86400000).toISOString().slice(0, 10);
+    expect(await run(["assign", "employee@example.com", future])).toBe(0);
+    expect((await pool.query("select effective_from::text from employee_policy_assignments where employee_id='employee'")).rows[0].effective_from).toBe(future);
   });
 });

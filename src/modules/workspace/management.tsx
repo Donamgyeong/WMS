@@ -1,6 +1,9 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { DailyAttendanceChart } from "./daily-attendance-chart";
+import type { Action, ConfigurationRequest } from "@/modules/admin-management/editor";
+import { ConfigurationDialog } from "@/modules/admin-management/dialog";
 import { useSearchParams } from "next/navigation";
 import { dashboardRange } from "@/modules/dashboard/domain";
 import type { WorkspaceRoute } from "./routes";
@@ -8,6 +11,7 @@ import type { ManagementData, ManagementQuery, ManagementRow, ManagementSection 
 
 export function WorkspaceManagement({ area, route }: { area: "team" | "admin"; route: WorkspaceRoute }) {
   const params = useSearchParams();
+  const [editing, setEditing] = useState<ConfigurationRequest | null>(null);
   const [query, setQuery] = useState<ManagementQuery>(() => {
     const range = dashboardRange(new Date());
     const rawDate = params.get("workDate");
@@ -39,6 +43,7 @@ export function WorkspaceManagement({ area, route }: { area: "team" | "admin"; r
     finally { if (!active.signal.aborted) setBusy(false); }
   }, [area, route.key, query]);
   useEffect(() => { const first = setTimeout(() => void refresh(), 0); return () => { clearTimeout(first); controller.current?.abort(); }; }, [refresh]);
+  const organization = route.key === "admin-organization";
   const attendance = ["team-attendance", "team-detail", "admin-attendance"].includes(route.key);
   const selectedPeople = data?.employees.filter(p => (!department || (p.departmentId ?? "unassigned") === department)) ?? [];
   const allowedIds = new Set(selectedPeople.map(p => p.id));
@@ -62,15 +67,17 @@ export function WorkspaceManagement({ area, route }: { area: "team" | "admin"; r
   return <div className="ws-live">
     <p className="ws-live-eyebrow">{area === "admin" ? "ADMIN" : "TEAM"} WORKSPACE</p><h1>{route.title}</h1>
     <p>서울 시간 기준 실제 저장 데이터 · 등록되지 않은 기록은 추정하지 않습니다.</p>
-    <form className="ws-live-filters" onSubmit={e => { e.preventDefault(); setNotice(""); setQuery(q => ({ ...q, from, to, workDate: undefined, calculationId: undefined })); }}>
+    {area === "admin" && ["admin-organization", "admin-settings"].includes(route.key) && <ConfigurationDialog request={editing} onClose={() => setEditing(null)} onSaved={refresh} />}
+    {!organization && <form className="ws-live-filters" onSubmit={e => { e.preventDefault(); setNotice(""); setQuery(q => ({ ...q, from, to, workDate: undefined, calculationId: undefined })); }}>
       <label>시작일<input type="date" required aria-label="시작일" value={from} onChange={e => setFrom(e.target.value)} /></label>
       <label>종료일 (제외)<input type="date" required aria-label="종료일" value={to} onChange={e => setTo(e.target.value)} /></label>
       <button type="submit" disabled={busy}>기간 조회</button><button type="button" disabled={busy} onClick={() => void refresh()}>다시 조회</button>
-    </form>
+    </form>}
     <div className="ws-live-filters">
       <label>직원<select aria-label="직원" value={query.employeeId ?? ""} onChange={e => { setData(undefined); setQuery(q => ({ ...q, employeeId: e.target.value || undefined, workDate: undefined, calculationId: undefined })); }}><option value="">직원 전체</option>{data?.employees.map(p => <option key={p.id} value={p.id}>{p.name} · {p.department}</option>)}</select></label>
       <label>이름·내용 검색<input type="search" aria-label="이름·내용 검색" value={search} onChange={e => setSearch(e.target.value)} /></label>
       <label>부서<select aria-label="부서" value={department} onChange={e => setDepartment(e.target.value)}><option value="">전체 부서</option>{data?.departments.map(d => <option key={d.id} value={d.id}>{d.name}</option>)}{data?.employees.some(p => p.departmentId === null) && <option value="unassigned">부서 미배정</option>}</select></label>
+      {organization && <button type="button" disabled={busy} onClick={() => void refresh()}>다시 조회</button>}
       {attendance && <label>상태<select aria-label="상태" value={status} onChange={e => setStatus(e.target.value)}><option value="">상태 전체</option><option value="WORKING">근무 중</option><option value="ON_BREAK">휴게 중</option><option value="FINISHED">퇴근 완료</option><option value="OPEN_SESSION">미종료</option></select></label>}
     </div>
     {busy && <p role="status">조회 중입니다.</p>}{error && <p role="alert">{error}</p>}{notice && <p role="status">{notice}</p>}
@@ -81,17 +88,22 @@ export function WorkspaceManagement({ area, route }: { area: "team" | "admin"; r
       {route.key === "admin-contracts" && <p>시급·계약 이력은 전체 유효 기간을 보존해 표시합니다. 유효 여부 기준일: {data.from}. 종료일은 제외합니다.</p>}
       {route.key === "admin-settings" && <p>PC는 허용 CIDR, 모바일은 GPS 100m 검증을 사용합니다. 미정 정책은 수정하지 않습니다.</p>}
       {route.key === "admin-settlements" && <p>저장된 계산 결과를 조회합니다. 미확정 금액은 0원이 아닙니다. 원본 스냅샷·이전 버전과 별도 조정 이력을 보존합니다. 목록의 ‘선택’으로 계산 근거를 확인하세요.</p>}
-      {data.sections.map(section => <ManagementTable key={`${route.key}-${section.title}`} section={section} rows={section.rows.filter(filter)} onSelect={selectRecord} />)}
-      <section className="ws-live-card" aria-label="미구현 기능"><h2>미구현 기능</h2><ul>{data.unavailable.map(item => <li key={item}>{item}</li>)}</ul><p>등록·수정·승인 처리는 제공되지 않습니다.</p></section>
-      <p className="ws-live-note">실제 DB 조회 · {new Date(data.asOf).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })} 기준 · 시작일 포함·종료일 제외 · 최대 366일</p>
+      {data.sections.map(section => section.title === "일별 집계" ? query.employeeId && <DailyAttendanceChart key={section.title} rows={section.rows.filter(filter)} onSelect={selectRecord} /> : <ManagementTable key={`${route.key}-${section.title}`} section={section} rows={section.rows.filter(filter)} onSelect={selectRecord} onEdit={area === "admin" && (organization || route.key === "admin-settings") ? setEditing : undefined} />)}
+      <section className="ws-live-card" aria-label="미구현 기능"><h2>미구현 기능</h2><ul>{data.unavailable.map(item => <li key={item}>{item}</li>)}</ul><p>위 목록의 기능은 아직 제공되지 않습니다.</p></section>
+      <p className="ws-live-note">실제 DB 조회 · {new Date(data.asOf).toLocaleString("ko-KR", { timeZone: "Asia/Seoul" })} 기준{!organization && " · 시작일 포함·종료일 제외 · 최대 366일"}</p>
     </>}
   </div>;
 }
-function ManagementTable({ section, rows, onSelect }: { section: ManagementSection; rows: ManagementRow[]; onSelect: (row: ManagementRow) => void }) {
+function ManagementTable({ section, rows, onSelect, onEdit }: { section: ManagementSection; rows: ManagementRow[]; onSelect: (row: ManagementRow) => void; onEdit?: (request: ConfigurationRequest) => void }) {
+  const panelActions: Partial<Record<string, Action>> = { "직원 목록": "employee.create", "부서 정보": "department.save", "근무 정책": "policy.create", "근무지·접속 검증": "workplace.save", "정책 적용 이력": "policy.assign" };
+  const action = panelActions[section.title];
+  const editable = Boolean(onEdit && action);
+  const editRow = (row: ManagementRow): ConfigurationRequest => action === "employee.create" ? { action: "employee.save", id: row.id } : action === "policy.create" ? { action, name: row.cells[0] } : action === "policy.assign" ? { action, id: row.id, employeeId: row.employeeId } : { action: action!, id: row.id };
+
   const [page, setPage] = useState(0);
   const max = Math.max(0, Math.ceil(rows.length / 30) - 1), current = Math.min(page, max);
   const actionable = rows.some(r => r.workDate && r.employeeId || r.calculationId);
-  return <section className="ws-live-card" aria-label={section.title}><h2>{section.title}</h2><p>{rows.length}건</p>
-    {rows.length ? <><div className="ws-live-table"><table><thead><tr>{section.columns.map(c => <th key={c}>{c}</th>)}{actionable && <th>상세</th>}</tr></thead><tbody>{rows.slice(current * 30, (current + 1) * 30).map(r => <tr key={r.id}>{r.cells.map((c, i) => <td key={i}>{c.length > 80 ? <details><summary>전체 내용 보기</summary><pre className="ws-live-json">{c}</pre></details> : c}</td>)}{actionable && <td>{(r.workDate && r.employeeId || r.calculationId) && <button onClick={() => onSelect(r)} aria-label={`${r.cells[0]} ${r.workDate ?? "정산"} 선택`}>선택</button>}</td>}</tr>)}</tbody></table></div>{max > 0 && <div className="ws-inline-actions"><button disabled={current === 0} onClick={() => setPage(current - 1)}>이전</button><span>{current + 1}/{max + 1} 페이지</span><button disabled={current === max} onClick={() => setPage(current + 1)}>다음</button></div>}</> : <p>조회 결과가 없습니다.</p>}
+  return <section className="ws-live-card" aria-label={section.title}><div className="ws-panel-heading"><h2>{section.title}</h2>{editable && <button type="button" onClick={() => onEdit?.({ action: action! })}>추가</button>}</div><p>{rows.length}건</p>
+    {rows.length ? <><div className="ws-live-table"><table><thead><tr>{section.columns.map(c => <th key={c}>{c}</th>)}{actionable && <th>상세</th>}{editable && <th>수정</th>}</tr></thead><tbody>{rows.slice(current * 30, (current + 1) * 30).map(r => <tr key={r.id}>{r.cells.map((c, i) => <td key={i}>{c.length > 80 ? <details><summary>전체 내용 보기</summary><pre className="ws-live-json">{c}</pre></details> : c}</td>)}{actionable && <td>{(r.workDate && r.employeeId || r.calculationId) && <button onClick={() => onSelect(r)} aria-label={`${r.cells[0]} ${r.workDate ?? "정산"} 선택`}>선택</button>}</td>}{editable && <td><button type="button" aria-label={`${r.cells[0]} 수정`} onClick={() => onEdit?.(editRow(r))}>수정</button></td>}</tr>)}</tbody></table></div>{max > 0 && <div className="ws-inline-actions"><button disabled={current === 0} onClick={() => setPage(current - 1)}>이전</button><span>{current + 1}/{max + 1} 페이지</span><button disabled={current === max} onClick={() => setPage(current + 1)}>다음</button></div>}</> : <p>조회 결과가 없습니다.</p>}
   </section>;
 }

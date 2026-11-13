@@ -1,4 +1,5 @@
 import "server-only";
+import { trustedOrigins } from "./origins";
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { APIError } from "better-auth/api";
@@ -15,6 +16,7 @@ function createAuth() {
   return betterAuth({
     secret,
     baseURL,
+    trustedOrigins: trustedOrigins(),
     database: drizzleAdapter(getDb(), { provider: "pg", schema }),
     emailAndPassword: {
       enabled: true,

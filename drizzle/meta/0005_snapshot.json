@@ -1,0 +1,2558 @@
+{
+  "id": "d40f7057-d0eb-4fe3-84f2-1397a57a14d3",
+  "prevId": "8483633e-db1a-4705-8420-abd8373c9d54",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.auth_accounts": {
+      "name": "auth_accounts",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "account_id": {
+          "name": "account_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider_id": {
+          "name": "provider_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "access_token": {
+          "name": "access_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refresh_token": {
+          "name": "refresh_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_token": {
+          "name": "id_token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "access_token_expires_at": {
+          "name": "access_token_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "refresh_token_expires_at": {
+          "name": "refresh_token_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "scope": {
+          "name": "scope",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "password": {
+          "name": "password",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "auth_accounts_user_idx": {
+          "name": "auth_accounts_user_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "auth_accounts_user_id_auth_users_id_fk": {
+          "name": "auth_accounts_user_id_auth_users_id_fk",
+          "tableFrom": "auth_accounts",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "tableTo": "auth_users",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "auth_account_provider_unique": {
+          "name": "auth_account_provider_unique",
+          "columns": [
+            "provider_id",
+            "account_id"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.departments": {
+      "name": "departments",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "parent_id": {
+          "name": "parent_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "manager_id": {
+          "name": "manager_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "departments_parent_id_departments_id_fk": {
+          "name": "departments_parent_id_departments_id_fk",
+          "tableFrom": "departments",
+          "columnsFrom": [
+            "parent_id"
+          ],
+          "tableTo": "departments",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "departments_manager_id_employees_id_fk": {
+          "name": "departments_manager_id_employees_id_fk",
+          "tableFrom": "departments",
+          "columnsFrom": [
+            "manager_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "departments_name_unique": {
+          "name": "departments_name_unique",
+          "columns": [
+            "name"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "department_not_self_parent": {
+          "name": "department_not_self_parent",
+          "value": "\"departments\".\"parent_id\" IS DISTINCT FROM \"departments\".\"id\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.employee_roles": {
+      "name": "employee_roles",
+      "schema": "",
+      "columns": {
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "role": {
+          "name": "role",
+          "type": "employee_role",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employee_roles_employee_id_employees_id_fk": {
+          "name": "employee_roles_employee_id_employees_id_fk",
+          "tableFrom": "employee_roles",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "employee_roles_employee_id_role_pk": {
+          "name": "employee_roles_employee_id_role_pk",
+          "columns": [
+            "employee_id",
+            "role"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.employees": {
+      "name": "employees",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "department_id": {
+          "name": "department_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "employee_no": {
+          "name": "employee_no",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hired_at": {
+          "name": "hired_at",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "terminated_at": {
+          "name": "terminated_at",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "active": {
+          "name": "active",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        },
+        "must_change_password": {
+          "name": "must_change_password",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employees_user_id_auth_users_id_fk": {
+          "name": "employees_user_id_auth_users_id_fk",
+          "tableFrom": "employees",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "tableTo": "auth_users",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "employees_department_id_departments_id_fk": {
+          "name": "employees_department_id_departments_id_fk",
+          "tableFrom": "employees",
+          "columnsFrom": [
+            "department_id"
+          ],
+          "tableTo": "departments",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "employees_user_id_unique": {
+          "name": "employees_user_id_unique",
+          "columns": [
+            "user_id"
+          ],
+          "nullsNotDistinct": false
+        },
+        "employees_employee_no_unique": {
+          "name": "employees_employee_no_unique",
+          "columns": [
+            "employee_no"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.managed_departments": {
+      "name": "managed_departments",
+      "schema": "",
+      "columns": {
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "department_id": {
+          "name": "department_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "managed_departments_employee_id_employees_id_fk": {
+          "name": "managed_departments_employee_id_employees_id_fk",
+          "tableFrom": "managed_departments",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "managed_departments_department_id_departments_id_fk": {
+          "name": "managed_departments_department_id_departments_id_fk",
+          "tableFrom": "managed_departments",
+          "columnsFrom": [
+            "department_id"
+          ],
+          "tableTo": "departments",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "managed_departments_employee_id_department_id_pk": {
+          "name": "managed_departments_employee_id_department_id_pk",
+          "columns": [
+            "employee_id",
+            "department_id"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.auth_rate_limits": {
+      "name": "auth_rate_limits",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "key": {
+          "name": "key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "count": {
+          "name": "count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_request": {
+          "name": "last_request",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "auth_rate_limits_key_unique": {
+          "name": "auth_rate_limits_key_unique",
+          "columns": [
+            "key"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.auth_sessions": {
+      "name": "auth_sessions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "token": {
+          "name": "token",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "ip_address": {
+          "name": "ip_address",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_agent": {
+          "name": "user_agent",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "auth_sessions_user_idx": {
+          "name": "auth_sessions_user_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "auth_sessions_user_id_auth_users_id_fk": {
+          "name": "auth_sessions_user_id_auth_users_id_fk",
+          "tableFrom": "auth_sessions",
+          "columnsFrom": [
+            "user_id"
+          ],
+          "tableTo": "auth_users",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "cascade"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "auth_sessions_token_unique": {
+          "name": "auth_sessions_token_unique",
+          "columns": [
+            "token"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.auth_users": {
+      "name": "auth_users",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "email_verified": {
+          "name": "email_verified",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "image": {
+          "name": "image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "auth_users_email_unique": {
+          "name": "auth_users_email_unique",
+          "columns": [
+            "email"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.auth_verifications": {
+      "name": "auth_verifications",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "identifier": {
+          "name": "identifier",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "value": {
+          "name": "value",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "expires_at": {
+          "name": "expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.employee_policy_assignments": {
+      "name": "employee_policy_assignments",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_policy_id": {
+          "name": "work_policy_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_to": {
+          "name": "effective_to",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employee_policy_assignments_employee_id_employees_id_fk": {
+          "name": "employee_policy_assignments_employee_id_employees_id_fk",
+          "tableFrom": "employee_policy_assignments",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "employee_policy_assignments_work_policy_id_work_policies_id_fk": {
+          "name": "employee_policy_assignments_work_policy_id_work_policies_id_fk",
+          "tableFrom": "employee_policy_assignments",
+          "columnsFrom": [
+            "work_policy_id"
+          ],
+          "tableTo": "work_policies",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.work_policies": {
+      "name": "work_policies",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "version": {
+          "name": "version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "clock_in_from": {
+          "name": "clock_in_from",
+          "type": "time",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'08:00'"
+        },
+        "clock_in_to": {
+          "name": "clock_in_to",
+          "type": "time",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'10:00'"
+        },
+        "daily_work_minutes": {
+          "name": "daily_work_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 480
+        },
+        "break_minutes": {
+          "name": "break_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 60
+        },
+        "half_day_work_minutes": {
+          "name": "half_day_work_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 240
+        },
+        "half_day_break_minutes": {
+          "name": "half_day_break_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "regular_multiplier": {
+          "name": "regular_multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'1.0'"
+        },
+        "overtime_multiplier": {
+          "name": "overtime_multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'1.5'"
+        },
+        "night_overtime_multiplier": {
+          "name": "night_overtime_multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'2.0'"
+        },
+        "holiday_multiplier": {
+          "name": "holiday_multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unresolved_policies": {
+          "name": "unresolved_policies",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[\"ALLOCATION\", \"ALLOWANCE_COMPARISON\", \"HALF_DAY\", \"OVERTIME_APPROVAL\", \"HOLIDAY\", \"CORRECTION_APPROVAL\", \"WEEKLY_ALERT\", \"ROUNDING\", \"TAX\"]'::jsonb"
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_to": {
+          "name": "effective_to",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "policy_name_version": {
+          "name": "policy_name_version",
+          "columns": [
+            "name",
+            "version"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "policy_values": {
+          "name": "policy_values",
+          "value": "\"work_policies\".\"version\">0 AND \"work_policies\".\"daily_work_minutes\">=0 AND \"work_policies\".\"break_minutes\">=0 AND \"work_policies\".\"half_day_work_minutes\">=0 AND (\"work_policies\".\"half_day_break_minutes\" IS NULL OR \"work_policies\".\"half_day_break_minutes\">=0) AND \"work_policies\".\"clock_in_from\"<=\"work_policies\".\"clock_in_to\" AND \"work_policies\".\"regular_multiplier\">0 AND \"work_policies\".\"overtime_multiplier\">0 AND \"work_policies\".\"night_overtime_multiplier\">0 AND (\"work_policies\".\"holiday_multiplier\" IS NULL OR \"work_policies\".\"holiday_multiplier\">0)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.employee_calendar_assignments": {
+      "name": "employee_calendar_assignments",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "calendar_id": {
+          "name": "calendar_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_to": {
+          "name": "effective_to",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "employee_calendar_assignments_employee_id_employees_id_fk": {
+          "name": "employee_calendar_assignments_employee_id_employees_id_fk",
+          "tableFrom": "employee_calendar_assignments",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "employee_calendar_assignments_calendar_id_holiday_calendars_id_fk": {
+          "name": "employee_calendar_assignments_calendar_id_holiday_calendars_id_fk",
+          "tableFrom": "employee_calendar_assignments",
+          "columnsFrom": [
+            "calendar_id"
+          ],
+          "tableTo": "holiday_calendars",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.holiday_calendars": {
+      "name": "holiday_calendars",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "timezone": {
+          "name": "timezone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.holidays": {
+      "name": "holidays",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "calendar_id": {
+          "name": "calendar_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "holiday_date": {
+          "name": "holiday_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "holiday_type": {
+          "name": "holiday_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_paid": {
+          "name": "is_paid",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "source": {
+          "name": "source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "holidays_calendar_id_holiday_calendars_id_fk": {
+          "name": "holidays_calendar_id_holiday_calendars_id_fk",
+          "tableFrom": "holidays",
+          "columnsFrom": [
+            "calendar_id"
+          ],
+          "tableTo": "holiday_calendars",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "holiday_calendar_date_name": {
+          "name": "holiday_calendar_date_name",
+          "columns": [
+            "calendar_id",
+            "holiday_date",
+            "name"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.leave_records": {
+      "name": "leave_records",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "external_leave_id": {
+          "name": "external_leave_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "leave_type": {
+          "name": "leave_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "start_at": {
+          "name": "start_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "end_at": {
+          "name": "end_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "approved_status": {
+          "name": "approved_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "synced_at": {
+          "name": "synced_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "leave_records_employee_id_employees_id_fk": {
+          "name": "leave_records_employee_id_employees_id_fk",
+          "tableFrom": "leave_records",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "leave_records_external_leave_id_unique": {
+          "name": "leave_records_external_leave_id_unique",
+          "columns": [
+            "external_leave_id"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "leave_interval": {
+          "name": "leave_interval",
+          "value": "\"leave_records\".\"start_at\"<\"leave_records\".\"end_at\""
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.work_schedules": {
+      "name": "work_schedules",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_date": {
+          "name": "work_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "day_type": {
+          "name": "day_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "required_work_minutes": {
+          "name": "required_work_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "holiday_id": {
+          "name": "holiday_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_work_scheduled": {
+          "name": "is_work_scheduled",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "work_schedules_employee_id_employees_id_fk": {
+          "name": "work_schedules_employee_id_employees_id_fk",
+          "tableFrom": "work_schedules",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "work_schedules_holiday_id_holidays_id_fk": {
+          "name": "work_schedules_holiday_id_holidays_id_fk",
+          "tableFrom": "work_schedules",
+          "columnsFrom": [
+            "holiday_id"
+          ],
+          "tableTo": "holidays",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "employee_work_date": {
+          "name": "employee_work_date",
+          "columns": [
+            "employee_id",
+            "work_date"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "schedule_minutes": {
+          "name": "schedule_minutes",
+          "value": "\"work_schedules\".\"required_work_minutes\" IS NULL OR \"work_schedules\".\"required_work_minutes\">=0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.attendance_corrections": {
+      "name": "attendance_corrections",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "event_id": {
+          "name": "event_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "requested_change": {
+          "name": "requested_change",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'UNDECIDED'"
+        },
+        "approved_by": {
+          "name": "approved_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "attendance_corrections_employee_id_employees_id_fk": {
+          "name": "attendance_corrections_employee_id_employees_id_fk",
+          "tableFrom": "attendance_corrections",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "attendance_corrections_approved_by_employees_id_fk": {
+          "name": "attendance_corrections_approved_by_employees_id_fk",
+          "tableFrom": "attendance_corrections",
+          "columnsFrom": [
+            "approved_by"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "attendance_corrections_event_id_employee_id_attendance_events_id_employee_id_fk": {
+          "name": "attendance_corrections_event_id_employee_id_attendance_events_id_employee_id_fk",
+          "tableFrom": "attendance_corrections",
+          "columnsFrom": [
+            "event_id",
+            "employee_id"
+          ],
+          "tableTo": "attendance_events",
+          "columnsTo": [
+            "id",
+            "employee_id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "correction_approver": {
+          "name": "correction_approver",
+          "value": "\"attendance_corrections\".\"status\"<>'APPROVED' OR \"attendance_corrections\".\"approved_by\" IS NOT NULL"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.attendance_events": {
+      "name": "attendance_events",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_session_id": {
+          "name": "work_session_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "event_type": {
+          "name": "event_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "occurred_at": {
+          "name": "occurred_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "recorded_at": {
+          "name": "recorded_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "source": {
+          "name": "source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "workplace_id": {
+          "name": "workplace_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "verification_status": {
+          "name": "verification_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "verification_evidence": {
+          "name": "verification_evidence",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "request_id": {
+          "name": "request_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "event_employee_time": {
+          "name": "event_employee_time",
+          "columns": [
+            {
+              "expression": "employee_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "occurred_at",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "with": {},
+          "method": "btree",
+          "concurrently": false
+        }
+      },
+      "foreignKeys": {
+        "attendance_events_employee_id_employees_id_fk": {
+          "name": "attendance_events_employee_id_employees_id_fk",
+          "tableFrom": "attendance_events",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "attendance_events_workplace_id_workplaces_id_fk": {
+          "name": "attendance_events_workplace_id_workplaces_id_fk",
+          "tableFrom": "attendance_events",
+          "columnsFrom": [
+            "workplace_id"
+          ],
+          "tableTo": "workplaces",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "attendance_events_work_session_id_employee_id_work_sessions_id_employee_id_fk": {
+          "name": "attendance_events_work_session_id_employee_id_work_sessions_id_employee_id_fk",
+          "tableFrom": "attendance_events",
+          "columnsFrom": [
+            "work_session_id",
+            "employee_id"
+          ],
+          "tableTo": "work_sessions",
+          "columnsTo": [
+            "id",
+            "employee_id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "event_request": {
+          "name": "event_request",
+          "columns": [
+            "employee_id",
+            "request_id"
+          ],
+          "nullsNotDistinct": false
+        },
+        "event_employee_key": {
+          "name": "event_employee_key",
+          "columns": [
+            "id",
+            "employee_id"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.work_segments": {
+      "name": "work_segments",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "work_session_id": {
+          "name": "work_session_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "started_at": {
+          "name": "started_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ended_at": {
+          "name": "ended_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "duration_minutes": {
+          "name": "duration_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_overtime": {
+          "name": "is_overtime",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_night": {
+          "name": "is_night",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "is_holiday_work": {
+          "name": "is_holiday_work",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "applied_multiplier": {
+          "name": "applied_multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calculation_version": {
+          "name": "calculation_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "work_segments_employee_id_employees_id_fk": {
+          "name": "work_segments_employee_id_employees_id_fk",
+          "tableFrom": "work_segments",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "work_segments_work_session_id_employee_id_work_sessions_id_employee_id_fk": {
+          "name": "work_segments_work_session_id_employee_id_work_sessions_id_employee_id_fk",
+          "tableFrom": "work_segments",
+          "columnsFrom": [
+            "work_session_id",
+            "employee_id"
+          ],
+          "tableTo": "work_sessions",
+          "columnsTo": [
+            "id",
+            "employee_id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "segment_values": {
+          "name": "segment_values",
+          "value": "\"work_segments\".\"started_at\"<\"work_segments\".\"ended_at\" AND \"work_segments\".\"duration_minutes\">0 AND \"work_segments\".\"calculation_version\">0 AND (\"work_segments\".\"applied_multiplier\" IS NULL OR \"work_segments\".\"applied_multiplier\">0)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.work_sessions": {
+      "name": "work_sessions",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_date": {
+          "name": "work_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "clock_in_at": {
+          "name": "clock_in_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "clock_out_at": {
+          "name": "clock_out_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "break_minutes": {
+          "name": "break_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "actual_work_minutes": {
+          "name": "actual_work_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "required_work_minutes": {
+          "name": "required_work_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calculation_version": {
+          "name": "calculation_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_policy_id": {
+          "name": "work_policy_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "input_snapshot": {
+          "name": "input_snapshot",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "work_sessions_employee_id_employees_id_fk": {
+          "name": "work_sessions_employee_id_employees_id_fk",
+          "tableFrom": "work_sessions",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "work_sessions_work_policy_id_work_policies_id_fk": {
+          "name": "work_sessions_work_policy_id_work_policies_id_fk",
+          "tableFrom": "work_sessions",
+          "columnsFrom": [
+            "work_policy_id"
+          ],
+          "tableTo": "work_policies",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "session_employee_key": {
+          "name": "session_employee_key",
+          "columns": [
+            "id",
+            "employee_id"
+          ],
+          "nullsNotDistinct": false
+        },
+        "session_date_version": {
+          "name": "session_date_version",
+          "columns": [
+            "employee_id",
+            "work_date",
+            "calculation_version"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "session_values": {
+          "name": "session_values",
+          "value": "\"work_sessions\".\"calculation_version\">0 AND (\"work_sessions\".\"clock_out_at\" IS NULL OR \"work_sessions\".\"clock_in_at\"<\"work_sessions\".\"clock_out_at\") AND (\"work_sessions\".\"break_minutes\" IS NULL OR \"work_sessions\".\"break_minutes\">=0) AND (\"work_sessions\".\"actual_work_minutes\" IS NULL OR \"work_sessions\".\"actual_work_minutes\">=0) AND (\"work_sessions\".\"required_work_minutes\" IS NULL OR \"work_sessions\".\"required_work_minutes\">=0)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.workplace_ip_ranges": {
+      "name": "workplace_ip_ranges",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "workplace_id": {
+          "name": "workplace_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ip_network": {
+          "name": "ip_network",
+          "type": "cidr",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "workplace_ip_ranges_workplace_id_workplaces_id_fk": {
+          "name": "workplace_ip_ranges_workplace_id_workplaces_id_fk",
+          "tableFrom": "workplace_ip_ranges",
+          "columnsFrom": [
+            "workplace_id"
+          ],
+          "tableTo": "workplaces",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "workplace_network": {
+          "name": "workplace_network",
+          "columns": [
+            "workplace_id",
+            "ip_network"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.workplaces": {
+      "name": "workplaces",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "latitude": {
+          "name": "latitude",
+          "type": "numeric(10, 7)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "longitude": {
+          "name": "longitude",
+          "type": "numeric(10, 7)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gps_radius_meters": {
+          "name": "gps_radius_meters",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "workplace_coordinates": {
+          "name": "workplace_coordinates",
+          "value": "\"workplaces\".\"latitude\" BETWEEN -90 AND 90 AND \"workplaces\".\"longitude\" BETWEEN -180 AND 180 AND \"workplaces\".\"gps_radius_meters\">0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "payroll.audit_logs": {
+      "name": "audit_logs",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "actor_id": {
+          "name": "actor_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "action": {
+          "name": "action",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "target_type": {
+          "name": "target_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "target_id": {
+          "name": "target_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "metadata": {
+          "name": "metadata",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "occurred_at": {
+          "name": "occurred_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "audit_logs_actor_id_employees_id_fk": {
+          "name": "audit_logs_actor_id_employees_id_fk",
+          "tableFrom": "audit_logs",
+          "columnsFrom": [
+            "actor_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payroll.compensation_contracts": {
+      "name": "compensation_contracts",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_to": {
+          "name": "effective_to",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "included_overtime_minutes": {
+          "name": "included_overtime_minutes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 960
+        },
+        "fixed_overtime_allowance": {
+          "name": "fixed_overtime_allowance",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "allocation_policy": {
+          "name": "allocation_policy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'UNDECIDED'"
+        },
+        "allowance_comparison_policy": {
+          "name": "allowance_comparison_policy",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'UNDECIDED'"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "compensation_contracts_employee_id_employees_id_fk": {
+          "name": "compensation_contracts_employee_id_employees_id_fk",
+          "tableFrom": "compensation_contracts",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "contract_employee_key": {
+          "name": "contract_employee_key",
+          "columns": [
+            "id",
+            "employee_id"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "contract_values": {
+          "name": "contract_values",
+          "value": "\"payroll\".\"compensation_contracts\".\"included_overtime_minutes\">=0 AND (\"payroll\".\"compensation_contracts\".\"fixed_overtime_allowance\" IS NULL OR \"payroll\".\"compensation_contracts\".\"fixed_overtime_allowance\">=0)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "payroll.hourly_rate_histories": {
+      "name": "hourly_rate_histories",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hourly_rate": {
+          "name": "hourly_rate",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_from": {
+          "name": "effective_from",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "effective_to": {
+          "name": "effective_to",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "hourly_rate_histories_employee_id_employees_id_fk": {
+          "name": "hourly_rate_histories_employee_id_employees_id_fk",
+          "tableFrom": "hourly_rate_histories",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "rate_positive": {
+          "name": "rate_positive",
+          "value": "\"payroll\".\"hourly_rate_histories\".\"hourly_rate\">0"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "payroll.payroll_adjustments": {
+      "name": "payroll_adjustments",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "payroll_calculation_id": {
+          "name": "payroll_calculation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "name": "amount",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "reason": {
+          "name": "reason",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_by": {
+          "name": "created_by",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "payroll_adjustments_payroll_calculation_id_payroll_calculations_id_fk": {
+          "name": "payroll_adjustments_payroll_calculation_id_payroll_calculations_id_fk",
+          "tableFrom": "payroll_adjustments",
+          "columnsFrom": [
+            "payroll_calculation_id"
+          ],
+          "tableTo": "payroll_calculations",
+          "schemaTo": "payroll",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "payroll_adjustments_created_by_employees_id_fk": {
+          "name": "payroll_adjustments_created_by_employees_id_fk",
+          "tableFrom": "payroll_adjustments",
+          "columnsFrom": [
+            "created_by"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "payroll.payroll_calculations": {
+      "name": "payroll_calculations",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "payroll_period_id": {
+          "name": "payroll_period_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "employee_id": {
+          "name": "employee_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contract_id": {
+          "name": "contract_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "regular_minutes": {
+          "name": "regular_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "overtime_minutes": {
+          "name": "overtime_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "night_overtime_minutes": {
+          "name": "night_overtime_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "included_overtime_minutes": {
+          "name": "included_overtime_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "payable_overtime_minutes": {
+          "name": "payable_overtime_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "regular_pay": {
+          "name": "regular_pay",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "additional_overtime_pay": {
+          "name": "additional_overtime_pay",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_calculated_pay": {
+          "name": "total_calculated_pay",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "calculation_version": {
+          "name": "calculation_version",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'UNRESOLVED'"
+        },
+        "unresolved_reasons": {
+          "name": "unresolved_reasons",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "input_snapshot": {
+          "name": "input_snapshot",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "payroll_calculations_payroll_period_id_payroll_periods_id_fk": {
+          "name": "payroll_calculations_payroll_period_id_payroll_periods_id_fk",
+          "tableFrom": "payroll_calculations",
+          "columnsFrom": [
+            "payroll_period_id"
+          ],
+          "tableTo": "payroll_periods",
+          "schemaTo": "payroll",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "payroll_calculations_employee_id_employees_id_fk": {
+          "name": "payroll_calculations_employee_id_employees_id_fk",
+          "tableFrom": "payroll_calculations",
+          "columnsFrom": [
+            "employee_id"
+          ],
+          "tableTo": "employees",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "payroll_calculations_contract_id_employee_id_compensation_contracts_id_employee_id_fk": {
+          "name": "payroll_calculations_contract_id_employee_id_compensation_contracts_id_employee_id_fk",
+          "tableFrom": "payroll_calculations",
+          "columnsFrom": [
+            "contract_id",
+            "employee_id"
+          ],
+          "tableTo": "compensation_contracts",
+          "schemaTo": "payroll",
+          "columnsTo": [
+            "id",
+            "employee_id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "payroll_employee_version": {
+          "name": "payroll_employee_version",
+          "columns": [
+            "payroll_period_id",
+            "employee_id",
+            "calculation_version"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "calculation_values": {
+          "name": "calculation_values",
+          "value": "\"payroll\".\"payroll_calculations\".\"calculation_version\">0 AND \"payroll\".\"payroll_calculations\".\"regular_minutes\">=0 AND \"payroll\".\"payroll_calculations\".\"overtime_minutes\">=0 AND \"payroll\".\"payroll_calculations\".\"night_overtime_minutes\" BETWEEN 0 AND \"payroll\".\"payroll_calculations\".\"overtime_minutes\" AND \"payroll\".\"payroll_calculations\".\"included_overtime_minutes\" BETWEEN 0 AND \"payroll\".\"payroll_calculations\".\"overtime_minutes\" AND (\"payroll\".\"payroll_calculations\".\"payable_overtime_minutes\" IS NULL OR \"payroll\".\"payroll_calculations\".\"payable_overtime_minutes\"=\"payroll\".\"payroll_calculations\".\"overtime_minutes\"-\"payroll\".\"payroll_calculations\".\"included_overtime_minutes\") AND \"payroll\".\"payroll_calculations\".\"regular_pay\">=0 AND (\"payroll\".\"payroll_calculations\".\"additional_overtime_pay\" IS NULL OR \"payroll\".\"payroll_calculations\".\"additional_overtime_pay\">=0) AND (\"payroll\".\"payroll_calculations\".\"total_calculated_pay\" IS NULL OR \"payroll\".\"payroll_calculations\".\"total_calculated_pay\"=\"payroll\".\"payroll_calculations\".\"regular_pay\"+\"payroll\".\"payroll_calculations\".\"additional_overtime_pay\")"
+        },
+        "unresolved_amounts": {
+          "name": "unresolved_amounts",
+          "value": "(\"payroll\".\"payroll_calculations\".\"status\"='UNRESOLVED' AND \"payroll\".\"payroll_calculations\".\"additional_overtime_pay\" IS NULL AND \"payroll\".\"payroll_calculations\".\"total_calculated_pay\" IS NULL) OR (\"payroll\".\"payroll_calculations\".\"status\"<>'UNRESOLVED' AND \"payroll\".\"payroll_calculations\".\"additional_overtime_pay\" IS NOT NULL AND \"payroll\".\"payroll_calculations\".\"total_calculated_pay\" IS NOT NULL AND \"payroll\".\"payroll_calculations\".\"payable_overtime_minutes\" IS NOT NULL AND \"payroll\".\"payroll_calculations\".\"unresolved_reasons\"='[]'::jsonb)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "payroll.payroll_line_items": {
+      "name": "payroll_line_items",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "payroll_calculation_id": {
+          "name": "payroll_calculation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "work_segment_id": {
+          "name": "work_segment_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "duration_minutes": {
+          "name": "duration_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hourly_rate": {
+          "name": "hourly_rate",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "multiplier": {
+          "name": "multiplier",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "gross_amount": {
+          "name": "gross_amount",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "included_minutes": {
+          "name": "included_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "payable_minutes": {
+          "name": "payable_minutes",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "additional_amount": {
+          "name": "additional_amount",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "basis_snapshot": {
+          "name": "basis_snapshot",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "payroll_line_items_payroll_calculation_id_payroll_calculations_id_fk": {
+          "name": "payroll_line_items_payroll_calculation_id_payroll_calculations_id_fk",
+          "tableFrom": "payroll_line_items",
+          "columnsFrom": [
+            "payroll_calculation_id"
+          ],
+          "tableTo": "payroll_calculations",
+          "schemaTo": "payroll",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "payroll_line_items_work_segment_id_work_segments_id_fk": {
+          "name": "payroll_line_items_work_segment_id_work_segments_id_fk",
+          "tableFrom": "payroll_line_items",
+          "columnsFrom": [
+            "work_segment_id"
+          ],
+          "tableTo": "work_segments",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "line_values": {
+          "name": "line_values",
+          "value": "\"payroll\".\"payroll_line_items\".\"duration_minutes\">0 AND \"payroll\".\"payroll_line_items\".\"hourly_rate\">0 AND (\"payroll\".\"payroll_line_items\".\"multiplier\" IS NULL OR \"payroll\".\"payroll_line_items\".\"multiplier\">0) AND (\"payroll\".\"payroll_line_items\".\"gross_amount\" IS NULL OR \"payroll\".\"payroll_line_items\".\"gross_amount\">=0) AND (\"payroll\".\"payroll_line_items\".\"included_minutes\" IS NULL OR \"payroll\".\"payroll_line_items\".\"included_minutes\" BETWEEN 0 AND \"payroll\".\"payroll_line_items\".\"duration_minutes\") AND (\"payroll\".\"payroll_line_items\".\"payable_minutes\" IS NULL OR \"payroll\".\"payroll_line_items\".\"payable_minutes\" BETWEEN 0 AND \"payroll\".\"payroll_line_items\".\"duration_minutes\") AND (\"payroll\".\"payroll_line_items\".\"additional_amount\" IS NULL OR \"payroll\".\"payroll_line_items\".\"additional_amount\">=0)"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "payroll.payroll_periods": {
+      "name": "payroll_periods",
+      "schema": "payroll",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "period_start": {
+          "name": "period_start",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "period_end": {
+          "name": "period_end",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'OPEN'"
+        },
+        "finalized_at": {
+          "name": "finalized_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "period_dates": {
+          "name": "period_dates",
+          "columns": [
+            "period_start",
+            "period_end"
+          ],
+          "nullsNotDistinct": false
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "period_interval": {
+          "name": "period_interval",
+          "value": "\"payroll\".\"payroll_periods\".\"period_start\"<\"payroll\".\"payroll_periods\".\"period_end\""
+        },
+        "period_finalized_at": {
+          "name": "period_finalized_at",
+          "value": "(\"payroll\".\"payroll_periods\".\"status\"='FINALIZED')=(\"payroll\".\"payroll_periods\".\"finalized_at\" IS NOT NULL)"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {
+    "public.employee_role": {
+      "name": "employee_role",
+      "schema": "public",
+      "values": [
+        "EMPLOYEE",
+        "MANAGER",
+        "ADMIN"
+      ]
+    }
+  },
+  "schemas": {
+    "payroll": "payroll"
+  },
+  "views": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

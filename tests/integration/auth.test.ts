@@ -56,6 +56,13 @@ afterAll(async () => {
   await globalDb.wmsPool?.end();
 });
 describe("인증 DB/API", () => {
+  it("macmini origin에서 JSON 로그인을 허용한다", async () => {
+    const response = await post("/sign-in/email", {
+      email: "employee@example.com", password: initialPassword,
+    }, "", "http://macmini:3001");
+    expect(response.status).toBe(200);
+    expect(response.headers.getSetCookie().length).toBeGreaterThan(0);
+  });
   it("공개 가입과 미인증 접근을 차단한다", async () => {
     expect(
       (
@@ -275,5 +282,53 @@ describe("인증 DB/API", () => {
         )
       ).status,
     ).toBe(401);
+  });
+});
+
+// The browser form endpoint must preserve the same server checks as the JSON API.
+describe("HTML POST 로그인", () => {
+  async function formLogin(originHeader = origin) {
+    const { POST: formPOST } =
+      await import("../../src/app/api/session/[action]/route");
+    return formPOST(
+      new Request(`${origin}/api/session/login`, {
+        method: "POST",
+        headers: {
+          origin: originHeader,
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          email: "employee@example.com",
+          password: initialPassword,
+        }),
+      }),
+      { params: Promise.resolve({ action: "login" }) },
+    );
+  }
+  it("쿠키와 303을 반환하고 Location에 자격증명을 포함하지 않는다", async () => {
+    const response = await formLogin();
+    expect(response.status).toBe(303);
+    expect(response.headers.get("location")).toBe("/me");
+    expect(response.headers.getSetCookie().length).toBeGreaterThan(0);
+    expect(response.headers.get("cache-control")).toBe("no-store");
+    const cookie = response.headers
+      .getSetCookie()
+      .map((c) => c.split(";")[0])
+      .join("; ");
+    expect((await protectedResponse(request(cookie))).status).toBe(200);
+  });
+  it("macmini origin에서 폼 로그인을 허용한다", async () => {
+    const response = await formLogin("http://macmini:3001");
+    expect(response.status).toBe(303);
+    expect(response.headers.get("location")).toBe("/me");
+    expect(response.headers.getSetCookie().length).toBeGreaterThan(0);
+  });
+  it("폼 방식에서도 외부 출처 로그인을 거부한다", async () => {
+    const response = await formLogin("https://evil.example");
+    expect(response.headers.get("location")).toBe("/login?error=origin");
+    expect(response.headers.getSetCookie()).toHaveLength(0);
+    expect(
+      (await pool.query("SELECT count(*) FROM auth_sessions")).rows[0].count,
+    ).toBe("0");
   });
 });

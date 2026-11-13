@@ -1,0 +1,22 @@
+ALTER TABLE "work_segments" ALTER COLUMN "duration_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "work_sessions" ALTER COLUMN "break_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "work_sessions" ALTER COLUMN "actual_work_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "work_sessions" ALTER COLUMN "required_work_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."compensation_contracts" ALTER COLUMN "fixed_overtime_allowance" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."hourly_rate_histories" ALTER COLUMN "hourly_rate" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_adjustments" ALTER COLUMN "amount" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "regular_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "overtime_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "night_overtime_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "included_overtime_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "payable_overtime_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "regular_pay" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "additional_overtime_pay" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_calculations" ALTER COLUMN "total_calculated_pay" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "duration_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "hourly_rate" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "multiplier" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "gross_amount" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "included_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "payable_minutes" SET DATA TYPE numeric;--> statement-breakpoint
+ALTER TABLE "payroll"."payroll_line_items" ALTER COLUMN "additional_amount" SET DATA TYPE numeric;
